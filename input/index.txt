@@ -1,0 +1,62 @@
+restindex
+    crumb: nmag home
+    format: rest
+    page-title: nmag - computational micromagnetics
+    include: Yes
+    page-description:
+      Home page of nmag - nmag - computational micromagnetics
+    /description
+    build: Yes
+/restindex
+
+
+
+nmag
+====
+
+nmag is a micromagnetic simulation package based on the general
+purpose multi-physics library `nsim
+<http://www.soton.ac.uk/~fangohr/nsim/index.html>`__. It is developed by
+the group of Hans Fangohr and Thomas Fischbacher at the `University of
+Southampton <http://www.soton.ac.uk>`__ and released under the `GPL
+<http://www.gnu.org/licenses/gpl2.txt>`__.
+
+
+News
+----
+
+:October 2007:
+  First release, version `0.1 beta <0.1/index.html>`__.
+
+
+Versions
+--------
+
+
+The following versions are available:
+
+* the `current version (nmag 0.1) <current/index.html>`__.
+
+* the `developer's version <devel/index.html>`__ (access restricted)
+
+
+
+
+
+
+.. raw:: html
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- BEGINN GOWEB WEBCOUNTER -->
+  <p><a href="http://www.webcounter.goweb.de"><img src="http://webcounter.goweb.de/7725.GIF" alt="gratis Counter by GOWEB" border="0" vspace="0"></a>
+  <font size="-3" color="#4c4c4c">Visits since 18 Sep 2006</font>
+  <!-- ENDE GOWEB WEBCOUNTER -->
+
+

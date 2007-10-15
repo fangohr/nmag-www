@@ -1,0 +1,14 @@
+restindex
+    crumb: current version
+    format: rest
+    page-title: The current release of nmag
+    include: Yes
+    page-description:
+	The current release of the software
+    /description
+    build: No
+    target: current/index.html
+/restindex
+
+
+

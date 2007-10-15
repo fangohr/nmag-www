@@ -1,0 +1,124 @@
+restindex
+    crumb: nmag 0.1
+    format: rest
+    page-title: nmag - computational micromagnetics
+    include: Yes
+    page-description:
+      Home page of nmag - nmag - computational micromagnetics
+    /description
+/restindex
+
+
+This documentation refers to the 0.1 beta release.
+
+.. contents:: Table of contents
+
+
+
+
+
+
+
+
+
+Overview
+--------
+
+Features in brief:
+
+ - based on finite elements (suitable for non-cuboidal structures)
+
+ - problem description in Python, therefore high degree of flexibility
+
+ - inbuilt mesh post processing tools
+
+ - efficient data storage (binary compressed) and extraction into vtk
+   files (of course the raw raw data can be extracted)
+
+ - arbitrary crystal anisotropy 
+
+ - (pseudo) periodic boundary conditions ("macro geometry approach")
+
+ - thermal fluctuations
+
+
+License and Disclaimer
+----------------------
+
+This software was developed at the University of Southampton, United
+Kingdom. It is released under the GNU General Public License (GPL_) as
+published by the Free Software Foundation; either version 2, or (at
+your option) any later version.
+
+
+Nmag is an experimental system. Neither the University of Southampton
+nor the authors assume any responsibility whatsoever for its use by
+other parties, and makes no guarantees, expressed or implied, about
+its quality, reliability, or any other characteristic.
+
+
+Where can I find ...
+--------------------
+
+- some examples showhing how to use nmag?
+- an explanation of what fields and subfields are?
+- information on finite element meshes?
+- acknowledgements?
+
+You can find all this (and a lot more) in the manual (`html
+<manual/html/manual.html>`__ or `pdf <manual/manual.pdf>`__).
+
+.. comment:
+
+ Site map  
+ --------
+
+  .. raw:: html
+
+  <div class="displaybox">
+      <#
+          print_details(default_section)
+      #>
+  </div>
+
+.. comment:
+
+  <h2>License</h2>
+  <p><em>nmag</em> is licensed under the GNU Public License.
+  
+  <h2>Download</h2> <p>The software will be released when it is
+  ready. Interested beta users are invited to contact Hans Fangohr
+  (fangohr@soton.ac.uk) to request an earlier release.
+  
+  <h2>Documentation</h2>
+  
+  <p>A draft of the (incomplete) manual is available <a href="nmag_manual_draft.pdf">here</a> for download.</p>
+  
+  <h2>Acknowledgements</h2>
+  
+  <p>This development of this tool is funded by the <a href="http://www.epsrc.ac.uk">Engineering and
+  Physical Sciences Research Council (EPSRC)</a> (United Kingdom).
+  
+  
+  <h2>Gallery</h2>
+  
+    <p align="center">  <img src="<% path_to_root %>nsim/nmag/images/comparison.png" width="570"></p>
+  
+    <p align="center">  <img src="<% path_to_root %>nsim/nmag/images/DyFeflip.png" ></p>
+  
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  
+  
+  
+  <hr>
+  
+  <!-- BEGINN GOWEB WEBCOUNTER -->
+  <p><a href="http://www.webcounter.goweb.de"><img src="http://webcounter.goweb.de/7725.GIF" alt="gratis Counter by GOWEB" border="0" vspace="0"></a>
+  <font size="-3" color="#4c4c4c">Visits since 18 Sep 2006</font>
+  <!-- ENDE GOWEB WEBCOUNTER -->
+  
+  </body> </html>
+
+.. _GPL: http://www.gnu.org/licenses/gpl2.txt

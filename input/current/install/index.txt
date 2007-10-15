@@ -1,0 +1,20 @@
+restindex
+    crumb: installation
+    format: rest
+    page-title: nmag installation instructions
+    include: Yes
+    page-description:
+      nmag installation instructions
+    /description
+    build: Yes
+/restindex
+
+.. contents: Installation methods
+
+Method A: compile everything from source
+----------------------------------------
+
+After downloading the `tar file <../download/nmag-0.1.tar.gz>`__, follow the instructions given `here (Method A) <install_A.html>`__.
+
+
+

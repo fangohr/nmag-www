@@ -1,0 +1,17 @@
+restindex
+    crumb: developer version
+    format: rest
+    page-title: nmag - computational micromagnetics (developer version)
+    include: Yes
+    page-description:
+      Home page of nmag for developers
+    /description
+/restindex
+
+
+nmag - Computational Micromagnetics
+===================================
+
+This documentation refers to the developer release.
+
+(to be written)
