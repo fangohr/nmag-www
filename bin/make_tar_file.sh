@@ -3,9 +3,7 @@ version=$1
 
 echo "version is $version"
 
-read
-
-name=nmag-$version
+name=$version
 
 versiondate="`date +%Y-%m-%d-T%H-%M-%S`"
 
@@ -19,7 +17,7 @@ svnversionnsimdist=`svnversion`
 
 infofile=VERSION
 
-echo "$version 0.1" > $infofile
+echo "$version" > $infofile
 
 echo "nsimdist rev $svnversionnsimdist" >> $infofile
 
@@ -53,6 +51,8 @@ echo "----------Details nsim repos:------" >> ../$infofile
 svn info >> ../$infofile
 
 
+rm -rvf obsolete
+
 #update manual, copy from where we have built it before
 
 cd ..
@@ -64,18 +64,15 @@ svn info >> $infofile
 echo "current directory is `pwd`"
 
 #untar packages
-/bin/tar xvf ../pkgs.tar
+/bin/tar xvf /tmp/pkgs.tar
 
 cd ..
 
-#then tar the lot
-mv nsimdist $name
-
-filename=${name}.tar.gz 
+filename=$name.tar.gz 
 
 tar cfvz $filename $name
 #mv $name nsimdist
 
-#mv $filename /tmp
+mv $filename /tmp
 
 #scp /tmp/$filename alpha.kk.soton.ac.uk:/tmp
