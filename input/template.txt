@@ -40,7 +40,7 @@ print """<img src="%s" alt="University of Southampton, nmag, Computational Micro
 <table>
   <tr>
     <td valign="top" align="left" width="25%">
-      <img src="<% path_to_root %>images/IronPalladium.png" width="150" height="150" alt="logo" >
+      <img src="<% path_to_root %>images/IronPalladium.png" width="137" height="134" alt="logo" vspace="1" hspace="2" >
 
     <div id="left-column">
     <div id="sidie">

@@ -28,6 +28,7 @@ update-svn-devel:
 	mkdir -p tmp/nmag-devel/nsim
 	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ nmag-devel
 	cd tmp/nmag-devel; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/trunk/ nsim
+	cd tmp/nmag-devel/nsim; svnversion > ../../../input/devel/svnversion
 
 
 
@@ -38,6 +39,9 @@ build-tarfile-devel:
 	cd $(TFDIR); pwd; rm -f doc/nmag
 	cd $(TFDIR); cd doc; ln -s nsim/interface/nmag/manual nmag
 
+	cd tmp; tar cfvz nmag-devel-core.tar.gz nmag-devel/nsim
+	mv tmp/nmag-devel-core.tar.gz output/devel/download
+
 	#copy compiled nmag manual
 	rsync -auv --delete $(MANUALDIR)/nsim/interface/nmag/manual/* $(TFDIR)/nsim/interface/nmag/manual
 
@@ -47,16 +51,12 @@ build-tarfile-devel:
 	rsync -auv --delete $(MANUALDIR)/INSTALL.html $(TFDIR)
 
 	#start tar process
-	cd tmp; sh bin/make_tar_file.sh nmag-devel
+	cd tmp; sh ../bin/make_tar_file.sh nmag-devel
 
-	mv tmp/nmag-0.1.tar.gz output/devel/download
+	mv tmp/nmag-devel.tar.gz output/devel/download
 
 
 
-update-devel:
-	make update-manuals-devel
-	make update-svn-devel
-	make build-tarfile-devel
 
 
 
@@ -84,6 +84,7 @@ update-svn-0.1:
 	mkdir -p tmp/nmag-0.1/nsim
 	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ nmag-0.1
 	cd tmp/nmag-0.1; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/trunk/ nsim
+	cd tmp/nmag-0.1/nsim; svnversion > ../../../input/0.1/svnversion
 
 
 DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
@@ -111,9 +112,12 @@ build-tarfile-0.1:
 
 
 
-update-0.1:
-	make update-manuals-0.1
-	make update-svn-0.1
-	make build-tarfile-0.1
+#These are the two useful targets:
 
+update-0.1: update-manuals-0.1 update-svn-0.1 build-tarfile-0.1 update-html
 
+update-devel: update-manuals-devel update-svn-devel build-tarfile-devel update-html
+
+#I suspect we run 'make update-0.1' only when we have anything useful and new to release.
+
+#'make update-devel' could be run every morning to release a new developers' version.
