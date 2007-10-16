@@ -25,13 +25,13 @@ echo "nsimdist rev $svnversionnsimdist" >> $infofile
 #update copies of installation manual in subdir
 cd doc/installation_manual
 
-rm INSTALL.pdf
-rm INSTALL.html
-rm INSTALL
+rm -v INSTALL.pdf
+rm -v INSTALL.html
+rm -v INSTALL
 
-ln -s ../../INSTALL .
-ln -s ../../INSTALL.html .
-ln -s ../../INSTALL.pdf .
+ln -sv ../../INSTALL .
+ln -sv ../../INSTALL.html .
+ln -sv ../../INSTALL.pdf .
 
 cd ../../
 
@@ -51,7 +51,8 @@ echo "----------Details nsim repos:------" >> ../$infofile
 svn info >> ../$infofile
 
 
-rm -rvf obsolete
+echo "Removing obsolete directory"
+rm -rf obsolete
 
 #update manual, copy from where we have built it before
 
@@ -61,18 +62,15 @@ echo "----------Details nsimdist repos:--" >> $infofile
 
 svn info >> $infofile
 
-echo "current directory is `pwd`"
+echo "untarring libraries"
+
 
 #untar packages
-/bin/tar xvf /tmp/pkgs.tar
+/bin/tar xf /tmp/pkgs.tar
 
 cd ..
 
 filename=$name.tar.gz 
 
-tar cfvz $filename $name
-#mv $name nsimdist
-
-mv $filename /tmp
-
-#scp /tmp/$filename alpha.kk.soton.ac.uk:/tmp
+echo "Creating $filename"
+tar cfz $filename $name
