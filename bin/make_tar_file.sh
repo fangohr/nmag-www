@@ -52,7 +52,7 @@ svn info >> ../$infofile
 
 
 echo "Removing obsolete directory"
-rm -rf obsolete
+rm -rf obsolete info
 
 #update manual, copy from where we have built it before
 
