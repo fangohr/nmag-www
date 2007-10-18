@@ -34,7 +34,18 @@ binary-arch: build
 	install -m 755 bin/pyfem $(bindir)/pyfem
 	# NOTE: wasteful - should instead use a symlink here!
 	install -m 755 bin/pyfem $(bindir)/ipyfem
-	install -m 755 bin/n* $(bindir)/
+
+	install -m 755 bin/ncol $(bindir)/
+	install -m 755 bin/nmagpp $(bindir)/
+	install -m 755 bin/nmesh2vtk $(bindir)/
+	install -m 755 bin/nmeshimport $(bindir)/
+	install -m 755 bin/nmeshmirror $(bindir)/
+	install -m 755 bin/nmeshpp $(bindir)/
+	install -m 755 bin/nsim $(bindir)/
+	install -m 755 bin/nsim_i $(bindir)/
+	install -m 755 bin/nsim-1cpu $(bindir)/
+	install -m 755 bin/nsimversion $(bindir)/
+
 	cp -a interface $(libdir)/interface
 	cp -a debian/changelog $(docdir)/changelog
 	cd $(docdir) && gzip -9 changelog
