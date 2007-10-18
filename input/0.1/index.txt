@@ -41,7 +41,7 @@ Features in brief:
  - inbuilt mesh post processing tools
 
  - efficient data storage (binary compressed) and extraction into vtk
-   files (of course the raw raw data can be extracted)
+   files (of course the raw data can be extracted)
 
  - arbitrary crystal anisotropy 
 
@@ -54,8 +54,8 @@ License and Disclaimer
 ----------------------
 
 This software was developed at the University of Southampton, United
-Kingdom. It is released under the GNU General Public License (GPL_) as
-published by the Free Software Foundation; either version 2, or (at
+Kingdom. It is released under the GNU General Public License (GNU GPL_) 
+as published by the Free Software Foundation; either version 2, or (at
 your option) any later version.
 
 
