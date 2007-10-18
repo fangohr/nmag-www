@@ -128,11 +128,11 @@ debian-package: build-with-manuals-0.1
 
 	cp -a tmp/nmag-0.1-manual/nsim/pyfem3/pyfem3 debian/packages/nsim-0.1/bin/pyfem
 	cd debian/packages/nsim-0.1; debuild -us -uc
-	mv debian/packages/nsim_*.{dsc|changes|deb|tar.gz} debian/apt/
-	cd debian/apt; make
+	mv debian/packages/nsim_*.{dsc|changes|deb|tar.gz} debian/web/
+	cd debian/web/debian; make
 
 #I suspect we run 'make update-0.1' only when we have anything useful and new to release.
 #'make update-devel' could be run every morning to release a new developers' version.
 
 web-publish: update-0.1 update-devel debian-package
-	rsync -avz --delete -e ssh output/* debian/apt www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
+	rsync -avz --delete -e ssh output/* debian/web/debian www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
