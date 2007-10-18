@@ -1,5 +1,8 @@
-To build these webpages, you need r2w.py in your path
-(http://www.voidspace.org.uk/python/rest2web/)
+To build these webpages, you need r2w in your path
+(http://www.voidspace.org.uk/python/rest2web/).
 
+This is also available as a debian package 'rest2web'.
 
-(fangohr 15/10/2007)
+Just type 'make', and wait.
+
+The html-root is produced in the 'output' directory.

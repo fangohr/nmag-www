@@ -1,3 +1,5 @@
+all:	update-0.1 update-devel
+
 update-html:
 	make prebuild-html
 	cd input; r2w
