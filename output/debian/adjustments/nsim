@@ -1,0 +1,3 @@
+#!/bin/sh
+export PYTHONPATH=/usr/lib/nsim/interface:$PYTHONPATH
+/usr/bin/pyfem $*

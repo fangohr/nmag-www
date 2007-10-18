@@ -31,10 +31,10 @@ binary-arch: build
 	#		prefix=$$(pwd)/debian/tmp/usr install
 	install -d $(bindir)
 	install -d $(libdir)
-	install -m 755 bin/pyfem3 $(bindir)/pyfem3
-	install -m 755 bin/pyfem3 $(bindir)/ipyfem3
-	install -m 755 bin/nsim $(bindir)/nsim
-	install -m 755 bin/nsim_i $(bindir)/nsim_i
+	install -m 755 bin/pyfem $(bindir)/pyfem
+	# NOTE: wasteful - should instead use a symlink here!
+	install -m 755 bin/pyfem $(bindir)/ipyfem
+	install -m 755 bin/n* $(bindir)/
 	cp -a interface $(libdir)/interface
 	cp -a debian/changelog $(docdir)/changelog
 	cd $(docdir) && gzip -9 changelog

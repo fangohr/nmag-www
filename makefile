@@ -120,17 +120,19 @@ update-0.1: update-manuals-0.1 update-svn-0.1 build-tarfile-0.1 update-html
 
 update-devel: update-manuals-devel update-svn-devel build-tarfile-devel update-html
 
-web-publish: update-0.1 update-devel
-	rsync -avz --delete -e ssh output/* www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
-
-
 debian-package: build-with-manuals-0.1
-	rsync -av tmp/nmag-0.1/nsim/interface/* input/debian/packages/nsim-0.1/interface/
-	cp -a tmp/nmag-0.1-manual/nsim/bin/n* input/debian/packages/nsim-0.1/bin/
-	cp -a tmp/nmag-0.1-manual/nsim/pyfem3/pyfem3 input/debian/packages/nsim-0.1/bin/pyfem
-	cd input/debian/packages/nsim-0.1; debuild -us -uc
+	rsync -av tmp/nmag-0.1/nsim/interface/* output/debian/packages/nsim-0.1/interface/
+	cp -a tmp/nmag-0.1-manual/nsim/bin/n* output/debian/packages/nsim-0.1/bin/
+	cp -a tmp/nmag-0.1-manual/nsim/bin/n* output/debian/packages/nsim-0.1/bin/
+	cp output/debian/adjustments/* output/debian/packages/nsim-0.1/bin/
 
+	cp -a tmp/nmag-0.1-manual/nsim/pyfem3/pyfem3 output/debian/packages/nsim-0.1/bin/pyfem
+	cd output/debian/packages/nsim-0.1; debuild -us -uc
+	mv output/debian/packages/nsim_*.{dsc|changes|deb|tar.gz} output/debian/web/
+	cd output/debian/web; make
 
 #I suspect we run 'make update-0.1' only when we have anything useful and new to release.
-
 #'make update-devel' could be run every morning to release a new developers' version.
+
+web-publish: update-0.1 update-devel debian-package
+	rsync -avz --delete -e ssh output/* www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
