@@ -1,3 +1,6 @@
+#WEBSERVER=nmag.soton.ac.uk
+WEBSERVER=152.78.96.206
+
 all:	update-0.1 update-devel
 
 update-html:
@@ -119,6 +122,9 @@ build-tarfile-0.1:
 update-0.1: update-manuals-0.1 update-svn-0.1 build-tarfile-0.1 update-html
 
 update-devel: update-manuals-devel update-svn-devel build-tarfile-devel update-html
+
+web-publish: update-0.1 update-devel
+	rsync -avz --delete -e ssh output/* www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
 
 #I suspect we run 'make update-0.1' only when we have anything useful and new to release.
 
