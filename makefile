@@ -60,12 +60,7 @@ build-tarfile-devel:
 
 	mv tmp/nmag-devel.tar.gz output/devel/download
 
-
-
-
-
-
-update-manuals-0.1:
+build-with-manuals-0.1:
 	#The following checkouts are just used to compile the documentation
 	mkdir -p tmp/nmag-0.1-manual
 	#cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/branches/0.1 nmag-0.1-manual
@@ -77,10 +72,12 @@ update-manuals-0.1:
 	cd tmp/nmag-0.1-manual/nsim; make
 	cd tmp/nmag-0.1-manual/nsim; make doc
 
-	#now copy to final destination
-	rsync -auv tmp/nmag-0.1-manual/nsim/interface/nmag/manual/* output/0.1/manual
 
+update-manuals-0.1: build-with-manuals-0.1
+	#copy to final destination
+	rsync -auv tmp/nmag-0.1-manual/nsim/interface/nmag/manual/* output/0.1/manual
 	rsync -auv tmp/nmag-0.1-manual/INSTALL input/0.1/install/_a_INSTALL
+
 
 
 update-svn-0.1:
@@ -125,6 +122,14 @@ update-devel: update-manuals-devel update-svn-devel build-tarfile-devel update-h
 
 web-publish: update-0.1 update-devel
 	rsync -avz --delete -e ssh output/* www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
+
+
+debian-package: build-with-manuals-0.1
+	rsync -av tmp/nmag-0.1/nsim/interface/* input/debian/packages/nsim-0.1/interface/
+	cp -a tmp/nmag-0.1-manual/nsim/bin/n* input/debian/packages/nsim-0.1/bin/
+	cp -a tmp/nmag-0.1-manual/nsim/pyfem3/pyfem3 input/debian/packages/nsim-0.1/bin/pyfem
+	cd input/debian/packages/nsim-0.1; debuild -us -uc
+
 
 #I suspect we run 'make update-0.1' only when we have anything useful and new to release.
 
