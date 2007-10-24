@@ -6,7 +6,7 @@ Standards-Version: 3.7.2
 
 Package: nsim
 Architecture: any
-Depends: libqhull5, libsundials-serial0, libsundials-serial-dev, python-tables, python2.4, libpetsc2.3.2, libpetsc2.3.2-dev, libparmetis3.1, libc6, ipython, gsl-bin
+Depends: python, libqhull5, libsundials-serial0, libsundials-serial-dev, python-tables, python2.4, libpetsc2.3.2, libpetsc2.3.2-dev, libparmetis3.1, libc6, ipython, gsl-bin, gnuplot, schedutils
 Description: The "nsim" finite element field theory simulation framework
  This is the "nsim" field theory simulation framework on which 
  the micromagnetic simulator "nmag" is based.
