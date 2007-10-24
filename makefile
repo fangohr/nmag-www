@@ -123,9 +123,8 @@ update-devel: update-manuals-devel update-svn-devel build-tarfile-devel update-h
 debian-package: build-with-manuals-0.1
 	rsync -av --delete --exclude '*~' --exclude '.svn' tmp/nmag-0.1/nsim/interface/* debian/packages/nsim-0.1/interface/
 	cp -a tmp/nmag-0.1-manual/nsim/bin/n* debian/packages/nsim-0.1/bin/
-	cp -a tmp/nmag-0.1-manual/nsim/bin/n* debian/packages/nsim-0.1/bin/
 	cp debian/adjustments/* debian/packages/nsim-0.1/bin/
-
+	./add-svnversion-to-debian-changelog.pl 0.1
 	cp -a tmp/nmag-0.1-manual/nsim/pyfem3/pyfem3 debian/packages/nsim-0.1/bin/pyfem
 	cd debian/packages/nsim-0.1; debuild -us -uc
 	mv debian/packages/nsim_*.{dsc,changes,deb,tar.gz} debian/web/
