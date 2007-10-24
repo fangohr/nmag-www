@@ -2,7 +2,9 @@ Source: nsim
 Section: devel
 Priority: optional
 Maintainer: Thomas Fischbacher <t.fischbacher@soton.ac.uk>
+Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
+
 
 Package: nsim
 Architecture: any
