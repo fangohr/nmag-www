@@ -35,6 +35,9 @@ binary-arch: build
 	# NOTE: wasteful - should instead use a symlink here!
 	install -m 755 bin/pyfem $(bindir)/ipyfem
 
+	strip $(bindir)/pyfem
+	strip $(bindir)/ipyfem
+
 	install -m 755 bin/ncol $(bindir)/
 	install -m 755 bin/nmagpp $(bindir)/
 	install -m 755 bin/nmesh2vtk $(bindir)/
@@ -46,9 +49,24 @@ binary-arch: build
 	install -m 755 bin/nsim-1cpu $(bindir)/
 	install -m 755 bin/nsimversion $(bindir)/
 
+	dh_installman -A man/nsim.1
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nsim_i.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/ncol.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nmesh.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nmeshimport.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nmeshpp.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nsim-1cpu.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nsimversion.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nmagpp.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nmesh2vtk.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/nmeshmirror.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/pyfem.1 
+	dh_link /usr/share/man/man1/nsim.1 /usr/share/man/man1/ipyfem.1 
+
 	cp -a interface $(libdir)/interface
 	cp -a debian/changelog $(docdir)/changelog
 	cd $(docdir) && gzip -9 changelog
+	cd $(libdir)/interface && find . -name .svn -exec rm -rf '{}' ';'
 	dpkg-gencontrol -isp
 	chown -R root:root debian/tmp
 	chmod -R u+w,go=rX debian/tmp

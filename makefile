@@ -135,4 +135,6 @@ debian-package: build-with-manuals-0.1
 #'make update-devel' could be run every morning to release a new developers' version.
 
 web-publish: update-0.1 update-devel debian-package
-	rsync -avz --delete -e ssh output/* debian/web/debian www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
+	rm -rf output/debian
+	rsync -av debian/web/debian/ output/debian/
+	rsync -avz --exclude '.svn' --delete -e ssh output/* www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
