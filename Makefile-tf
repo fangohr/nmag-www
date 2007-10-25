@@ -7,7 +7,7 @@ DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
 NSIM_VERSION=devel
 NSIM_BRANCH=$(patsubst branches/devel,trunk,branches/$(NSIM_VERSION))
 DEBVERSION=$(NSIM_VERSION:devel=0.9999)
-DEVDIR=nsim-src-$(NSIM_VERSION)
+SRCDIR=nsim-src-$(NSIM_VERSION)
 
 #all: tarballs html-toplevel current-link debian-package
 
@@ -31,8 +31,12 @@ devel:
 
 mrproper:
 	rm -rf tmp/*
+	rm -rf webserver-webroot/*
 
 webroot: all
+	mkdir webserver-webroot || /bin/true # ensure it exists
+	rsync -auv --exclude .svn output/* webserver-webroot/nmag/
+	rsync -auv --exclude Makefile debian/web/debian/ webserver-webroot/debian/
 
 
 # This introduces the link current -> [current version]:
@@ -61,32 +65,36 @@ nsim:
 
 
 fetchtrunk:
-	#This is used for creation of the tar file
+	#This is used for the creation of the tar file
 	echo "About to do a clean checkout from the repository (trunk) for the distribution."
-	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ $(DEVDIR)
-	mkdir -p tmp/$(DEVDIR)/nsim
-	cd tmp/$(DEVDIR); svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
-	cd tmp/$(DEVDIR)/nsim; svnversion > ../../../input/$(NSIM_VERSION)/svnversion
+	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ $(SRCDIR)
+	mkdir -p tmp/$(SRCDIR)/nsim
+	cd tmp/$(SRCDIR); svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
+	cd tmp/$(SRCDIR)/nsim; svnversion > ../../../input/$(NSIM_VERSION)/svnversion
 
 
 tarballs: fetchtrunk installation-manual nsim
 	#create links for nmag manual into toplevel 'doc' dir
 	mkdir -p output/$(NSIM_VERSION)/download
-	rm -f tmp/$(DEVDIR)/doc/nmag
-	cd tmp/$(DEVDIR)/doc; ln -s nsim/interface/nmag/manual nmag
-	cd tmp; tar --exclude=\\.svn -cvzf ../output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar.gz $(DEVDIR)/nsim
+	rm -f tmp/$(SRCDIR)/doc/nmag
+	cd tmp/$(SRCDIR)/doc; ln -s nsim/interface/nmag/manual nmag
+	cd tmp; tar --exclude=\\.svn -cvzf ../output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar.gz $(SRCDIR)/nsim
 
 	#copy compiled nmag manual
-	rsync -auv --delete tmp/nsim/interface/nmag/manual/* tmp/$(DEVDIR)/nsim/interface/nmag/manual
+	rsync -auv --delete tmp/nsim/interface/nmag/manual/* tmp/$(SRCDIR)/nsim/interface/nmag/manual
 
 	#copy (compiled) installation manual
-	rsync -auv --delete $(INST_MANUALDIR)/INSTALL tmp/$(DEVDIR)
-	rsync -auv --delete $(INST_MANUALDIR)/INSTALL.pdf tmp/$(DEVDIR)
-	rsync -auv --delete $(INST_MANUALDIR)/INSTALL.html tmp/$(DEVDIR)
+	rsync -auv --delete $(INST_MANUALDIR)/INSTALL tmp/$(SRCDIR)
+	rsync -auv --delete $(INST_MANUALDIR)/INSTALL.pdf tmp/$(SRCDIR)
+	rsync -auv --delete $(INST_MANUALDIR)/INSTALL.html tmp/$(SRCDIR)
 
 	#make tarball
+	# XXX NOTE: Problem: should use bin/make_tarball.sh
+	# Furthermore, this script should NOT modify the contents
+	# of $(SRCDIR) but rather use the --exclude feature to get rid of
+	# indo/ and obsolete/ sundirectories in the tarball!
 	cd tmp; sh ../bin/make_tar_file.sh nmag-$(NSIM_VERSION)
-	mv tmp/nmag-$(NSIM_VERSION).tar.gz output/$(NSIM_VERSION)/download
+	mv tmp/nmag-$(NSIM_VERSION).tar.gz output/$(NSIM_VERSION)/download/
 
 manuals: installation-manual nsim
 	#copy to final destination
@@ -104,6 +112,7 @@ debian-package: nsim manuals fetchtrunk
 	mv debian/packages/nsim_*.{dsc,changes,deb,tar.gz} debian/web/
 	cd debian/web; make
 
+# NOTE: not adjusted yet:
 
 web-publish: update-0.1 update-devel debian-package
 	rm -rf output/debian
