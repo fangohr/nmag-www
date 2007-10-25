@@ -1,0 +1,13 @@
+restindex
+    crumb: manual (pdf)
+    format: rest
+    page-title: nmag manual (pdf)
+    include: Yes
+    page-description:
+      Manual for nmag (pdf)
+    /description
+    build: No
+    target: manual/manual.pdf
+/restindex
+
+

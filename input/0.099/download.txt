@@ -1,0 +1,27 @@
+restindex
+    crumb: download
+    format: rest
+    page-title: nmag download page
+    include: Yes
+    page-description:
+      Download page for nmag - computational micromagnetics
+    /description
+    build: Yes
+/restindex
+
+.. contents: Installation methods
+
+
+Method A: compile everything from source
+----------------------------------------
+
+Download a `tar file <download/nmag-0.1.tar.gz>`__ to compile nmag and (most)
+required other software from source.
+
+
+
+
+
+
+
+

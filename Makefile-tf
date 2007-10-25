@@ -7,7 +7,6 @@ DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
 NSIM_VERSION=devel
 NSIM_BRANCH=$(patsubst branches/devel,trunk,branches/$(NSIM_VERSION))
 DEBVERSION=$(NSIM_VERSION:devel=0.9999)
-
 DEVDIR=nsim-src-$(NSIM_VERSION)
 
 #all: tarballs html-toplevel current-link debian-package
@@ -19,6 +18,12 @@ all: html-toplevel current-link debian-package
 devel:
 	make -f Makefile-tf NSIM_VERSION=devel all
 
+# Experimental branch to test this version-aware build system:
+0.099:
+	make -f Makefile-tf NSIM_VERSION=0.099 all
+
+
+# Does not exist yet:
 0.1:
 	make -f Makefile-tf NSIM_VERSION=0.1 all
 
@@ -58,7 +63,6 @@ nsim:
 fetchtrunk:
 	#This is used for creation of the tar file
 	echo "About to do a clean checkout from the repository (trunk) for the distribution."
-	echo "NSIM_VERSION: " $(NSIM_VERSION) "  NSIM_BRANCH:" $(NSIM_BRANCH) "  DEBVERSION: " $(DEBVERSION)
 	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ $(DEVDIR)
 	mkdir -p tmp/$(DEVDIR)/nsim
 	cd tmp/$(DEVDIR); svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
