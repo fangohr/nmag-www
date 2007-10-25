@@ -12,7 +12,7 @@ Depends: python, libqhull5, libsundials-serial0, libsundials-serial-dev, python-
 Description: The "nsim" finite element field theory simulation framework
  This is the "nsim" field theory simulation framework
  on which the micromagnetic simulator "nmag" is based.
-
+ .
  This preliminary debian package provides both nsim and nmag.
  Note that - as this piece of software still is in a state
  of flux - there are a number of issues (e.g. manpages,
