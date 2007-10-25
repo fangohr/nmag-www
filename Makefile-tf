@@ -1,0 +1,100 @@
+WEBSERVER=nmag.soton.ac.uk
+INST_MANUALDIR=tmp/installation-manual
+DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
+
+# Note: this variable can and will be overridden via "make NSIM_VERSION=0.1 all".
+
+NSIM_VERSION=devel
+NSIM_BRANCH = $(ifeq $(NSIM_VERSION) "devel","trunk","branches/$(NSIM_VERSION)")
+DEBVERSION = $(ifeq $(NSIM_VERSION) "devel","0.9999",$(NSIM_VERSION))
+DEVDIR=nsim-src-$(NSIM_VERSION)
+
+all: tarballs html-toplevel current-link 
+
+
+# This introduces the link current -> [current version]:
+
+current-link:
+	rm -f output/current
+	cd output; ln -s 0.1 current
+
+
+# This builds the "outer" HTML structure which contains general
+# explanations on installation, etc.  plus links to the individual
+# versions:
+
+html-toplevel: manuals
+	cat input/0.1/install/_a_index input/0.1/install/_a_INSTALL > input/0.1/install/install_a.txt
+	cd input; r2w
+
+installation-manual:
+	mkdir -p tmp/installation-manual
+	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/$(NSIM_BRANCH) installation-manual
+	cd tmp/installation-manual/doc/installation_manual; make
+
+nsim:
+	mkdir -p tmp/nsim
+	cd tmp/nsim; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
+	cd tmp/nsim; make all doc
+
+
+fetchtrunk:
+	#This is used for creation of the tar file
+	echo "About to do a clean checkout from the repository (trunk) for the distribution."
+	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ $(DEVDIR)
+	mkdir -p tmp/$(DEVDIR)/nsim
+	cd tmp/$(DEVDIR); svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
+	cd tmp/$(DEVDIR)/nsim; svnversion > ../../../input/$(NSIM_VERSION)/svnversion
+
+
+tarballs: fetchtrunk-tarball installation-manual nsim
+	#create links for nmag manual into toplevel 'doc' dir
+	rm -f tmp/$(DEVDIR)/doc/nmag
+	cd tmp/$(DEVDIR)/doc; ln -s nsim/interface/nmag/manual nmag
+
+	cd tmp; tar --exclude .svn cvzf ../output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar.gz $(DEVSUBDIR)/nsim
+
+	#copy compiled nmag manual
+	rsync -auv --delete tmp/nsim/interface/nmag/manual/* tmp/$(DEVDIR)/nsim/interface/nmag/manual
+
+	#copy (compiled) installation manual
+	rsync -auv --delete $(INST_MANUALDIR)/INSTALL tmp/$(DEVDIR)
+	rsync -auv --delete $(INST_MANUALDIR)/INSTALL.pdf tmp/$(DEVDIR)
+	rsync -auv --delete $(INST_MANUALDIR)/INSTALL.html tmp/$(DEVDIR)
+
+	#make tarball
+	cd tmp; sh ../bin/make_tar_file.sh nmag-$(NSIM_VERSION)
+	mv tmp/nmag-$(NSIM_VERSION).tar.gz output/$(NSIM_VERSION)/download
+
+manuals: installation-manual nsim
+	#copy to final destination
+	rsync -auv tmp/nsim/interface/nmag/manual/* output/$(NSIM_VERSION)/manual
+	rsync -auv $(INST_MANUALDIR)/INSTALL input/$(NSIM_VERSION)/install/_a_INSTALL
+
+
+# The debian package is a bit special insofar as that we for now only build packages
+# with debian version 0.1.
+
+debian-package: nsim manuals fetchtrunk
+	rsync -av --delete --exclude '*~' --exclude '.svn' tmp/nsim/interface/* debian/packages/nsim-0.1/interface/
+	cp -a tmp/nmag-0.1-manual/nsim/bin/n* debian/packages/nsim-0.1/bin/
+	cp debian/adjustments/* debian/packages/nsim-0.1/bin/
+	bin/svnversion-to-debian-changelog.pl $(DEBVERSION)
+	cp -a tmp/nmag-0.1-manual/nsim/pyfem3/pyfem3 debian/packages/nsim-0.1/bin/pyfem
+	cd debian/packages/nsim-0.1; debuild -us -uc
+	mv debian/packages/nsim_*.{dsc,changes,deb,tar.gz} debian/web/
+	cd debian/web; make
+
+#I suspect we run 'make update-0.1' only when we have anything useful and new to release.
+#'make update-devel' could be run every morning to release a new developers' version.
+
+webroot: update-html 
+
+
+web-publish: update-0.1 update-devel debian-package
+	rm -rf output/debian
+	rsync -av debian/web/debian/ output/debian/
+	rsync -avz --exclude '.svn' --delete -e ssh output/* www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
+
+
+# XXX NOTE: add .PHONY line!
