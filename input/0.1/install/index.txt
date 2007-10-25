@@ -9,12 +9,81 @@ restindex
     build: Yes
 /restindex
 
-.. contents: Installation methods
+.. contents:: Installation methods
+
+How can I install nmag?
+=======================
+
+This depends on your operating system.
+
+Mac OS X
+--------
+
+You can compile nmag and required helping libraries from source (see
+`Method A: compile everything from source`_).
+
+
+Debian Linux, Ubuntu, Knoppix and other debian derivatives
+----------------------------------------------------------
+
+You can install the debian package (see `Method B: debian package`_).
+
+Other Linux/UNIX
+----------------
+
+You can compile nmag and required helping libraries from source (see
+`Method A: compile everything from source`_).
+
+
+Windows
+-------
+
+There is currently no nmag version for Windows. You have two options of running nmag:
+
+1. You use the bootable CD provided in `Method C: Knoppix CD`_ to boot
+   your PC from the CD into a running (linux) system. This is ideal to
+   test the program (and will not modify your hard drive).
+
+2. You install a virtual machine (http://www.vmware.com, try vmware
+   workstation) on your Windows machine, and run Linux inside this
+   virtual machine.
+
+   You have several options what Linux to run inside the virtual
+   machine. We recommend that you 
+
+   * either install a debian-based Linux (such as http://www.debian.org/ or
+     http://www.ubuntu.com/ for example), and use `Method B: debian
+     package`_ to install nmag. 
+
+   * Or you can use the CD from `Method C: Knoppix CD`_ and simply boot
+   * the virtual machine from this CD.
+
+
+
+-----------------
+
+
+
+Links to installation instructions
+==================================
+
 
 Method A: compile everything from source
 ----------------------------------------
 
 After downloading the nmag-0.1.tar.gz from `here <../download.html>`__, follow the instructions given `here (Method A) <install_a.html>`__.
+
+Method B: debian package
+------------------------
+
+`This link <debian.html>`__ explains how to install nmag on your Debian (based) Linux system.
+
+
+
+Method C: Knoppix CD
+--------------------
+
+`This link <knoppix.html>`__ explains how to run nmag from the Knoppix CD.
 
 
 

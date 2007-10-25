@@ -1,0 +1,18 @@
+restindex
+    crumb: Debian package
+    format: rest
+    page-title: nmag installation instructions for debian
+    include: Yes
+    page-description:
+      nmag installation instructions for debian systems
+    /description
+    build: Yes
+/restindex
+
+Installing nmag on a debian based Linux system
+==============================================
+
+(to be written)
+
+
+
