@@ -9,9 +9,11 @@ my $changelog_file="debian/packages/nsim-$ver/debian/changelog";
 
 my $changelog=`cat $changelog_file`;
 
-my $svnversion=`cd tmp/nmag-$ver/; svnversion`;
+my $svnversion=`cd tmp/nmag-$ver/nsim/; svnversion`;
 
-chomp $svnversion;
+$svnversion=~/^(\d+)/ or die "Fatal: svnversion is '$svnversion'\n";
+$svnversion=$1;
+
 
 $changelog=~/^(\S+)\s*\(\d+\.\d+\.(\d+)\)/ or die "Bad changelog file!\n";
 $svnversion eq $1 and do

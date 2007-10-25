@@ -1,14 +1,25 @@
 Source: nsim
 Section: devel
 Priority: optional
-Maintainer: The nmag team <nmag@soton.ac.uk>
+Maintainer: The Nmag team <nmag@soton.ac.uk>
 Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
 
 
 Package: nsim
 Architecture: any
-Depends: python, libqhull5, libsundials-serial0, libsundials-serial-dev, python-tables, python2.4, libpetsc2.3.2, libpetsc2.3.2-dev, libparmetis3.1, libc6, ipython, gsl-bin, gnuplot, schedutils
+Depends: python, libqhull5, libsundials-serial0, libsundials-serial-dev, python-tables, python2.4, libpetsc2.3.2, libpetsc2.3.2-dev, libparmetis3.1, libc6, python2.4-ipython, gsl-bin, gnuplot, schedutils
 Description: The "nsim" finite element field theory simulation framework
- This is the "nsim" field theory simulation framework on which 
- the micromagnetic simulator "nmag" is based.
+ This is the "nsim" field theory simulation framework
+ on which the micromagnetic simulator "nmag" is based.
+
+ This preliminary debian package provides both nsim and nmag.
+ Note that - as this piece of software still is in a state
+ of flux - there are a number of issues (e.g. manpages,
+ location of some files, contents of the source tarball)
+ where this package does not yet adhere to all of the 
+ expectations one has of a neat and tidy debian package.
+ Rather, this should be regarded as a first step to bring
+ nsim/nmag under package manager control in order to make
+ installation, upgrading, and de-installation an easy and
+ straightforward task.

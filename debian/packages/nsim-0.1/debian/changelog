@@ -1,8 +1,8 @@
-nsim (0.1.40) testing; urgency=low
+nsim (0.1.4443) testing; urgency=low
 
   * Automatic version sync with SVN
 
- -- The Nmag team <nmag@soton.ac.uk>  Wed, 24 Oct 2007 18:18:58 +0000
+ -- The Nmag team <nmag@soton.ac.uk>  Thu, 25 Oct 2007 14:02:29 +0000
 
 nsim (0.1.0) testing; urgency=low
 

@@ -51,7 +51,7 @@ echo "----------Details nsim repos:------" >> ../$infofile
 svn info >> ../$infofile
 
 
-echo "Removing obsolete directory"
+echo "Removing obsolete and info directories"
 rm -rf obsolete info
 
 #update manual, copy from where we have built it before
@@ -73,4 +73,4 @@ cd ..
 filename=$name.tar.gz 
 
 echo "Creating $filename"
-tar cfz $filename $name
+tar czf $filename $name
