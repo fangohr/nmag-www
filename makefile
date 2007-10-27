@@ -42,7 +42,7 @@ TFDIR=tmp/nmag-devel
 build-tarfile-devel:
 	#create links for nmag manual into toplevel 'doc' dir
 	cd $(TFDIR); pwd; rm -f doc/nmag
-	cd $(TFDIR); cd doc; ln -s nsim/interface/nmag/manual nmag
+	cd $(TFDIR); cd doc; ln -s ../nsim/interface/nmag/manual nmag
 
 	cd tmp; tar cfvz nmag-devel-core.tar.gz nmag-devel/nsim
 	mv tmp/nmag-devel-core.tar.gz output/devel/download
