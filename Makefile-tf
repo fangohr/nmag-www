@@ -81,7 +81,7 @@ tarballs: fetchtrunk installation-manual nsim
 	mkdir -p output/$(NSIM_VERSION)/download
 	rm -f tmp/$(SRCDIR)/doc/nmag
 	ln -s nsim/interface/nmag/manual tmp/$(SRCDIR)/doc/nmag
-	tar -C tmp/$(SRCDIR) --exclude=\\.svn -cvf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nsim
+	tar -C tmp/$(SRCDIR) --anchored --exclude=*.svn --exclude=nsim/obsolete --exclude=nsim/info -cvf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nsim
 
 	cp output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar \
            output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar
