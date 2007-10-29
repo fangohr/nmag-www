@@ -19,7 +19,7 @@ postbuild-html:
 update-manuals-devel:
 	#The following checkouts are just used to compile the documentation
 	mkdir -p tmp/nmag-devel-manual
-	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk nmag-devel-manual
+	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/dist/src nmag-devel-manual
 	cd tmp/nmag-devel-manual/doc/installation_manual; make
 
 	cd tmp/nmag-devel-manual; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/trunk nsim
@@ -31,7 +31,7 @@ update-svn-devel:
 	#This is used for creation of the tar file
 	echo "About to checkout repository (trunk)"
 	mkdir -p tmp/nmag-devel/nsim
-	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ nmag-devel
+	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/dist/src/ nmag-devel
 	cd tmp/nmag-devel; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/trunk/ nsim
 	cd tmp/nmag-devel/nsim; svnversion > ../../../input/devel/svnversion
 	cd tmp/nmag-devel/nsim; make interface/nsim/svnversion.py
@@ -65,7 +65,7 @@ build-with-manuals-0.1:
 	#The following checkouts are just used to compile the documentation
 	mkdir -p tmp/nmag-0.1-manual
 	#cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/branches/0.1 nmag-0.1-manual
-	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk nmag-0.1-manual
+	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/dist/src nmag-0.1-manual
 	cd tmp/nmag-0.1-manual/doc/installation_manual; make
 
 	#cd tmp/nmag-0.1-manual; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/branches/0.1 nsim	
@@ -85,7 +85,7 @@ update-svn-0.1:
 	#This is used for creation of the tar file
 	echo "About to checkout repository (trunk)"
 	mkdir -p tmp/nmag-0.1/nsim
-	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ nmag-0.1
+	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/dist/src/ nmag-0.1
 	cd tmp/nmag-0.1; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/trunk/ nsim
 	cd tmp/nmag-0.1/nsim; svnversion > ../../../input/0.1/svnversion
 	cd tmp/nmag-0.1/nsim; make interface/nsim/svnversion.py
