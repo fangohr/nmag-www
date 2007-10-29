@@ -71,6 +71,7 @@ fetchtrunk:
 	mkdir -p tmp/$(SRCDIR)/nsim
 	cd tmp/$(SRCDIR); svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
 	cd tmp/$(SRCDIR)/nsim; svnversion > ../../../input/$(NSIM_VERSION)/svnversion
+	cd tmp/$(SRCDIR)/nsim; make interface/nsim/svnversion.py
 
 
 tarballs: fetchtrunk installation-manual nsim

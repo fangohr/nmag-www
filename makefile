@@ -34,6 +34,7 @@ update-svn-devel:
 	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ nmag-devel
 	cd tmp/nmag-devel; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/trunk/ nsim
 	cd tmp/nmag-devel/nsim; svnversion > ../../../input/devel/svnversion
+	cd tmp/nmag-devel/nsim; make interface/nsim/svnversion.py
 
 
 
@@ -87,6 +88,7 @@ update-svn-0.1:
 	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsimdist/trunk/ nmag-0.1
 	cd tmp/nmag-0.1; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/trunk/ nsim
 	cd tmp/nmag-0.1/nsim; svnversion > ../../../input/0.1/svnversion
+	cd tmp/nmag-0.1/nsim; make interface/nsim/svnversion.py
 
 
 DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
