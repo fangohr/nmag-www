@@ -11,8 +11,6 @@ SRCDIR=nsim-$(NSIM_VERSION)
 
 INST_SYSTEMDIR=tmp/nmag-$(NSIM_VERSION)
 
-#all: tarballs html-toplevel current-link debian-package
-
 all: html-toplevel current-link tarballs debian-package
 
 # === KNOWN VERSIONS ===
