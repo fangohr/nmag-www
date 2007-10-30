@@ -13,7 +13,7 @@ INST_SYSTEMDIR=tmp/nmag-$(NSIM_VERSION)
 
 #all: tarballs html-toplevel current-link debian-package
 
-all: html-toplevel current-link debian-package
+all: html-toplevel current-link tarballs debian-package
 
 # === KNOWN VERSIONS ===
 
@@ -63,18 +63,19 @@ installation-system:
 
 
 nsim:
-	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
-	cd tmp/nsim; make all doc
+	cd tmp; mkdir -p nsim-build/nmag
+	cd tmp/nsim-build/nmag; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
+	cd tmp/nsim-build/nmag/nsim; make all doc
 
 
 fetchtrunk:
 	#This is used for the creation of the tar file
 	echo "About to do a clean checkout from the repository (trunk) for the distribution."
 	cd tmp; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/dist/src/ $(SRCDIR)
-	mkdir -p tmp/$(SRCDIR)/nsim
-	cd tmp/$(SRCDIR); svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
-	cd tmp/$(SRCDIR)/nsim; svnversion > ../../../input/$(NSIM_VERSION)/svnversion
-	cd tmp/$(SRCDIR)/nsim; make interface/nsim/svnversion.py
+	mkdir -p tmp/$(SRCDIR)/nmag
+	cd tmp/$(SRCDIR)/nmag; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
+	cd tmp/$(SRCDIR)/nmag/nsim; svnversion > ../../../../input/$(NSIM_VERSION)/svnversion
+	cd tmp/$(SRCDIR)/nmag/nsim; make interface/nsim/svnversion.py
 
 
 tarballs: fetchtrunk installation-system nsim
@@ -82,11 +83,14 @@ tarballs: fetchtrunk installation-system nsim
 	mkdir -p output/$(NSIM_VERSION)/download
 	rm -f tmp/$(SRCDIR)/doc/nmag
 	ln -s nsim/interface/nmag/manual tmp/$(SRCDIR)/doc/nmag
-	tar -C tmp --anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=nmag-devel/nsim/obsolete --exclude=nmag-devel/nsim/info -cvf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar $(SRCDIR)
+	tar --directory $(INST_SYSTEMDIR) --anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=nmag/nsim/obsolete --exclude=nmag/nsim/info -cvf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag
 
+	tar --directory tmp/$(SRCDIR) --anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=nmag/nsim/obsolete --exclude=nmag/nsim/info -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag/nsim
 
-	tar --directory $(INST_SYSTEMDIR) -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar nmag/INSTALL.pdf nmag/INSTALL.html
-	tar --directory tmp -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar $(SRCDIR)/nsim/interface/nmag/manual
+	# This should not be necessary, as we built that manual anyway when we made installation-system:
+	#tar --directory $(INST_SYSTEMDIR) -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar nmag/INSTALL.pdf nmag/INSTALL.html
+
+	tar --directory tmp/nsim-build -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar nmag/nsim/interface/nmag/manual
 
 	cp output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar \
            output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar
@@ -97,9 +101,9 @@ tarballs: fetchtrunk installation-system nsim
 	gzip -9 output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar
 	gzip -9 output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar
 
-manuals: installation-manual nsim
+manuals: installation-system nsim
 	#copy to final destination
-	rsync -auv tmp/nsim/interface/nmag/manual/* output/$(NSIM_VERSION)/manual
+	rsync -auv tmp/nsim-build/nmag/nsim/interface/nmag/manual/* output/$(NSIM_VERSION)/manual
 	rsync -auv $(INST_SYSTEMDIR)/nmag/INSTALL input/$(NSIM_VERSION)/install/_a_INSTALL
 
 
