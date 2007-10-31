@@ -31,6 +31,7 @@ devel:
 
 mrproper:
 	rm -rf tmp/*
+	rm -rf output/*/download/*.tar.gz
 	rm -rf webserver-webroot/*
 
 webroot: all
@@ -79,21 +80,33 @@ fetchtrunk:
 tarballs: fetchtrunk installation-system nsim
 	#create links for nmag manual into toplevel 'doc' dir
 	mkdir -p output/$(NSIM_VERSION)/download
-	rm -f tmp/$(SRCDIR)/doc/nmag
-	ln -s nsim/interface/nmag/manual tmp/$(SRCDIR)/doc/nmag
+	rm -rf tmp/$(SRCDIR)/nmag/doc/nmag
+	mkdir -p tmp/$(SRCDIR)/nmag/doc/nmag
+	ln -s nsim/interface/nmag/manual tmp/$(SRCDIR)/nmag/doc/nmag
+
+	echo "\n*** CREATING CORE NMAG BUILD ARCHIVE ***\n"
+
 	tar --directory $(INST_SYSTEMDIR) --anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=nmag/nsim/obsolete --exclude=nmag/nsim/info -cvf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag
 
-	tar --directory tmp/$(SRCDIR) --anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=nmag/nsim/obsolete --exclude=nmag/nsim/info -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag/nsim
+	echo "\n*** ADDING NSIM SOURCES ARCHIVE ***\n"
+
+	tar --directory tmp/$(SRCDIR) --anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=nmag/nsim/obsolete --exclude=nmag/nsim/info -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag/nsim nmag/doc
 
 	# This should not be necessary, as we built that manual anyway when we made installation-system:
 	#tar --directory $(INST_SYSTEMDIR) -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar nmag/INSTALL.pdf nmag/INSTALL.html
 
-	tar --directory tmp/nsim-build -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar nmag/nsim/interface/nmag/manual
+	echo "\n*** ADDING MANUAL TO ARCHIVE ***\n"
+
+	tar --directory tmp/nsim-build -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag/nsim/interface/nmag/manual
 
 	cp output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar \
            output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar
 
+	echo "\n*** ADDING PACKAGE SOURCES TO BIG ARCHIVE ***\n"
+
 	tar --directory tmp -Af output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar $(LIBSOURCE_FILE)
+
+	echo "\n*** ZIPPING TARBALLS ***\n"
 
 	# Gzip final tarballs:
 	gzip -9 output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar
