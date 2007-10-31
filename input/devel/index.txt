@@ -21,36 +21,29 @@ restindex
 Compiling nmag libraries and nmag from source
 ---------------------------------------------
 
-We assume that you are reasonable familiar with the install procedure. If not, look it up in `installation instructions (method A) <../current/install/install_a.html>`__.
+We assume that you are reasonable familiar with the install procedure. 
+If not, look it up in `installation instructions (method A) <../current/install/install_a.html>`__.
 
 Download the latest overall tar file `nmag-devel.tar.gz <download/nmag-devel.tar.gz>`__. 
 
 Updating the nmag-core only
 ---------------------------
 
-Assuming you have downloaded `nmag-devel.tar.gz <download/nmag-devel.tar.gz>`__ before, and you just want an update of the nmag core (not the other libraries such as python, petsc, qhull, ...), then:
+Assuming you have downloaded `nmag-devel.tar.gz <download/nmag-devel.tar.gz>`__ before, 
+and you just want an update of the nmag core (not the other libraries such as python, petsc, qhull, ...), 
+then:
 
 1. download `nmag-devel-core.tar.gz <download/nmag-devel-core.tar.gz>`__
 
 2. go to the parent directory of ``nmag-devel`` and untar::
 
-     me@my_machine:~$ tar xfvz nmag-devel-core.tar.gz
+     $ tar xfvz nmag-devel-core.tar.gz
 
 3. Update the core::
 
-     me@my_machine:~$cd nmag-devel
-     me@my_machine:~/nmag-0.1$ . exports.bash
-     me@my_machine:~/nmag-0.1$ cd nsim 
-     me@my_machine:~/nmag-0.1$ rm bin/nsim 
-     me@my_machine:~/nmag-0.1$ make
-
-
-
-
-
-
-
-
-
-
+     $ cd nmag
+     $ . exports.bash
+     $ cd nsim 
+     $ rm bin/nsim 
+     $ make
 
