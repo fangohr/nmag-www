@@ -1,6 +1,6 @@
-nsim (0.099.4484) testing; urgency=low
+nsim (0.1.4587) testing; urgency=low
 
   * SVN-version-aligned autobuild of debian package
 
- -- The Nmag team <nmag@soton.ac.uk>  Wed, 31 Oct 2007 15:49:08 +0000
+ -- The Nmag team <nmag@soton.ac.uk>  Thu, 01 Nov 2007 16:18:49 +0000
 

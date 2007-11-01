@@ -102,7 +102,7 @@ tarballs: fetchtrunk installation-system nsim
 
 	tar --directory tmp/$(SRCDIR) $(TAR_SVNEXCLUDE) --exclude=nmag/nsim/info -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag/nsim nmag/doc
 
-	rm tmp/$(SRCDIR)/interface/nmag/DISTMODE
+	rm tmp/$(SRCDIR)/nmag/nsim/interface/nmag/DISTMODE
 
 	# This should not be necessary, as we built that manual anyway when we made installation-system:
 	#tar --directory $(INST_SYSTEMDIR) -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar nmag/INSTALL.pdf nmag/INSTALL.html
@@ -142,12 +142,14 @@ debian-package: nsim manuals fetchtrunk
 
 # NOTE: not adjusted yet:
 
-web-publish: webroot
+#web-publish: webroot
+
+web-publish:
 	rsync -avz --exclude '.svn' --delete -e ssh webserver-webroot/nmag/ www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
 
 	# Hans insists on having the tarball use a different toplevel directory name.
         # We repackage on the webserver:
 
-	ssh www-data@$(WEBSERVER) "cd /var/local/www/virtual-hosts/nmag/webroot/nmag/current/download; tar xzf nmag-$(NSIM_VERSION)-core.tar.gz; mv nmag nmag-$(NSIM_VERSION); rm nmag-$(NSIM_VERSION)-core.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-core.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION); tar xzf nmag-$(NSIM_VERSION)-all.tar.gz; mv nmag nmag-$(NSIM_VERSION); rm nmag-$(NSIM_VERSION)-all.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-all.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION)"
+	ssh www-data@$(WEBSERVER) "cd /var/local/www/virtual-hosts/nmag/webroot/nmag/$(NSIM_VERSION)/download; echo 'OK 1'; tar xzf nmag-$(NSIM_VERSION)-core.tar.gz; echo 'OK 2'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 3'; rm nmag-$(NSIM_VERSION)-core.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-core.tar.gz nmag-$(NSIM_VERSION); echo 'OK 4'; rm -rf nmag-$(NSIM_VERSION); tar xzf nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 5'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 6'; rm nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 7'; tar cvzf nmag-$(NSIM_VERSION)-all.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION)"
 
 # XXX NOTE: add .PHONY line!
