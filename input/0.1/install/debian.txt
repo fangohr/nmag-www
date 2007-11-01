@@ -24,7 +24,7 @@ Alternatively, one may add the following line to ``/etc/apt/sources.list``::
  deb http://nmag.soton.ac.uk/debian/ stable unofficial
 
 Then, an ``aptitude update`` (or ``apt-get update``), followed by 
-``aptitide install nsim`` (or ``apt-get install nsim``) will suffice 
+``aptitude install nsim`` (or ``apt-get install nsim``) will suffice 
 to install the system (and resolve all the dependencies).
 
 Note: if you have a beta-tester password, you may gain access to the
