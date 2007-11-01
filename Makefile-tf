@@ -6,7 +6,7 @@ TAR_SVNEXCLUDE=--anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn 
 # Note: this variable can and will be overridden via "make NSIM_VERSION=0.1 all".
 
 NSIM_VERSION=devel
-NSIM_BRANCH=$(patsubst branches/devel,trunk,branches/$(NSIM_VERSION))
+NSIM_BRANCH=$(patsubst tags/release/devel,trunk,tags/release/$(NSIM_VERSION))
 DEBVERSION=$(NSIM_VERSION:devel=0.9999)
 SRCDIR=nsim-$(NSIM_VERSION)
 
@@ -98,7 +98,11 @@ tarballs: fetchtrunk installation-system nsim
 
 	echo " *** ADDING NSIM SOURCES ARCHIVE *** "
 
+	echo "tarball" >tmp/$(SRCDIR)/nmag/nsim/interface/nmag/DISTMODE
+
 	tar --directory tmp/$(SRCDIR) $(TAR_SVNEXCLUDE) --exclude=nmag/nsim/info -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-core.tar nmag/nsim nmag/doc
+
+	rm tmp/$(SRCDIR)/interface/nmag/DISTMODE
 
 	# This should not be necessary, as we built that manual anyway when we made installation-system:
 	#tar --directory $(INST_SYSTEMDIR) -rf output/$(NSIM_VERSION)/download/nmag-$(NSIM_VERSION)-all.tar nmag/INSTALL.pdf nmag/INSTALL.html
