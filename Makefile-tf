@@ -145,4 +145,9 @@ debian-package: nsim manuals fetchtrunk
 web-publish: webroot
 	rsync -avz --exclude '.svn' --delete -e ssh webserver-webroot/nmag/ www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
 
+	# Hans insists on having the tarball use a different toplevel directory name.
+        # We repackage on the webserver:
+
+	ssh www-data@$(WEBSERVER) "cd /var/local/www/virtual-hosts/nmag/webroot/nmag/current/download; tar xzf nmag-$(NSIM_VERSION)-core.tar.gz; mv nmag nmag-$(NSIM_VERSION); rm nmag-$(NSIM_VERSION)-core.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-core.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION); tar xzf nmag-$(NSIM_VERSION)-all.tar.gz; mv nmag nmag-$(NSIM_VERSION); rm nmag-$(NSIM_VERSION)-all.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-all.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION)"
+
 # XXX NOTE: add .PHONY line!
