@@ -12,7 +12,7 @@ SRCDIR=nsim-$(NSIM_VERSION)
 
 INST_SYSTEMDIR=tmp/nmag-$(NSIM_VERSION)
 
-all: html-toplevel current-link tarballs debian-package
+all: html-toplevel r2w-update current-link tarballs debian-package
 
 # === KNOWN VERSIONS ===
 
@@ -46,16 +46,21 @@ webroot: all
 current-link:
 	rm -f output/current
 	#	cd output; ln -s devel current
-	cd output; ln -s 0.099 current
+	cd output; ln -s 0.1 current
 
 
 # This builds the "outer" HTML structure which contains general
 # explanations on installation, etc.  plus links to the individual
 # versions:
 
+r2w-call:
+	#get current svnversion and release
+	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/tags/release/$(NSIM_VERSION)/svnversion input/NSIM_VERSION/svnversion
+	cd input; r2w
+	
+
 html-toplevel: manuals
 	cat input/0.1/install/_a_index input/0.1/install/_a_INSTALL > input/0.1/install/install_a.txt
-	cd input; r2w
 
 installation-system:
 	mkdir -p $(INST_SYSTEMDIR)/nmag
