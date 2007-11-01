@@ -13,21 +13,21 @@ SRCDIR=nsim-$(NSIM_VERSION)
 
 INST_SYSTEMDIR=tmp/nmag-$(NSIM_VERSION)
 
-all: html-toplevel r2w-update current-link tarballs debian-package
+all: html-toplevel r2w-call current-link tarballs debian-package
 
 # === KNOWN VERSIONS ===
 
 devel:
-	make -f Makefile-tf NSIM_VERSION=devel all
+	make -f Makefile NSIM_VERSION=devel all
 
 # Experimental branch to test this version-aware build system:
 0.099:
-	make -f Makefile-tf NSIM_VERSION=0.099 all
+	make -f Makefile NSIM_VERSION=0.099 all
 
 
 # Does not exist yet:
 0.1:
-	make -f Makefile-tf NSIM_VERSION=0.1 all
+	make -f Makefile NSIM_VERSION=0.1 all
 
 # === /KNOWN VERSIONS ===
 
@@ -54,15 +54,16 @@ current-link:
 # explanations on installation, etc.  plus links to the individual
 # versions:
 
-r2w-call:
-	#get current svnversion and release
-	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/tags/release/$(NSIM_VERSION)/svnversion input/$(NSIM_VERSION)/svnversion
-	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/tags/release/$(NSIM_VERSION)/interface/nmag4/RELEASE input/$(NSIM_VERSION)/release_version.uyu
+#The pure r2w-stuff
+
+r2w-call: 
+	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH)/svnversion input/$(NSIM_VERSION)/svnversion
+	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH)/interface/nmag4/RELEASE input/$(NSIM_VERSION)/release_version.uyu
 	cd input; r2w
-	
+
 
 html-toplevel: manuals
-	cat input/0.1/install/_a_index input/0.1/install/_a_INSTALL > input/0.1/install/install_a.txt
+	cat input/$(NSIM_VERSION)/install/_a_index input/$(NSIM_VERSION)/install/_a_INSTALL > input/$(NSIM_VERSION)/install/install_a.txt
 
 installation-system:
 	mkdir -p $(INST_SYSTEMDIR)/nmag
