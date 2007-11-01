@@ -77,7 +77,7 @@ follow `these installation instructions <install_a.html>`__.
 Method B: Debian package
 ------------------------
 
-Please consult the `detailed instructions for Debian systems <../../debian.html>`__ 
+Please consult the `detailed instructions for Debian systems <debian.html>`__ 
 for an explanation how to install nmag on a Debian based (for now, only i386) Linux 
 system in a convenient way.
 
