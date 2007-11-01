@@ -20,6 +20,20 @@ required other software from source.
 
 
 
+Method B: Debian package
+------------------------
+
+Download deb file directly from http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386 (see also `instructions <install/debian.html>`__)
+
+
+Method C: Knoppix CD
+--------------------
+
+Download the iso image from `this directory <http://nmag.soton.ac.uk/cd-images>`__.
+
+
+
+
 
 
 

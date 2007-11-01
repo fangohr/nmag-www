@@ -85,5 +85,5 @@ Method C: Knoppix CD
 --------------------
 
 The nmag team also provides bootable Linux live-CDs (based on Knoppix) containing 
-the nmag system. Please consult our `live-CD instructions <knoppix.html>`.
+the nmag system. Please consult our `live-CD instructions <knoppix.html>`__.
 

@@ -12,7 +12,21 @@ restindex
 Running (Installing) nmag from the Knoppix CD
 =============================================
 
-(to be written)
+Knoppix (http://www.knopper.net/knoppix/index-en.html) provides a
+Linux system that can be booted directly from CD. The nmag team has
+tailored a Knoppix CD so that the nmag system can be tested easily
+(without having to install Linux). The CD should boot on most Intel PC
+hardware.
+
+This 'installation' should be as easy as booting from the CD. 
+
+
+There is also the possibility of booting this CD within a virtual
+machine (such as the `VMWare <http://www.vmware.com>`__). While one needs to
+install the virtual machine software in the host system, this approach
+allows running the Knoppix Linux alongside the host system.
+
+An iso image for the Knoppix CD is available in `this directory <http://nmag.soton.ac.uk/cd-images>`__.
 
 
 
