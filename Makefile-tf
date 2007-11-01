@@ -143,6 +143,7 @@ debian-package: nsim manuals fetchtrunk
 	cp -a tmp/nsim-build/nmag/nsim/pyfem3/pyfem3 debian/packages/nsim/bin/pyfem
 	cd debian/packages/nsim; debuild -us -uc
 	mv debian/packages/nsim_*.{dsc,changes,deb,tar.gz} debian/web/
+	cd debian/web; rm debian; ln -s . debian
 	cd debian/web; make
 
 # NOTE: not adjusted yet:
