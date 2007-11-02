@@ -36,10 +36,10 @@ mrproper:
 	rm -rf output/*/download/*.tar.gz
 	rm -rf webserver-webroot/*
 
-webroot: all
+webroot: 
 	mkdir webserver-webroot || /bin/true # ensure it exists
 	rsync -auv --exclude .svn output/* webserver-webroot/nmag/
-	rsync -auv --exclude Makefile debian/web/debian/ webserver-webroot/debian/
+	rsync -auv --exclude Makefile --exclude .svn debian/web/debian/ webserver-webroot/debian/
 
 
 # This introduces the link current -> [current version]:
@@ -156,9 +156,12 @@ debian-package: nsim manuals fetchtrunk
 web-publish:
 	rsync -avz --exclude '.svn' --delete -e ssh webserver-webroot/nmag/ www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
 
+
+
 	# Hans insists on having the tarball use a different toplevel directory name.
         # We repackage on the webserver:
 
+web-repackage:
 	ssh www-data@$(WEBSERVER) "cd /var/local/www/virtual-hosts/nmag/webroot/nmag/$(NSIM_VERSION)/download; echo 'OK 1'; tar xzf nmag-$(NSIM_VERSION)-core.tar.gz; echo 'OK 2'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 3'; rm nmag-$(NSIM_VERSION)-core.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-core.tar.gz nmag-$(NSIM_VERSION); echo 'OK 4'; rm -rf nmag-$(NSIM_VERSION); tar xzf nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 5'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 6'; rm nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 7'; tar cvzf nmag-$(NSIM_VERSION)-all.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION)"
 
 # XXX NOTE: add .PHONY line!
