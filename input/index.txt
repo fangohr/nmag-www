@@ -25,9 +25,9 @@ Southampton <http://www.soton.ac.uk>`__ and released under the `GNU GPL
 News
 ----
 
-* *1 November 2007*
+* *2 November 2007*
 
-  First release, version `0.1 beta (4585) <0.1/index.html>`__ available.
+  First release, version `0.1 beta (4806) <0.1/index.html>`__ available.
 
 
 Versions
