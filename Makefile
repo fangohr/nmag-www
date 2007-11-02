@@ -169,3 +169,9 @@ web-repackage-local:
 	cd webserver-webroot/nmag/$(NSIM_VERSION)/download; echo 'OK 1'; tar xzf nmag-$(NSIM_VERSION)-core.tar.gz; echo 'OK 2'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 3'; rm nmag-$(NSIM_VERSION)-core.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-core.tar.gz nmag-$(NSIM_VERSION); echo 'OK 4'; rm -rf nmag-$(NSIM_VERSION); tar xzf nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 5'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 6'; rm nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 7'; tar cvzf nmag-$(NSIM_VERSION)-all.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION)
 
 # XXX NOTE: add .PHONY line!
+
+
+
+#Hans preferred command to update everything:
+#
+#time make NSIM_VERSION=0.1 LIBSOURCE_FILE=/var/local/nmag/pkgs.tar all web-repackage-local web-publish
