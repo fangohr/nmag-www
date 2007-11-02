@@ -13,7 +13,7 @@ SRCDIR=nsim-$(NSIM_VERSION)
 
 INST_SYSTEMDIR=tmp/nmag-$(NSIM_VERSION)
 
-all: html-toplevel r2w-call current-link tarballs debian-package
+all: html-toplevel r2w-call current-link tarballs debian-package webroot 
 
 # === KNOWN VERSIONS ===
 
@@ -40,6 +40,7 @@ webroot:
 	mkdir webserver-webroot || /bin/true # ensure it exists
 	rsync -auv --exclude .svn output/* webserver-webroot/nmag/
 	rsync -auv --exclude Makefile --exclude .svn debian/web/debian/ webserver-webroot/debian/
+	cd webserver-webroot/debian; rm -f debian; ln -s . debian
 
 
 # This introduces the link current -> [current version]:
@@ -145,8 +146,8 @@ debian-package: nsim manuals fetchtrunk
 	bin/svnversion-to-debian-changelog.pl $(DEBVERSION)
 	cp -a tmp/nsim-build/nmag/nsim/pyfem3/pyfem3 debian/packages/nsim/bin/pyfem
 	cd debian/packages/nsim; debuild -us -uc
+	cd debian/web; perl -MFile::Find -e 'sub w{shift; m/nsim.*deb/ and unlink};find({no_chdir=>1,wanted=>\&w},".");'
 	mv debian/packages/nsim_*.{dsc,changes,deb,tar.gz} debian/web/
-	cd debian/web; rm debian; ln -s . debian
 	cd debian/web; make
 
 # NOTE: not adjusted yet:
@@ -163,5 +164,8 @@ web-publish:
 
 web-repackage:
 	ssh www-data@$(WEBSERVER) "cd /var/local/www/virtual-hosts/nmag/webroot/nmag/$(NSIM_VERSION)/download; echo 'OK 1'; tar xzf nmag-$(NSIM_VERSION)-core.tar.gz; echo 'OK 2'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 3'; rm nmag-$(NSIM_VERSION)-core.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-core.tar.gz nmag-$(NSIM_VERSION); echo 'OK 4'; rm -rf nmag-$(NSIM_VERSION); tar xzf nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 5'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 6'; rm nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 7'; tar cvzf nmag-$(NSIM_VERSION)-all.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION)"
+
+web-repackage-local:
+	cd webserver-webroot/nmag/$(NSIM_VERSION)/download; echo 'OK 1'; tar xzf nmag-$(NSIM_VERSION)-core.tar.gz; echo 'OK 2'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 3'; rm nmag-$(NSIM_VERSION)-core.tar.gz; tar cvzf nmag-$(NSIM_VERSION)-core.tar.gz nmag-$(NSIM_VERSION); echo 'OK 4'; rm -rf nmag-$(NSIM_VERSION); tar xzf nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 5'; mv nmag nmag-$(NSIM_VERSION); echo 'OK 6'; rm nmag-$(NSIM_VERSION)-all.tar.gz; echo 'OK 7'; tar cvzf nmag-$(NSIM_VERSION)-all.tar.gz nmag-$(NSIM_VERSION); rm -rf nmag-$(NSIM_VERSION)
 
 # XXX NOTE: add .PHONY line!

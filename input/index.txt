@@ -27,7 +27,7 @@ News
 
 * *2 November 2007*
 
-  First release, version `0.1 beta (4806) <0.1/index.html>`__ available.
+  First release, version `0.1 beta (4625) <0.1/index.html>`__ available.
 
 
 Versions
