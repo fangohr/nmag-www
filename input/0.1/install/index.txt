@@ -56,7 +56,7 @@ There is currently no nmag version for Windows. You have two options of running 
      package`_ to install nmag. 
 
    * Or you can use the CD from `Method C: Knoppix CD`_ and simply boot
-   * the virtual machine from this CD.
+     the virtual machine from this CD.
 
 
 
@@ -71,8 +71,9 @@ Links to installation instructions
 Method A: compile everything from source
 ----------------------------------------
 
-After downloading the `nmag-0.1.tar.gz <../download.html>`__ archive, 
+After downloading the `nmag-0.1-all.tar.gz <../download.html>`__ archive, 
 follow `these installation instructions <install_a.html>`__.
+
 
 Method B: Debian package
 ------------------------
