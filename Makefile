@@ -140,7 +140,7 @@ manuals: installation-system nsim
 
 
 debian-package: nsim manuals fetchtrunk
-	rsync -av --delete --exclude '*~' --exclude '.svn' tmp/nsim-build/nmag/nsim/interface/* debian/packages/nsim/interface/
+	rsync -av --delete --exclude '*~' --exclude '*.pyc' --exclude '.svn' tmp/nsim-build/nmag/nsim/interface/* debian/packages/nsim/interface/
 	cp -a tmp/nsim-build/nmag/nsim/bin/n* debian/packages/nsim/bin/
 	cp debian/adjustments/* debian/packages/nsim/bin/
 	bin/svnversion-to-debian-changelog.pl $(DEBVERSION)
