@@ -34,33 +34,34 @@ to install the system (and resolve all the dependencies).
 Notes for Ubuntu
 ----------------
 
-The Ubuntu libpetsc deviates from the Debian package in subtle
-ways. In particular, the following error is produced on Ubuntu (Gutsy)
-when trying to start nsim::
+Nsim employs the PETSc library, which provides parallelizable linear
+algebra. Unfortunately, Ubuntu's libpetsc package appears to be
+broken. Trying to install and start nsim on Ubuntu 7.10 (Gutsy Gibbon)
+gives this error message::
 
   $ nsim
   /usr/bin/pyfem: symbol lookup error: /usr/lib/libpetsc.so.2.3.2:
   undefined symebl: queue
 
 We have contacted the Ubuntu developers and asked to resolve this
-issue. In the mean time, what you can do for now is to download this
-file:
+issue. In the mean time, one workaround that reportedly works is to
+replace the Ubuntu libpetsc package with Debian's. (Installing Debian
+packages in Ubuntu seems to be somewhat frowned upon by Ubuntu
+developers, but in this particular case it should be harmless.)
 
-http://ftp.cz.debian.org/debian/pool/main/p/petsc/libpetsc2.3.2_2.3.2-1_i386.deb
+To do so, first download the debian libpetsc package from this URL:
 
-This is the debian version of the libpetsc package.
+http://ftp.debian.org/debian/pool/main/p/petsc/libpetsc2.3.2_2.3.2-1_i386.deb
 
 Then, as root, give the command::
 
-  $ dpkg -i libpetsc2.3.2_2.3.2-1_i386.deb
+  # dpkg -i libpetsc2.3.2_2.3.2-1_i386.deb
 
-to replace your Ubuntu libpetsc package by its Debian cousin. This
-should not upset anything on your system. Should you, however,
-nevertheless want to revert this change, you can just say::
+to replace your Ubuntu libpetsc package by its Debian cousin. While 
+this should not upset anything on your system, you can, however,
+nevertheless revert this change any time by giving the command::
 
-  $ aptitude reinstall libpetsc2.3.2
-
-
+  # aptitude reinstall libpetsc2.3.2
 
 
 Installing the developer version
