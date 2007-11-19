@@ -12,6 +12,9 @@ restindex
 Installing nmag on a debian based Linux system
 ==============================================
 
+Generic instructions
+--------------------
+
 To assist easy installation (and de-installation) on debian-based
 Linux systems (such as Ubuntu, Knoppix, or plain Debian), we provide
 (at present, i386 binary-only) packages that contain the nmag library
@@ -26,6 +29,42 @@ Alternatively, one may add the following line to ``/etc/apt/sources.list``::
 Then, an ``aptitude update`` (or ``apt-get update``), followed by 
 ``aptitude install nsim`` (or ``apt-get install nsim``) will suffice 
 to install the system (and resolve all the dependencies).
+
+
+Notes for Ubuntu
+----------------
+
+The Ubuntu libpetsc deviates from the Debian package in subtle
+ways. In particular, the following error is produced on Ubuntu (Gutsy)
+when trying to start nsim::
+
+  $ nsim
+  /usr/bin/pyfem: symbol lookup error: /usr/lib/libpetsc.so.2.3.2:
+  undefined symebl: queue
+
+We have contacted the Ubuntu developers and asked to resolve this
+issue. In the mean time, what you can do for now is to download this
+file:
+
+http://ftp.cz.debian.org/debian/pool/main/p/petsc/libpetsc2.3.2_2.3.2-1_i386.deb
+
+This is the debian version of the libpetsc package.
+
+Then, as root, give the command::
+
+  $ dpkg -i libpetsc2.3.2_2.3.2-1_i386.deb
+
+to replace your Ubuntu libpetsc package by its Debian cousin. This
+should not upset anything on your system. Should you, however,
+nevertheless want to revert this change, you can just say::
+
+  $ aptitude reinstall libpetsc2.3.2
+
+
+
+
+Installing the developer version
+--------------------------------
 
 Note: if you have a beta-tester password, you may gain access to the
 most recent developer debian package by using the following line instead::
