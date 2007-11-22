@@ -42,7 +42,9 @@ Notes for Ubuntu
 ----------------
 
 Nsim employs the PETSc library, which provides parallelizable linear
-algebra. Unfortunately, Ubuntu's libpetsc package appears to be
+algebra. This appears to work fine on Ubuntu 7.04 (Feisty Fawn).
+
+Unfortunately, Ubuntu's libpetsc package appears to be
 broken. Trying to install and start nsim on Ubuntu 7.10 (Gutsy Gibbon)
 gives this error message::
 
