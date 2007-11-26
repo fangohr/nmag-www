@@ -20,7 +20,7 @@ try:
    #f=open(filepath,'r')
    #version=f.readline().replace(' ','').strip() #remove spaces
    version=include('release_version.uyu','home')+"\n"
-   path=os.path.join(path_to_root,'images','nmaglogo_v'+version+'.png')
+   path=os.path.join(path_to_root,'images','nmaglogo1.png')
 except IOError:
    path=os.path.join(path_to_root,'images','nmaglogo1.png')
 print """<img src="%s" alt="University of Southampton, nmag, Computational Micromagnetism,  logo"  hspace="0" vspace="1" valign="top">""" % path
