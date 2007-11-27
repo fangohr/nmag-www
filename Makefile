@@ -137,8 +137,6 @@ manuals: installation-system nsim
 	#copy to final destination
 	rsync -auv tmp/nsim-build/nmag/nsim/interface/nmag/manual/* output/$(NSIM_VERSION)/manual
 	rsync -auv $(INST_SYSTEMDIR)/nmag/INSTALL input/$(NSIM_VERSION)/install/_a_INSTALL
-	#copy version specific change log file
-	rsync -auv $(INST_SYSTEMDIR)/nmag/nsim/changelog-$(NSIM_VERSION).txt input/$(NSIM_VERSION)/install/changelog.txt
 
 
 

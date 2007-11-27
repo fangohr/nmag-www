@@ -61,12 +61,15 @@ News
 
 * *2 November 2007*
 
-  First release, version `0.1 beta (4625) <0.1/index.html>`__ available.
+  First release, version 0.1 beta (4625) available.
+
+* *27 November 2007*
+
+  Update `0.1 beta (4785) <0.1/index.html>`__ (mostly bugfixes)
 
 
 Versions
 --------
-
 
 The following versions are available:
 
