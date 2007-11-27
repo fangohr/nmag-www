@@ -22,6 +22,40 @@ Southampton <http://www.soton.ac.uk>`__ and released under the `GNU GPL
 <http://www.gnu.org/licenses/gpl2.txt>`__.
 
 
+Features in brief:
+
+ - based on finite elements (suitable for non-cuboidal structures)
+
+ - problem description in Python, therefore high degree of flexibility
+
+ - inbuilt mesh post processing tools
+
+ - efficient data storage (binary compressed) and extraction into vtk
+   files (of course the raw data can be extracted)
+
+ - arbitrary crystal anisotropy 
+
+ - (pseudo) periodic boundary conditions ("macro geometry approach")
+
+ - thermal fluctuations
+
+
+License and Disclaimer
+----------------------
+
+This software was developed at the University of Southampton, United
+Kingdom. It is released under the GNU General Public License (GNU GPL_) 
+as published by the Free Software Foundation; either version 2, or (at
+your option) any later version.
+
+
+Nmag is an experimental system. Neither the University of Southampton
+nor the authors assume any responsibility whatsoever for its use by
+other parties, and makes no guarantees, expressed or implied, about
+its quality, reliability, or any other characteristic.
+
+
+
 News
 ----
 
@@ -61,3 +95,4 @@ The following versions are available:
   <!-- ENDE GOWEB WEBCOUNTER -->
 
 
+.. _GPL: http://www.gnu.org/licenses/gpl2.txt
