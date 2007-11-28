@@ -155,12 +155,18 @@ debian-package: nsim manuals fetchtrunk
 
 #web-publish: webroot. Note that this will delete any 
 #files on the target that are not at the source location
-web-publish:
+web-publish: web-publish-nmag web-publish-debian
+
+web-publish-nmag:
 	rsync -avz --exclude '.svn' --delete -e ssh webserver-webroot/nmag/ www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
+
+web-publish-debian:
+	rsync -avz --exclude '.svn' --delete -e ssh webserver-webroot/debian/ www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/debian/
 
 #will not delete anything at target location
 web-update:
 	rsync -avz --exclude '.svn' -e ssh webserver-webroot/nmag/ www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/nmag/
+	rsync -avz --exclude '.svn' -e ssh webserver-webroot/debian/ www-data@$(WEBSERVER):/var/local/www/virtual-hosts/nmag/webroot/debian/
 
 
 
