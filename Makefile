@@ -179,4 +179,9 @@ web-repackage-local:
 
 #Hans preferred command to update everything:
 #
+#first tag a new release version with the tool in svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/branches/bin/make-nmag-tag.sh
+
+# Then run on eta
+#
 #time make NSIM_VERSION=0.1 LIBSOURCE_FILE=/var/local/nmag/pkgs.tar all web-repackage-local web-publish
+
