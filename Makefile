@@ -1,7 +1,7 @@
 WEBSERVER=nmag.soton.ac.uk
 DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
 LIBSOURCE_FILE=/var/local/www/webroot/nmag/pkgs.tar
-TAR_SVNEXCLUDE=--anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=*/*/*/*/*.svn --exclude=*/*/*/*/*/*.svn
+TAR_SVNEXCLUDE=--anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=*/*/*/*/*.svn --exclude=*/*/*/*/*/*.svn --exclude=nmag/nsim/obsolete
 
 # Note: this variable can and will be overridden via "make NSIM_VERSION=0.1 all".
 
