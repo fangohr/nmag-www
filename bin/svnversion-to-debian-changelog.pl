@@ -7,7 +7,7 @@ my $ver=shift;
 
 my $changelog_file="debian/packages/nsim/debian/changelog";
 
-my $svnversion=`cd tmp/nsim/; svnversion`;
+my $svnversion=`cat tmp/nsim-build/nmag/nsim/svnversion`;
 
 $svnversion=~/^(\d+)/ or die "Fatal: svnversion is '$svnversion'\n";
 $svnversion=$1;
