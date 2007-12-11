@@ -37,7 +37,12 @@ Manual
 Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf>`__
 
 
+Mailing list
+============
 
+`Searchable archives
+<http://groups.google.com/group/nmag-users>`__ of the
+nmag-users `mailing list <http://nmag.soton.ac.uk/nmag/0.1/manual/html/manual.html#mailing-list>`__.
 
 Changelog
 =========
