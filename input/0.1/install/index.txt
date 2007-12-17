@@ -33,8 +33,8 @@ Other Linux/UNIX
 ----------------
 
 You can compile nmag and required helping libraries from source
-(`download tar file <download/nmag-0.1-all.tar.gz>`__, `Method A
-installation instructions <install/install_a.html>`__)
+(`download tar file <../download/nmag-0.1-all.tar.gz>`__, `Method A
+installation instructions <install_a.html>`__)
 
 
 
