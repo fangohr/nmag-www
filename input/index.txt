@@ -62,17 +62,32 @@ other parties, and makes no guarantees, expressed or implied, about
 its quality, reliability, or any other characteristic.
 
 
+
 News
 ----
+
+* *22 December 2007*
+
+  Update `0.1 beta (4947) <0.1/index.html>`__ (mostly bugfixes)
 
 
 * *27 November 2007*
 
-  Update `0.1 beta (4785) <0.1/index.html>`__ (mostly bugfixes)
+  Update `0.1 beta (4785) (mostly bugfixes)
 
 * *2 November 2007*
 
   First release, version 0.1 beta (4625) available.
+
+
+Mailing list & Contact
+----------------------
+
+`Searchable archives
+<http://groups.google.com/group/nmag-users>`__ of the
+``nmag-users`` `mailing list <http://nmag.soton.ac.uk/nmag/current/manual/html/manual.html#mailing-list>`__. 
+
+The development team can be contacted at nmag@soton.ac.uk.
 
 
 Versions

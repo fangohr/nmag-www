@@ -28,7 +28,7 @@ restindex
 Download
 ========
 
-The  code can be obtained from the `download page <download.html>`__.
+The code can be obtained from the `download page <download.html>`__.
 
 
 Manual
@@ -37,18 +37,49 @@ Manual
 Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf>`__
 
 
-Mailing list
-============
-
-`Searchable archives
-<http://groups.google.com/group/nmag-users>`__ of the
-nmag-users `mailing list <http://nmag.soton.ac.uk/nmag/0.1/manual/html/manual.html#mailing-list>`__.
-
 Changelog
 =========
 
-Release 0.1 beta (4785) 27 November 2007 (current)
+
+Release 0.1 beta (4947) 20 December 2007 (current)
 --------------------------------------------------
+
+* Bug fixes/Improvements
+
+  * resolved ticket 101: Setting
+    anisotropy=nmag.uniaxial_anisotropy(K1=0) in MagMaterial produces
+    an error message;
+ 
+  * resolved ticket 103: When starting from a zero torque configuration the simulation
+    proceeds up to the maximum time (which is 1 s) and here it stops:
+    now an appropriate error message is displayed.
+
+  * resovled ticket 97: Unrecognized architecture causes compilation failure in the
+    bem3d module: now the architecture flag will be empty if the architecture
+    detection fails.
+
+  * reduced setup speed by approximately a factor 2 
+
+  * added new section on sundials tolerances in manual (guided tour)
+
+* Interface changes
+  
+  None.
+
+
+* New features
+  
+  * Writing sundials performance data in log file (_cvode.log)
+
+
+
+
+
+
+
+
+Release 0.1 beta (4785) 27 November 2007
+----------------------------------------
 
 * Bug fixes/Improvements
   
