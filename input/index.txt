@@ -66,6 +66,14 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
+* *04 January 2008* 
+
+  http://nmag.soton.ac.uk back online (again). Please accept our
+  apologies for the unscheduled downtime over the past week. This was
+  due to a (unscheduled) problem with a network switch over the
+  Christmas break, followed by (scheduled) university wide internet
+  outage. We believe that everything should be back to normal now.
+
 * *22 December 2007*
 
   Update `0.1 beta (4947) <0.1/index.html>`__ (mostly bugfixes)
@@ -73,7 +81,7 @@ News
 
 * *27 November 2007*
 
-  Update `0.1 beta (4785) (mostly bugfixes)
+  Update 0.1 beta (4785) (mostly bugfixes)
 
 * *2 November 2007*
 
