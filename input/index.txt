@@ -109,7 +109,10 @@ The following versions are available:
 
 
 
+Acknowledgement
+---------------
 
+The development of the nmag tool has been financially supported by the `EPSRC <http://www.epsrc.ac.uk>`__, Grant GR/T09156/01 (United Kingdom).
 
 
 .. raw:: html
