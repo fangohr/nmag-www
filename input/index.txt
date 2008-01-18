@@ -127,7 +127,7 @@ The development of the nmag tool has been financially supported by the `EPSRC <h
 
   <!-- BEGINN GOWEB WEBCOUNTER -->
   <p><a href="http://www.webcounter.goweb.de"><img src="http://webcounter.goweb.de/7725.GIF" alt="gratis Counter by GOWEB" border="0" vspace="0"></a>
-  <font size="-3" color="#4c4c4c">Visits since 18 Sep 2006</font>
+  <font size="-3" color="#4c4c4c">Visits to this page since 18 Sep 2006</font>
   <!-- ENDE GOWEB WEBCOUNTER -->
 
 
