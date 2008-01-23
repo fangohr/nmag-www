@@ -1,0 +1,12 @@
+restindex
+    crumb: Publications
+    format: rest
+    page-title: Publications nmag/nsim
+    include: No
+    page-description:
+      Publications nmag/nsim
+    /description
+    build: Yes
+/restindex
+
+Currently unpopulated. Overview of publications available `here  <../publications.html>`__

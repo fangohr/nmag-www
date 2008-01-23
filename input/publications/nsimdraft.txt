@@ -1,0 +1,14 @@
+restindex
+    crumb: nsim publications
+    format: rest
+    page-title: Publications nsim multi-physics library
+    include: No
+    page-description:
+      Publications nsim multi-physics library
+    /description
+    build: Yes
+/restindex
+
+ *  Thomas Fischbacher and Hans Fangohr: *On the automatic translation
+    of classical field theory to computer simulations*. In preparation
+    (2008) (`draft <nsim_draft.pdf>`__)
