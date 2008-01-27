@@ -9,6 +9,9 @@ restindex
     build: Yes
 /restindex
 
+Currently unpublished
+---------------------
+
  *  Thomas Fischbacher and Hans Fangohr: *On the automatic translation
     of classical field theory to computer simulations*. In preparation
     (2008) (`draft <nsim_draft.pdf>`__)
