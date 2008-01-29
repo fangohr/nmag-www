@@ -1,0 +1,43 @@
+restindex
+    crumb: nmag 0.1
+    format: rest
+    page-title: nmag - Older changelog entries
+    include: No
+    build: Yes
+    page-description:
+    nmag - Older changelog entries that are not displayed on main page
+    /description
+/restindex
+
+
+
+
+Release 0.1 beta (4785) 27 November 2007
+----------------------------------------
+
+* Bug fixes/Improvements
+  
+  * improved renderening of bitmaps (figures and equations) in html
+    documentation 
+  
+  * install from tar ball was broken (pkgs in wrong directory)
+  
+  
+* Interface changes
+  
+  None.
+  
+  
+* New features
+  
+  * added mini tutorial on micromagnetic simulations to manual
+  
+  * new tool nmeshsort
+
+
+Release 0.1 beta (4625) 02 November 2007
+----------------------------------------
+
+First release.
+
+
