@@ -47,12 +47,12 @@ Release 0.1 beta (5259) 30 January 2008 (current)
 * Bug fixes/Improvements
     
     
-    * ticket 126: Calculation of exchange energy, demag energy, Zeeman
-      energy and total energy had wrong sign; now working correctly.
+  * ticket 126: Calculation of exchange energy, demag energy, Zeeman
+    energy and total energy had wrong sign; now working correctly.
     
-    * increased speed of setup phase slightly.
+  * increased speed of setup phase slightly.
 
-    * decreased memory usage for runs with anisotropy.
+  * decreased memory usage for runs with anisotropy.
     
 
 * Interface changes
