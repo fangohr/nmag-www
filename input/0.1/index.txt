@@ -41,7 +41,7 @@ Changelog
 =========
 
 
-Release 0.1 beta (XXXX) 30 January 2008 (current)
+Release 0.1 beta (5259) 30 January 2008 (current)
 -------------------------------------------------
 
 * Bug fixes/Improvements
@@ -51,6 +51,8 @@ Release 0.1 beta (XXXX) 30 January 2008 (current)
       energy and total energy had wrong sign; now working correctly.
     
     * increased speed of setup phase slightly.
+
+    * decreased memory usage for runs with anisotropy.
     
 
 * Interface changes
@@ -60,7 +62,6 @@ Release 0.1 beta (XXXX) 30 January 2008 (current)
     packages). Users who have older tarballs and want to use MPI
     execution, need to obtain a new tarball to update (updating the
     nsim-core is not sufficient).
-  
 
 * New features
 

@@ -66,6 +66,10 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
+* *30 December 2008* 
+
+  Update `0.1 beta (5259) <0.1/index.html>`__ (bugfixes, minor improvements)
+
 * *04 January 2008* 
 
   http://nmag.soton.ac.uk back online (again). Please accept our
@@ -76,7 +80,7 @@ News
 
 * *22 December 2007*
 
-  Update `0.1 beta (4947) <0.1/index.html>`__ (mostly bugfixes)
+  Update 0.1 beta (4947)  (mostly bugfixes)
 
 
 * *27 November 2007*
