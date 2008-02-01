@@ -68,6 +68,9 @@ binary-arch: build
 	dh_link nsim.1.gz usr/share/man/man1/ipyfem.1.gz 
 
 	cp -a interface $(libdir)/interface
+	mkdir $(libdir)/so
+	cp /usr/local/lib/libsundials_cvode.so* $(libdir)/so
+	cp /usr/local/lib/libsundials_nvec*.so* $(libdir)/so
 	echo "debian-package" > $(libdir)/interface/nmag/DISTMODE
 	cp -a debian/changelog $(docdir)/changelog
 	cd $(docdir) && gzip -9 changelog
