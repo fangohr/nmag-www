@@ -1,3 +1,4 @@
 #!/bin/sh
 export PYTHONPATH=/usr/lib/nsim/interface:$PYTHONPATH
+export NSIM_SUNDIALS_PATH=/usr/lib/nsim/so
 taskset 0x00000001 /usr/bin/pyfem $*
