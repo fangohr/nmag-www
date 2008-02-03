@@ -41,12 +41,16 @@ Changelog
 =========
 
 
-Release 0.1 beta (5259) 30 January 2008 (current)
+Release 0.1 beta (5274) 3 February 2008 (current)
 -------------------------------------------------
 
+* As 0.1 beta (5259) but with working debian package.
+
+Release 0.1 beta (5259) 30 January 2008
+---------------------------------------
+
 * Bug fixes/Improvements
-    
-    
+   
   * ticket 126: Calculation of exchange energy, demag energy, Zeeman
     energy and total energy had wrong sign; now working correctly.
     
@@ -67,6 +71,7 @@ Release 0.1 beta (5259) 30 January 2008 (current)
 
   None
 
+Note: there is no debian package for this release.
 
 Release 0.1 beta (4947) 20 December 2007
 ----------------------------------------
