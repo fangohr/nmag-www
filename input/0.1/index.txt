@@ -41,8 +41,24 @@ Changelog
 =========
 
 
-Release 0.1 beta (5274) 3 February 2008 (current)
+Release 0.1 beta (5282) 5 February 2008 (current)
 -------------------------------------------------
+
+* Interface changes
+
+  * Have changed version of petsc in tarball distribution. Used to be
+    2.3.1 and is now 2.3.2. (to be consistent with debian
+    packages). Users who have older tarballs, need to obtain a new
+    tarball to update (updating the nsim-core is not sufficient).
+
+* Bug fixes/Improvemest
+
+  * The change in the petsc version increases the setup phase
+    significantly (for installations from source).
+
+
+Release 0.1 beta (5274) 3 February 2008
+---------------------------------------
 
 * As 0.1 beta (5259) but with working debian package.
 
@@ -86,7 +102,7 @@ Release 0.1 beta (4947) 20 December 2007
     proceeds up to the maximum time (which is 1 s) and here it stops:
     now an appropriate error message is displayed.
 
-  * resovled ticket 97: Unrecognized architecture causes compilation failure in the
+  * resolved ticket 97: Unrecognized architecture causes compilation failure in the
     bem3d module: now the architecture flag will be empty if the architecture
     detection fails.
 

@@ -66,9 +66,9 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
-* *03 February 2008* 
+* *05 February 2008* 
 
-  Update `0.1 beta (5274) <0.1/index.html>`__ (bugfixes, minor improvements)
+  Update `0.1 beta (5282) <0.1/index.html>`__ 
 
 * *04 January 2008* 
 
@@ -80,12 +80,12 @@ News
 
 * *22 December 2007*
 
-  Update 0.1 beta (4947)  (mostly bugfixes)
+  Update 0.1 beta (4947)  
 
 
 * *27 November 2007*
 
-  Update 0.1 beta (4785) (mostly bugfixes)
+  Update 0.1 beta (4785) 
 
 * *2 November 2007*
 
