@@ -20,7 +20,7 @@ restindex
   #>
 
 
-.. coment:
+.. comment:
   .. contents:: Table of contents
 
 
@@ -51,7 +51,7 @@ Release 0.1 beta (5282) 5 February 2008 (current)
     packages). Users who have older tarballs, need to obtain a new
     tarball to update (updating the nsim-core is not sufficient).
 
-* Bug fixes/Improvemest
+* Bug fixes/Improvements
 
   * The change in the petsc version increases the setup phase
     significantly (for installations from source).
@@ -102,7 +102,7 @@ Release 0.1 beta (4947) 20 December 2007
     proceeds up to the maximum time (which is 1 s) and here it stops:
     now an appropriate error message is displayed.
 
-  * resolved ticket 97: Unrecognized architecture causes compilation failure in the
+  * resolved ticket 97: Unrecognised architecture causes compilation failure in the
     bem3d module: now the architecture flag will be empty if the architecture
     detection fails.
 
