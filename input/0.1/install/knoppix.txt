@@ -27,5 +27,5 @@ allows running the Knoppix Linux alongside the host system.
 
 An iso image for the Knoppix CD is available in `this directory <http://nmag.soton.ac.uk/cd-images>`__.
 
-The current version of code on the Knoppix cd is *nmag 0.1 beta (4625)* from 02 November 2007.
+The current version of code on the Knoppix CD is *nmag 0.1 beta (5282)* from 05 February 2008.
 
