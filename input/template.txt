@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <title><% title %></title>
-    <link rel="stylesheet" href="<% path_to_root %>css/rest2web_modified.css" type="text/css" />
+    <link rel="stylesheet" href="<% path_to_root %>css/navigation_02_2008.css" type="text/css" />
 
-<link rel="stylesheet" href="<% path_to_root %>css/nmag_10_2007.css" type="text/css" />
+<link rel="stylesheet" href="<% path_to_root %>css/body_02_2008.css" type="text/css" />
 
 </head>
 
@@ -15,38 +15,24 @@
 
 #This piece of code will load the right bitmap as the header bar.
 import os
-try:
-   #filepath= os.path.join(os.path.split(pagepath)[0],'release_version.uyu')
-   #f=open(filepath,'r')
-   #version=f.readline().replace(' ','').strip() #remove spaces
-   version=include('release_version.uyu','home')+"\n"
-   path=os.path.join(path_to_root,'images','nmaglogo1.png')
-except IOError:
-   path=os.path.join(path_to_root,'images','nmaglogo1.png')
+path=os.path.join(path_to_root,'images','nmaglogo2.png')
 print """<img src="%s" alt="University of Southampton, nmag, Computational Micromagnetism,  logo"  hspace="0" vspace="1" valign="top">""" % path
 #>
 </div>
 
 <div id="wrap"> 
 
-<div id="header-section">
-  <div id="header">
-  <ul>
-    <# print_crumbs(breadcrumbs) #>
-  </ul>
-</div>
-</div>
 
 <table>
   <tr>
     <td valign="top" align="left" width="25%">
-      <img src="<% path_to_root %>images/IronPalladium.png" width="137" height="134" alt="logo" vspace="1" hspace="2" >
+      <!--<img src="<% path_to_root %>images/IronPalladium.png" width="137" height="134" alt="logo" vspace="1" hspace="2" >-->
 
     <div id="left-column">
     <div id="sidie">
       <ul>
 	<li class="left-navheader-first">
-	<a href="<% indexpage['target'] %>" class="left-navheader">nmag <% include('release_version.uyu','XXX?') %></a>
+	<a href="<% indexpage['target'] %>" class="left-navheader"><% include('section_title.uyu','XXX?') %></a>
 	</li> 
         <# minibar(sections, displayval="crumb", liststart='', listend='',
                         intro='<li class="left-navheader">'+ include('mynavtitle2.uyu','Pages')+'</li>' ,subsect=False)
@@ -58,6 +44,16 @@ print """<img src="%s" alt="University of Southampton, nmag, Computational Micro
     </td>
     <!-- main content cell first, with rowspan=2 -->
     <td valign="top" rowspan="2">
+
+
+<div id="header-section">
+  <div id="header">
+  <ul>
+    <# print_crumbs(breadcrumbs,divider='|') #>
+  </ul>
+</div>
+</div>
+
     <div id="middle-column">
       <a name="startcontent" id="startcontent"></a>
     <div id="gallery">
@@ -75,7 +71,7 @@ print """<img src="%s" alt="University of Southampton, nmag, Computational Micro
   </tr>
   </table>
 
-  <hr />
+
 <div id="footer">
 
   <!--
