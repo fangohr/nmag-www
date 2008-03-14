@@ -18,25 +18,45 @@ Generic instructions
 To assist easy installation (and de-installation) on debian-based
 Linux systems (such as Ubuntu, Knoppix, or plain Debian), we provide
 (at present, i386 binary-only) packages that contain the nmag library
-and the nsim framework. These can either be obtained directly from 
-`http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/ <http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/>`__ and installed manually 
-(using ``dpkg -i [packagefile.deb]``).
+and the nsim framework. 
 
+For Debian experts
+~~~~~~~~~~~~~~~~~~
+
+Nsim can be obtained directly from
+`http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/
+<http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/>`__
+and installed manually (using ``dpkg -i [packagefile.deb]``). However,
+one needs to fulfill all requirements manually.
+
+Recommended procedure
+~~~~~~~~~~~~~~~~~~~~~
+  
 Alternatively, one may add the following line to ``/etc/apt/sources.list``::
+  
+    deb http://nmag.soton.ac.uk/debian/ stable unofficial
+  
+to get access to the nsim package.
 
-  deb http://nmag.soton.ac.uk/debian/ stable unofficial
+Further, add a second line to ``/etc/apt/sources.list``::
 
-Then, an:: 
+    deb http://ftp.de.debian.org/debian/ etch main non-free
 
-  $ aptitude update
+to get access to the `libparmetis3.1` package which is required by nsim.
 
-(or ``apt-get update``), followed by:: 
+Then, run:: 
+  
+    $ aptitude update
+  
+to update the list of packages that your debian installation is aware of. Finally, run
+  
+    $ aptitude install nsim
+  
+to install nsim. This will automatically install all required dependencies.
 
-  $ aptitude install nsim
 
-(or ``apt-get install nsim``) will suffice 
-to install the system (and resolve all the dependencies).
 
+  
 
 Notes for Ubuntu
 ----------------
