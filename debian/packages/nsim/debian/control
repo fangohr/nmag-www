@@ -23,5 +23,5 @@ Description: The "nsim" finite element field theory simulation framework
  nsim/nmag under package manager control in order to make
  installation, upgrading, and de-installation an easy and
  straightforward task.
-
+ .
  The nmag home page is http://nmag.soton.ac.uk
