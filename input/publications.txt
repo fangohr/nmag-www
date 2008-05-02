@@ -19,12 +19,14 @@ Publications
  *  Giuliano Bordignon, Matteo Franchin, Jurgen P. Zimmermann, 
     Peter A. J. de Groot and Hans Fangohr:
     *Numerical studies of demagnetizing effects in triangular ring arrays*, 
-    JAP, in print (2008)
+    JAP, **103** 07D932 (`online <http://link.aip.org/link/?JAP/103/07D932>`__)  (2008)
 
  *  Matteo Franchin, Giuliano Bordignon, Peter A. J. de Groot, Thomas
     Fischbacher, Jurgen P. Zimmermann, Guido Meier and Hans Fangohr:
-    *Spin-polarized currents in exchange spring systems*, JAP, in
-    print (2008) 
+    *Spin-polarized currents in exchange spring systems*, JAP,
+    **103**, 07A504 (2008), (`online
+    <http://link.aip.org/link/?JAPIAU/103/07A504/1>`__)
+    DOI:10.1063/1.2837665
 
  *  Matteo Franchin, J.P. Zimmermann, Thomas Fischbacher, Giuliano
     Bordignon, Peter de Groot and Hans Fangohr: *Micromagnetic
