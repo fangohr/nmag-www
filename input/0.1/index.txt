@@ -40,6 +40,68 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
+Release 0.1 beta (5518) 2 June 2008 (current)
+---------------------------------------------
+
+
+* Bug fixes/Improvements/New Features
+  
+  * The current release, distribution mode, svn release number and
+    location of the nmag-python libraries are provided (to stdout and
+    logfile) when a simulation object is created. 
+  
+  * Re-designed and implemented calculation of the Jacobi matrix: The
+    new approach 
+  
+    - slightly more computation time is spent during the main simulation
+      whenever the Jacobian needs to be re-computed
+  
+    - the setup phase takes (notably) less time.
+  
+    - simulations with the new approach need about 30% less memory 
+  
+  * Matrix setup is now parallised.
+  
+  * Documented the use of MPI in the manual to carry out parallel runs.
+  
+  * Bugfix: Code now working with MPICH2.
+  
+  * Bugfix: The compilation from source works (again) for Mac OS X.
+  
+  * Switched to pvode (the parallel solver for time integration) by default.
+    Updated timestepper tolerances section accordingly.
+  
+  * Feature enhancement: can save spatially resolved fields using the
+    save_data command in any order (previsouly, it was possible to stick
+    to the same set of saved fields for every saved timestep). 
+  
+  * Update of manual in several places (including recommendation how to
+    cite nmag in FAQ).
+  
+  * A number of (smaller) bugfixes.
+
+  
+* Interface changes
+
+  * The use of ``row`` for the analyses of nmag's ``_dat.h5`` data files
+    has been superseeded with the use of ``id``\ s (see explanation in
+    manual).
+  
+    This has the following side effect: the nmagpp command labels vtk
+    file using the mask NAME-00XX.vtk where XX is an increasing
+    number. This used to be the 'row' number for saved fields. Because
+    it is now possible to save any fields in any order, the value of XX
+    is now replaced with the unique id of a saved configuration. This
+    also allows easier identification of a saved configuration with an
+    entry in the ndt file (via the id).
+  
+  * nmagpp used to have a switch ``--field`` which allowed to choose
+    *one* field that should be dumped (``--dump``) or converted to vtk
+    files (``--vtk``). The functionality has now been extended so that
+    *a list of fields* can be given, such as ``nmagpp --fields m,phi,H_demag --vtk myvtkfiles.vtk  mysimulation_dat.h5``. Consequently, the switch has been renamed
+    from ``--field`` to ``--fields``.
+
+
 
 Release 0.1 beta (5282) 5 February 2008 (current)
 -------------------------------------------------
