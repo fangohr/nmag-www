@@ -83,7 +83,7 @@ Release 0.1 beta (5518) 2 June 2008 (current)
   
 * Interface changes
 
-  * The use of ``row`` for the analyses of nmag's ``_dat.h5`` data files
+  * The use of ``row`` for the analysis of nmag's ``_dat.h5`` data files
     has been superseeded with the use of ``id``\ s (see explanation in
     manual).
   
@@ -103,8 +103,8 @@ Release 0.1 beta (5518) 2 June 2008 (current)
 
 
 
-Release 0.1 beta (5282) 5 February 2008 (current)
--------------------------------------------------
+Release 0.1 beta (5282) 5 February 2008
+---------------------------------------
 
 * Interface changes
 
