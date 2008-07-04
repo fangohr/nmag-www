@@ -1,6 +1,9 @@
 WEBSERVER=nmag.soton.ac.uk
 DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
-LIBSOURCE_FILE=/var/local/www/webroot/nmag/pkgs.tar
+#on alpha
+#LIBSOURCE_FILE=/var/local/www/webroot/nmag/pkgs.tar
+#on eta (and we use eta to update the packages)
+LIBSOURCE_FILE=/var/local/nmag/pkgs.tar
 TAR_SVNEXCLUDE=--anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn --exclude=*/*/*/*.svn --exclude=*/*/*/*/*.svn --exclude=*/*/*/*/*/*.svn --exclude=nmag/nsim/obsolete --exclude=nmag/nsim/interface/nmesh/doc --exclude=nmag/nsim/interface/nmeshlj/doc --exclude=nmag/nsim/devel
 
 # Note: this variable can and will be overridden via "make NSIM_VERSION=0.1 all".
@@ -58,6 +61,8 @@ current-link:
 #The pure r2w-stuff
 
 r2w-call: 
+	echo "NSIM_VERSION is"
+	echo "$(NSIM_VERSION)"
 	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH)/svnversion input/$(NSIM_VERSION)/svnversion
 	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH)/interface/nmag4/RELEASE input/$(NSIM_VERSION)/release_version.uyu
 	cd input; r2w
@@ -70,6 +75,10 @@ installation-system:
 	mkdir -p $(INST_SYSTEMDIR)/nmag
 	svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/dist/src $(INST_SYSTEMDIR)/nmag
 	cd $(INST_SYSTEMDIR)/nmag/doc/installation_manual; make
+
+
+clean:
+	rm -rf tmp/nsim-build/nmag/nsim
 
 
 nsim:
