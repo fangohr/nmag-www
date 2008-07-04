@@ -1,0 +1,14 @@
+restindex
+    crumb: from source
+    format: rest
+    page-title: Installation Manual method A
+    include: Yes
+    page-description:
+      Installation Manual method A - explains how to compile from source
+    /description
+    build: Yes
+/restindex
+
+.. contents:: Table of Contents Installation Method A
+
+
