@@ -11,6 +11,7 @@ TAR_SVNEXCLUDE=--anchored --exclude=*.svn --exclude=*/*.svn --exclude=*/*/*.svn 
 NSIM_VERSION=devel
 NSIM_BRANCH=$(patsubst tags/release/devel,trunk,tags/release/$(NSIM_VERSION))
 
+
 DEBVERSION=$(NSIM_VERSION:devel=0.9999)
 SRCDIR=nsim-$(NSIM_VERSION)
 
@@ -18,9 +19,17 @@ INST_SYSTEMDIR=tmp/nmag-$(NSIM_VERSION)
 
 all: html-toplevel r2w-call current-link tarballs debian-package webroot 
 
+config:
+	echo " NSIM_VERSION:   $(NSIM_VERSION)"
+	echo " NSIM_BRANCH:    $(NSIM_BRANCH)"
+	echo " DEBVERSION:     $(DEBVERSION)"
+	echo " SRCDIR:	       $(SRCDIR)"
+	echo " INST_SYSTEMDIR:  $(INST_SYSTEMDIR)"
+
 # === KNOWN VERSIONS ===
 
-devel:
+devel: #this checks out the trunk
+	make NSIM_VERSION=devel config
 	make -f Makefile NSIM_VERSION=devel all
 
 # Experimental branch to test this version-aware build system:
@@ -84,6 +93,14 @@ clean:
 nsim:
 	cd tmp; mkdir -p nsim-build/nmag
 	cd tmp/nsim-build/nmag; svn co svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH) nsim
+
+	#when we release properly, we add a file 'svnversion' with the 
+        #release number, so that we know it for the future. If we check 
+        #out the trunk, we need to add that file at this 
+        #stage. (Hans July 2008)
+	if [ $(NSIM_BRANCH) == trunk ]; then cd tmp/nsim-build/nmag/nsim; \
+	  svnversion > svnversion ; fi
+
 	cd tmp/nsim-build/nmag/nsim; make all doc
 
 
