@@ -99,7 +99,7 @@ nsim:
         #out the trunk, we need to add that file at this 
         #stage. (Hans July 2008)
 	if [ $(NSIM_BRANCH) == trunk ]; then cd tmp/nsim-build/nmag/nsim; \
-	  svnversion > svnversion ; fi
+	  rm -f svnversion; svnversion > svnversion ; fi
 
 	cd tmp/nsim-build/nmag/nsim; make all doc
 
