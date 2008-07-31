@@ -67,9 +67,9 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
-* *31 July 2008* 
+* *1 August 2008* 
 
-  Update `0.1 beta (5686) <0.1/index.html>`__
+  Update `0.1 beta (5694) <0.1/index.html>`__
 
 * *02 June 2008* 
 

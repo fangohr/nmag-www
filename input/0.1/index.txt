@@ -40,8 +40,8 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
-Release 0.1 beta (5686) 31 July 2008 (current)
-----------------------------------------------
+Release 0.1 beta (5694) 1 August 2008 (current)
+-----------------------------------------------
 
 
 * Bug fixes/Improvements/New Features
