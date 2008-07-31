@@ -11,6 +11,70 @@ restindex
 
 
 
+Release 0.1 beta (5274) 3 February 2008
+---------------------------------------
+
+* As 0.1 beta (5259) but with working debian package.
+
+Release 0.1 beta (5259) 30 January 2008
+---------------------------------------
+
+* Bug fixes/Improvements
+   
+  * ticket 126: Calculation of exchange energy, demag energy, Zeeman
+    energy and total energy had wrong sign; now working correctly.
+    
+  * increased speed of setup phase slightly.
+
+  * decreased memory usage for runs with anisotropy.
+    
+
+* Interface changes
+
+  * Have changed version of mpich in tarball distribution. Used to be
+    mpich2.0 but is mpich1.0 from now on (to be consistent with debian
+    packages). Users who have older tarballs and want to use MPI
+    execution, need to obtain a new tarball to update (updating the
+    nsim-core is not sufficient).
+
+* New features
+
+  None
+
+Note: there is no debian package for this release.
+
+Release 0.1 beta (4947) 20 December 2007
+----------------------------------------
+
+* Bug fixes/Improvements
+
+  * resolved ticket 101: Setting
+    anisotropy=nmag.uniaxial_anisotropy(K1=0) in MagMaterial produces
+    an error message;
+ 
+  * resolved ticket 103: When starting from a zero torque configuration the simulation
+    proceeds up to the maximum time (which is 1 s) and here it stops:
+    now an appropriate error message is displayed.
+
+  * resolved ticket 97: Unrecognised architecture causes compilation failure in the
+    bem3d module: now the architecture flag will be empty if the architecture
+    detection fails.
+
+  * reduced setup speed by approximately a factor 2 
+
+  * added new section on sundials tolerances in manual (guided tour)
+
+* Interface changes
+  
+  None.
+
+
+* New features
+  
+  * Writing sundials performance data in log file (_cvode.log)
+
+
+
 
 Release 0.1 beta (4785) 27 November 2007
 ----------------------------------------

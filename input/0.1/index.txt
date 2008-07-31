@@ -40,8 +40,39 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
-Release 0.1 beta (5531) 2 June 2008 (current)
----------------------------------------------
+Release 0.1 beta (5590) 31 July 2008 (current)
+----------------------------------------------
+
+
+* Bug fixes/Improvements/New Features
+
+  * Reduced memory requirements by approximately 20% (due to better
+    compression of sparse matrices)
+  
+  * Updated code working with hdf5 files to be compatible with pytables
+    version 1 and 2 (no immediate effect on user if using compile from
+    source, but allows to link to existing pytables2). By default we
+    are still using pytables1 (but expect to switch at some point in the
+    future, which should be transparent to users).
+    
+  * Change from numpy 1.0.1 to 1.1.0. in compile from source distribution.
+  
+  * More detailed progress reporting in nmagpp (useful if data files
+    become large, i.e. a GB and more).
+  
+  * More detailed progress report in setup phase.
+  
+  * More detailed progress reporting in hysterises/relax commands.
+  
+  * Made compile from source work for Mac OS X 10.5 (Leopard)
+
+* Interface changes
+
+  (None)
+
+
+Release 0.1 beta (5531) 2 June 2008
+-----------------------------------
 
 
 * Bug fixes/Improvements/New Features
@@ -98,7 +129,9 @@ Release 0.1 beta (5531) 2 June 2008 (current)
   * nmagpp used to have a switch ``--field`` which allowed to choose
     *one* field that should be dumped (``--dump``) or converted to vtk
     files (``--vtk``). The functionality has now been extended so that
-    *a list of fields* can be given, such as ``nmagpp --fields m,phi,H_demag --vtk myvtkfiles.vtk  mysimulation_dat.h5``. Consequently, the switch has been renamed
+    *a list of fields* can be given, such as ``nmagpp --fields
+    m,phi,H_demag --vtk myvtkfiles.vtk
+    mysimulation_dat.h5``. Consequently, the switch has been renamed
     from ``--field`` to ``--fields``.
 
 

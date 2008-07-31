@@ -40,8 +40,8 @@ Features in brief:
 
  - thermal fluctuations
 
- - documentation in `html <current/manual/html/manual.html>`__ 
-   and `pdf <current/manual/manual.pdf>`__
+ - extensive documentation in `html <current/manual/html/manual.html>`__ 
+   and `pdf <current/manual/manual.pdf>`__, including Tutorial
 
  - `download <current/download.html>`__ as source, debian package and
    bootable CD ISO image
@@ -67,10 +67,13 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
+* *31 July 2008* 
+
+  Update `0.1 beta (5590) <0.1/index.html>`__
 
 * *02 June 2008* 
 
-  Update `0.1 beta (5531) <0.1/index.html>`__
+  Update 0.1 beta (5531) 
 
 * *05 February 2008* 
 
