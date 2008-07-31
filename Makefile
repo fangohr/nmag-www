@@ -73,7 +73,7 @@ r2w-call:
 	echo "NSIM_VERSION is"
 	echo "$(NSIM_VERSION)"
 	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH)/svnversion input/$(NSIM_VERSION)/svnversion
-	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH)/interface/nmag4/RELEASE input/$(NSIM_VERSION)/release_version.uyu
+	svn export svn+ssh://alpha.kk.soton.ac.uk/var/local/svn/nsim/$(NSIM_BRANCH)/interface/nmag/RELEASE input/$(NSIM_VERSION)/release_version.uyu
 	cd input; r2w
 
 
@@ -215,5 +215,11 @@ web-repackage-local:
 
 # Then run on eta
 #
-#time make NSIM_VERSION=0.1 LIBSOURCE_FILE=/var/local/nmag/pkgs.tar all web-repackage-local web-publish
+#time make NSIM_VERSION=0.1 clean all web-repackage-local 
+#
+#  to get everything ready and 
+#time make NSIM_VERSION=0.1 clean all web-repackage-local web-publish
+#
+# to get it on the server
+
 
