@@ -66,6 +66,8 @@ Release 0.1 beta (5694) 1 August 2008 (current)
   
   * Made compile from source work for Mac OS X 10.5 (Leopard)
 
+  * Introduced unit and regression tests.
+
 * Interface changes
 
   (None)
