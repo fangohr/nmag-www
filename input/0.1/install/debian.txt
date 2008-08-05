@@ -9,8 +9,14 @@ restindex
     build: Yes
 /restindex
 
+
+
 Installing nmag on a debian based Linux system
 ==============================================
+
+
+.. contents::
+
 
 Generic instructions
 --------------------
@@ -19,15 +25,6 @@ To assist easy installation (and de-installation) on debian-based
 Linux systems (such as Ubuntu, Knoppix, or plain Debian), we provide
 (at present, i386 binary-only) packages that contain the nmag library
 and the nsim framework. 
-
-For Debian experts
-~~~~~~~~~~~~~~~~~~
-
-Nsim can be obtained directly from
-`http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/
-<http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/>`__
-and installed manually (using ``dpkg -i [packagefile.deb]``). However,
-one needs to fulfill all requirements manually.
 
 Recommended procedure
 ~~~~~~~~~~~~~~~~~~~~~
@@ -55,6 +52,15 @@ to update the list of packages that your debian installation is aware of. Finall
 to install nsim. This will automatically install all required dependencies.
 
 
+
+For Debian experts
+~~~~~~~~~~~~~~~~~~
+
+Nsim can be obtained directly from
+`http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/
+<http://nmag.soton.ac.uk/debian/dists/stable/unofficial/binary-i386/>`__
+and installed manually (using ``dpkg -i [packagefile.deb]``). However,
+one needs to fulfill all requirements manually.
 
   
 
@@ -93,6 +99,13 @@ nevertheless revert this change any time by giving the command::
   $ aptitude reinstall libpetsc2.3.2
 
 
+If you cannot get this to work on your Ubuntu release, then we suggest
+you `compile from source <install_a.html>`__, which works on any
+standard linux system (including Ubuntu).
+
+
+
+
 Installing the developer version
 --------------------------------
 
@@ -102,3 +115,44 @@ most recent developer debian package by using the following line instead::
  deb http://user:password@nmag.soton.ac.uk/debian/ unstable unofficial
 
 (Strictly speaking, this works but violates RFC1738.)
+
+
+
+Installing Netgen
+-----------------
+
+Netgen is available for debian in the 'unstable' version. To get
+access to this (from etch, which is the current 'stable' version),
+follow these instructions:
+
+1. Add::
+
+     deb http://ftp.uk.debian.org/debian unstable main contrib non-free
+
+   to your ``/etc/apt/sources.list``.
+
+2. Run::
+
+     $> aptitude update
+
+3. Run::
+   
+     $> aptitude install netgen
+
+  (this is likely to require an upgrade of the libc, and should be okay).
+
+  At this point, you should have working netgen installation (you can test
+  this by calling netgen)::
+
+     $> netgen
+
+4. If you want to carry on using etch stable in the future, then
+   remove the line added to ``/etc/apt/sources.list`` in step 1, and
+   update the package list again::
+
+     $> aptitude update
+
+
+You find more information about Netgen at http://www.hpfem.jku.at/netgen/.
+	 
+
