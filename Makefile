@@ -88,6 +88,7 @@ installation-system:
 
 clean:
 	rm -rf tmp/nsim-build/nmag/nsim
+	rm -rf tmp/nsim-0.1/nmag/nsim
 
 
 nsim:
@@ -101,6 +102,7 @@ nsim:
 	if [ $(NSIM_BRANCH) == trunk ]; then cd tmp/nsim-build/nmag/nsim; \
 	  rm -f svnversion; svnversion > svnversion ; fi
 
+	cd tmp/nsim-build/nmag/nsim/config; python configure.py --cflags=-march=i386
 	cd tmp/nsim-build/nmag/nsim; make all doc
 
 
