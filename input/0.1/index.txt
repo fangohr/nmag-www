@@ -47,16 +47,18 @@ Release 0.1 beta (5787) 8 August 2008 (current)
 * Bugfixes/Improvements/New Features
   
   * We have a new distribution mode using VMWare's vmplayer. This is
-    particularly attractive to MS Windows users. This is at a very early
-    stage and and we invite feedback from early adaptors.
+    particularly attractive to MS Windows users. This is at a very
+    early stage and and we invite feedback from early adaptors (see
+    installation Method D).
   
-  * Updated the Knoppix CD to the most recent version.
+  * Updated the Knoppix CD to the most recent version (installation Method C). 
+    Also included Netgen, a mesh generator, in the CD image.
   
   * ncol can now process OOMMF's odt files (use --odt switch)
   
   * Bugfix: the previous debian package could only execute on CPUs with sse2 extension.
   
-  * Bugfix: fixed	embarrassing bug that appeared with the last release
+  * Bugfix: fixed embarrassing bug that appeared with the last release
     (printing of applied field brakes when first component is zero).
   
 * Interface change

@@ -117,9 +117,9 @@ obtain the 'virtual machine' that we want to execute.
 Downloading and starting the Nmag virtual machine
 -------------------------------------------------
 
-* Download the zipped Nmag virtual appliance from `this directory <http://nmag.soton.ac.uk/vmware>`__.
+* Download the zipped Nmag virtual appliance from `this directory <http://nmag.soton.ac.uk/vmware/0.1>`__. The appliance is split into two files (to ensure that each file does not exceed the 2GB file size limit that some file systems impose).
 
-* unzip the downloaded file
+* unzip the downloaded files. (They inflate their content into a subdirectory with name ``nmag-0.1``).
 
 * start the VMware Player software 
 
