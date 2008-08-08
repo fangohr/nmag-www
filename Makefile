@@ -167,8 +167,8 @@ manuals: installation-system nsim
 	rsync -auv $(INST_SYSTEMDIR)/nmag/INSTALL input/$(NSIM_VERSION)/install/_a_INSTALL
 
 
-#nsim manuals fetchtrunk
-debian-package: 
+
+debian-package: nsim manuals fetchtrunk
 	rsync -av --delete --exclude '*~' --exclude '*.pyc' --exclude '.svn' tmp/nsim-build/nmag/nsim/interface/* debian/packages/nsim/interface/
 	cp -a tmp/nsim-build/nmag/nsim/bin/n* debian/packages/nsim/bin/
 	cp -a tmp/nsim-build/nmag/nsim/tests/pytest_main.py debian/packages/nsim/interface
