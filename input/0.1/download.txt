@@ -32,6 +32,10 @@ Method C: Knoppix CD
 Download the iso image from `this directory <http://nmag.soton.ac.uk/cd-images>`__. `Installation instructions <install/knoppix.html>`__
 
 
+Method D: Nmag Virtual Machine
+------------------------------
+
+Download the Nmag Virtual Machine from `this directory <http://nmag.soton.ac.uk/vmware>`__. `Installation instructions <install/vmplayer.html>`__
 
 
 Not sure which installation method to use?
