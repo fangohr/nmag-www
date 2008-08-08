@@ -38,8 +38,6 @@ Features in brief:
 
  - (pseudo) periodic boundary conditions ("macro geometry approach")
 
- - thermal fluctuations
-
  - extensive documentation in `html <current/manual/html/manual.html>`__ 
    and `pdf <current/manual/manual.pdf>`__, including Tutorial
 
@@ -67,39 +65,20 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
+* *8 August 2008* 
+
+  Update `0.1 beta (5776) <0.1/index.html>`__
+
 * *1 August 2008* 
 
-  Update `0.1 beta (5734) <0.1/index.html>`__
+  Update `0.1 beta (5734)
 
 * *02 June 2008* 
 
   Update 0.1 beta (5531) 
 
-* *05 February 2008* 
 
-  Update 0.1 beta (5282)
-
-
-* *04 January 2008* 
-
-  http://nmag.soton.ac.uk back online (again). Please accept our
-  apologies for the unscheduled downtime over the past week. This was
-  due to a (unscheduled) problem with a network switch over the
-  Christmas break, followed by (scheduled) university wide internet
-  outage. We believe that everything should be back to normal now.
-
-* *22 December 2007*
-
-  Update 0.1 beta (4947)  
-
-
-* *27 November 2007*
-
-  Update 0.1 beta (4785) 
-
-* *2 November 2007*
-
-  First release, version 0.1 beta (4625) available.
+`Older news items <oldnews.html>`__
 
 
 Mailing list & Contact
