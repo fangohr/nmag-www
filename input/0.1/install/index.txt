@@ -30,45 +30,50 @@ You can compile nmag and required helping libraries from source
 (`download tar file <download/nmag-0.1-all.tar.gz>`__, `Method A
 installation instructions <install_a.html>`__).
 
+If you have VMware Fusion, you can run the Nmag Virtual Machine (see
+`Method D <vmplayer.html>`_).
+
 
 Debian Linux, Ubuntu, Knoppix and other debian derivatives
 ----------------------------------------------------------
 
-You can install the debian package (see `Method B installation instructions <debian.html>`_).
+You will probably prefer to install the debian package (see `Method B
+installation instructions <debian.html>`__).
 
-Other Linux/UNIX (but also Mac OS X, and Debian and friends)
-------------------------------------------------------------
+You can also install nmag from source (`Method A <install_a.html>`__),
+or use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).
+
+
+Linux/UNIX in general
+---------------------
 
 You can compile nmag and required helping libraries from source
 (`download tar file <../download/nmag-0.1-all.tar.gz>`__, `Method A
 installation instructions <install_a.html>`__)
 
+You can also use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).
+
 
 Windows
 -------
 
-There is currently no nmag version for Windows. You have two options of running nmag:
+There is currently no nmag version for Windows. You have two options
+of running nmag:
 
-1. You use the bootable CD (`download <http://nmag.soton.ac.uk/cd-images>`__,
-   `Method C instructions
+1. You install a virtual machine player on your Windows machine, and
+   run the Nmag virtual machine in this application (`Method D
+   <vmplayer.html>`__). This is the right choice for most users who want
+   to use nmag.
+
+2. You can use the bootable CD (`download  <http://nmag.soton.ac.uk/cd-images>`__, `Method C instructions
    <knoppix.html>`__) to boot your PC from the CD into a running (linux)
-   system. This is ideal to test the program (and will not modify your
+   system. This is ideal to test nmag (and will not modify your
    hard drive).
 
-2. You install a virtual machine (http://www.vmware.com, try vmware
-   workstation) on your Windows machine, and run Linux inside this
-   virtual machine.
-
-   You have several options what Linux to run inside the virtual
-   machine. We recommend that you 
-
-   * either install a debian-based Linux (such as http://www.debian.org/ or
-     http://www.ubuntu.com/ for example), and use `Method B: debian
-     package installation instructions <debian.html>`__ to install nmag. 
-
-   * Or you can use the CD from `Method C: installation instructions
-     <knoppix.html>`__ and simply boot the virtual machine from this
-     CD.
+   Note that with this setup you will run out of memory sooner than
+   with any other method, as part of the RAM is used as a RAM
+   disk. That is typically no problem if you just want to compute a
+   few examples from the tutorial.
 
 
 
