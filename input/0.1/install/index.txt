@@ -14,7 +14,10 @@ restindex
  Installation methods
 ======================
 
+.. sectnum::
+
 .. contents:: 
+   
 
 
 How can I install nmag for Windows/Linux/Mac OSX?
@@ -172,3 +175,21 @@ The only requirement is that there is a lot of disk space available
 
 :Read More: `Installation instructions Method D <vmplayer.html>`__.
 
+
+
+----------------------------
+
+
+Abbreviations used
+==================
+
+:OS: Operating System (i.e. MS Windows, Linux, Mac OS X, UNIX, VMS, ...)
+
+:i386: 
+  An intel i386 compatible processor. All modern PC have such a
+  processor.
+
+  The new Apple machines (including MacBook, Airbook,
+  MacBook Pro) also have such Intel CPUs. However, the old Apples
+  (including Powerbooks and ibooks) have the PowerPC chip, which is
+  different.
