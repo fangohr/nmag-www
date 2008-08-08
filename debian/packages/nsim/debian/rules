@@ -48,6 +48,8 @@ binary-arch: build
 	install -m 755 bin/nsim_i $(bindir)/
 	install -m 755 bin/nsim-1cpu $(bindir)/
 	install -m 755 bin/nsimversion $(bindir)/
+	install -m 755 bin/pytest_nsim $(bindir)/
+	install -m 755 bin/nmagcheck.sh $(bindir)/
 
 	dh_strip
 	dh_installdocs

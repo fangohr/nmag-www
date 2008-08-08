@@ -167,13 +167,15 @@ manuals: installation-system nsim
 	rsync -auv $(INST_SYSTEMDIR)/nmag/INSTALL input/$(NSIM_VERSION)/install/_a_INSTALL
 
 
-
-debian-package: nsim manuals fetchtrunk
+#nsim manuals fetchtrunk
+debian-package: 
 	rsync -av --delete --exclude '*~' --exclude '*.pyc' --exclude '.svn' tmp/nsim-build/nmag/nsim/interface/* debian/packages/nsim/interface/
 	cp -a tmp/nsim-build/nmag/nsim/bin/n* debian/packages/nsim/bin/
+	cp -a tmp/nsim-build/nmag/nsim/tests/pytest_main.py debian/packages/nsim/interface
 	cp debian/adjustments/* debian/packages/nsim/bin/
 	bin/svnversion-to-debian-changelog.pl $(DEBVERSION)
 	cp -a tmp/nsim-build/nmag/nsim/pyfem3/pyfem3 debian/packages/nsim/bin/pyfem
+
 	cd debian/packages/nsim; debuild -us -uc
 	cd debian/web; perl -MFile::Find -e 'sub w{shift; m/nsim.*deb/ and unlink};find({no_chdir=>1,wanted=>\&w},".");'
 	mv debian/packages/nsim_*.{dsc,changes,deb,tar.gz} debian/web/
