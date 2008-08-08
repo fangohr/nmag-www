@@ -71,7 +71,7 @@ News
 
 * *1 August 2008* 
 
-  Update `0.1 beta (5734)
+  Update 0.1 beta (5734)
 
 * *02 June 2008* 
 
