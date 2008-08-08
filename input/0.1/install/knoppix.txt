@@ -20,12 +20,20 @@ hardware.
 
 This 'installation' should be as easy as booting from the CD. 
 
-There is also the possibility of booting this CD within a virtual
-machine (such as the `VMWare <http://www.vmware.com>`__). While one needs to
-install the virtual machine software in the host system, this approach
-allows running the Knoppix Linux alongside the host system.
-
+.. comment:
+  There is also the possibility of booting this CD within a virtual
+  machine (such as the `VMWare <http://www.vmware.com>`__). While one needs to
+  install the virtual machine software in the host system, this approach
+  allows running the Knoppix Linux alongside the host system.
+  
 An iso image for the Knoppix CD is available in `this directory <http://nmag.soton.ac.uk/cd-images>`__.
 
+Note that saving data needs some extra effort (see
+http://groups.google.com/group/nmag-users/browse_thread/thread/4f26ceddef9100b3)
+as the Knoppix systems lives entirely in the RAM of the machine (and,
+by default, never uses the hard drive).
+
 The current version of code on the Knoppix CD is *nmag 0.1 beta (5282)* from 05 February 2008.
+
+
 
