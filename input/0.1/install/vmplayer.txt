@@ -11,8 +11,8 @@ restindex
 
 
 
-Installing nmag on using VMware Player
-======================================
+Installing Nmag using the VMware Player
+=======================================
 
 
 .. contents::
