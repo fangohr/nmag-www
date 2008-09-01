@@ -15,7 +15,12 @@ Publications
  *  Thomas Fischbacher and Hans Fangohr: *On the automatic translation
     of classical field theory to computer simulations*. In preparation
     (2008) (`draft <publications/nsim_draft.pdf>`__)
- 
+
+ * Matteo Franchin, Thomas Fischbacher, Giuliano Bordignon, Peter de
+   Groot and Hans Fangohr Current-driven dynamics of domain walls
+   constrained in ferromagnetic nanopillars, Phys Rev B, **78** 054447
+   (`online <http://link.aps.org/abstract/PRB/v78/e054447>`__) (2008) 
+
  *  Giuliano Bordignon, Matteo Franchin, Jurgen P. Zimmermann, 
     Peter A. J. de Groot and Hans Fangohr:
     *Numerical studies of demagnetizing effects in triangular ring arrays*, 
