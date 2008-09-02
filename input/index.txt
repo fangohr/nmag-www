@@ -65,17 +65,15 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
+
+* *2 September 2008* 
+
+  Update `0.1 beta (5834) <0.1/index.html>`__
+
 * *8 August 2008* 
 
-  Update `0.1 beta (5787) <0.1/index.html>`__
+  Update 0.1 beta (5787)
 
-* *1 August 2008* 
-
-  Update 0.1 beta (5734)
-
-* *02 June 2008* 
-
-  Update 0.1 beta (5531) 
 
 
 `Older news items <oldnews.html>`__
