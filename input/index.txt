@@ -66,9 +66,13 @@ News
 ----
 
 
+* *13 October 2008* 
+
+  Update `0.1 beta (5878) <0.1/index.html>`__
+
 * *2 September 2008* 
 
-  Update `0.1 beta (5834) <0.1/index.html>`__
+  Update 0.1 beta (5834)
 
 * *8 August 2008* 
 

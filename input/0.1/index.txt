@@ -40,9 +40,43 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
-
-Release 0.1 beta (5787) 2 September 2009 (current)
+Release 0.1 beta (5878) 13 October 2009 (current)
 --------------------------------------------------
+
+* Bugfixes/Improvements
+  
+  * bugfix: reinitialisation used to reset the stage_time and stage_step
+    counters. This is now fixed and is done explicitly in the hysteresis method.
+    This functionality is needed to study systems where the applied field
+    changes in time (5848).
+  
+  * bugfix: allow from source compilation on (K)Ubuntu 8.04. The bug is
+    with the Petsc library 2.3.2. We have upgraded the Petsc library to
+    2.3.3 in the compile from source installation, which resolves the
+    problem (5851). 
+  
+  * bugfix: reading Gambit meshes works without warnings (5852).
+  
+  * bugfix: A missing ``.petsc`` file in the user's home directory
+    resulted in an error message when nsim was started. This did create
+    the missing file, so all is fine the next time nsim is
+    called. Revision (5853) fixes this.
+  
+  * Improvement: Split hysteresis example in tutorial into two
+    examples. The first can be used to play around with thecommand andto
+    quickly complete a simulation. The second allows to compare the
+    resulting hysteresis loop with an analytical prediction (5876).
+  
+  * minor improvements in makefile for installation from source (5859).
+  
+* Interface changes
+  
+  None.
+
+
+
+Release 0.1 beta (5834) 2 September 2009
+----------------------------------------
 
 * Bugfixes/Improvements/New Features
 
