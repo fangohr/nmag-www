@@ -1,0 +1,4 @@
+#!/bin/sh
+export PYTHONPATH=/usr/lib/nsim/interface:$PYTHONPATH
+export NSIM_SUNDIALS_PATH=/usr/lib/nsim/so
+/usr/bin/pyfem /usr/lib/nsim/interface/pytest_main.py $*
