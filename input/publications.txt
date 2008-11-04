@@ -12,6 +12,9 @@ restindex
 Publications
 ============
 
+ * Hans Fangohr, Giuliano Bordignon, Matteo Franchin, Andreas Knittel, Peter A. J. de Groot, Thomas Fischbacher: *A new approach to (quasi) periodic boundary conditions in micromagnetics: the macro geometry* Submitted (`preprint <http://www.soton.ac.uk/~fangohr/publications/preprint_macrogeometry.pdf>`__)
+
+
  * Thomas Fischbacher and Hans Fangohr: *On the automatic translation
    of classical field theory to computer simulations*. In preparation
    (2008) (`draft <publications/nsim_draft.pdf>`__)
