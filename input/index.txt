@@ -62,9 +62,34 @@ its quality, reliability, or any other characteristic.
 
 
 
+.. raw:: html		  
+
+   <p><font color="red">New: </font>Fully funded PhD <a href="http://www.soton.ac.uk/~fangohr/vacancies.html"> studentships in micromagnetic modelling available </a> for 2009.</p>
+
+
+
 News
 ----
+* *10 - 14 November, MMM Austin, Texas*
 
+  Matteo Franchin and Andreas Knittel represent the Nmag team at the
+  MMM. They are happy to approached with Nmag-related queries. They
+  will give the following presentations:
+
+  :Session: EH Numerical Methods and Magnetic Simulations
+
+  :Date: Thursday 13 November 2009
+
+  :Time: 9:24: *The macro geometry* (new approach to periodic boundary conditions as `available in Nmag <http://nmag.soton.ac.uk/nmag/current/manual/html/manual.html#example-1d-periodicity>`__)
+
+  :Time: 9:36: *Scriptability and interactive parallel micromagnetic simulations* (about the Nmag concept of 'writing micromagnetic simulation programs')
+
+  :Time: 9:48: *Matrix compression using the H-Lib* (for large simulations of systems with large surface area) 
+
+  :Location: Meeting Room 410
+
+  They will also attend the Open Forum on Micromagnetic Modelling
+  Wednesday evening (20:00-22:00).
 
 * *13 October 2008* 
 
