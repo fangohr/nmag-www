@@ -131,6 +131,12 @@ Knoppix), you shoud be able to upgrade the ``nsim`` package:
 
   $> aptitude install nsim
 
+This completes the upgrade procedure. To check whether the upgrade has been successful, do two things:
+
+1. You can check which version is installed by running the ``nsimversion`` command.
+
+2. You can run a few regression tests by calling ``nmagcheck.sh``.
+
 
 Method C: Knoppix CD
 --------------------
@@ -152,7 +158,6 @@ nmag.soton.ac.uk, but (i) you download a lot of bytes that haven't
 changed and (ii) you may have modified the virtual machine, or saved
 your own data etc. For these reasons, you may prefer to upgrade the
 Nmag software on the virtual machine you have already.
-
 
 
 
