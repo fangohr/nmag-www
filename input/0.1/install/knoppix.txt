@@ -33,7 +33,7 @@ http://groups.google.com/group/nmag-users/browse_thread/thread/4f26ceddef9100b3)
 as the Knoppix systems lives entirely in the RAM of the machine (and,
 by default, never uses the hard drive).
 
-The current version of code on the Knoppix CD is *nmag 0.1 beta (5282)* from 05 February 2008.
+The current version of code on the Knoppix CD is *nmag 0.1 beta (5878)* from 14 Oct 2008. Note that this is not the most recent version of the code.
 
 
 
