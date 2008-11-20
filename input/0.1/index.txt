@@ -40,8 +40,33 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
-Release 0.1 beta (5878) 13 October 2009 (current)
---------------------------------------------------
+Release 0.1 beta (5962) 20 November 2009
+---------------------------------------
+
+* Bugfixes/Improvements
+
+  * New feature: Can read finite element meshes produced with Gmsh using
+    the new ``--gmsh`` switch for the ``nmeshimport`` tool. (5924)
+  
+  * Added more regression tests
+  
+  * Fixed bug that stopped simulations where two magnetic domains touch
+    each other (5886)
+  
+  * Fixed bug that didn't allow to have different (potentially
+    unrelated) simulation objects in the same nmag-program (5956)
+  
+  * Fixed bug that (sometimes) stopped the --restart mechanism 
+    to continue interrupted hysteresis loop calculations (5907)
+  
+  * Fixed bug that prevented ``sim.get_subfield_positions`` and
+    ``sim.get_subfield_sites()`` from working. (5933)
+  
+  
+
+
+Release 0.1 beta (5878) 13 October 2009
+---------------------------------------
 
 * Bugfixes/Improvements
   

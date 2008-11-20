@@ -70,6 +70,12 @@ its quality, reliability, or any other characteristic.
 
 News
 ----
+
+* *20 November 2008* 
+
+  Update `0.1 beta (5962) <0.1/index.html>`__
+
+
 * *10 - 14 November, MMM Austin, Texas*
 
   Matteo Franchin and Andreas Knittel represent the Nmag team at the
@@ -93,7 +99,7 @@ News
 
 * *13 October 2008* 
 
-  Update `0.1 beta (5878) <0.1/index.html>`__
+  Update 0.1 beta (5878)
 
 * *2 September 2008* 
 
@@ -132,7 +138,7 @@ The following versions are available:
 Acknowledgement
 ---------------
 
-The development of the nmag tool has been financially supported by the `EPSRC <http://www.epsrc.ac.uk>`__, Grant GR/T09156/01 (United Kingdom).
+The development of the nmag tool has been financially supported by the `EPSRC <http://www.epsrc.ac.uk>`__, Grant GR/T09156/01, EP/E039944/1 (United Kingdom).
 
 
 .. raw:: html
