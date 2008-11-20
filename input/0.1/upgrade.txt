@@ -1,0 +1,159 @@
+restindex
+    crumb: upgrade
+    format: rest
+    page-title: Nmag Upgrade Instructions
+    include: No
+    page-description:
+      Nmag Upgrade Instructions
+    /description
+    build: Yes
+/restindex
+
+=====================
+ How to upgrade Nmag
+=====================
+
+.. contents:: Overview
+
+
+Introduction
+------------
+
+How to upgrade Nmag depends on the way it which it has been installed.
+
+Method A: compile everything from source
+----------------------------------------
+
+If you have compiled Nmag `from source <install/install_a.html>`__, you have two options:
+
+*   optionally move the old installation directory (``nmag-0.1``) to a
+    different location (or, if you feel brave, delete it), then
+    download the whole tar-file (nmag-0.1.tar.gz), and repeat the
+    installation. This is the safe way, but it will take the same time
+    to compile as the initial install, as all supporting libraries
+    will be re-compiled.
+
+*   Alternatively, ``cd`` into the ``nmag-0.1`` directory, i.e.::
+
+       $> cd nmag-0.1
+
+     and run the ``make update`` command, i.e.::
+
+       $nmag-0.1> make update
+
+     This will download just the Nmag-specific code (that is
+     everything in the subdirectory ``nmag-0.1/nsim``, and recompile
+     this. This is expected to usually work, but is somewhat experimental.
+
+     In particular, this may fail if any changes to the supporting
+     libraries have taken place.
+
+To check whether the upgrade has been successful, do two things:
+
+1.  go to the ``nmag-0.1`` directory, and run ``bin/nsimversion``, i.e.::
+
+      $> cd nmag-0.1
+      $nmag-0.1> bin/nsimversion
+
+    This should produce output like this::
+
+      Versions:
+	nsim.svnversion        =5962
+	nmag-release           =0.1
+	nmag-distribution-mode =tarball
+      Paths:
+	nsimpath       : /Users/fangohr/local/nmag-0.1/nsim/interface/nsim
+	nmagpath       : /Users/fangohr/local/nmag-0.1/nsim/interface/nsim/../nmag
+	nmagpath (real): /Users/fangohr/local/nmag-0.1/nsim/interface/nmag
+
+
+    where the version number (here 5962) can be found at the top.
+
+    This should display the version number of the most recent
+    version on http://nmag.soton.ac.uk.
+
+
+2.  go to the ``nmag-0.1`` directory, and run ``make check``, i.e.::
+
+      $> cd nmag-0.1
+      $nmag-0.1> make check
+   
+    This will run a small number of selected (fast) regression
+    tests. If these pass, chances are that the upgrade has been
+    successful.
+
+    The output should end similar to this::
+
+      <...>
+      interface/nmag/manual/example1/test_sphere1.py[4] ....
+      interface/nmag/tests/test_trial.py[2] ..
+      interface/nsim/test_reporttools.py[3] ...
+      interface/nsim/test_sets.py[13] .............
+      interface/nsim/test_when.py[5] .....
+      interface/nsim/si_units/test_lib.py[1] .
+      tests/regression/nmag/bigbar/nmag4/test_slow_bigbar.py[2] ss
+      tests/regression/nmesh/import/gmsh1_0/test_gmsh1_0_import.py[2] ..
+      ../../../../unit/nmeshmirror/test_nmeshmirror.py[1] .
+      ../../../../unit/pycaml/test_refcount.py[1] .
+      
+      __________________________ reasons for skipped tests ___________________________
+      reason: Skipped: "test not selected by keyword '-test_slow'"
+      
+      ============= tests finished: 32 passed, 4 skipped in 9.88 seconds =============
+
+    The important information is that 32 tests have passed (the actual
+    number may differ).
+
+    Skipped tests are okay (these are the slow ones that are excluded
+    for this quick check).
+
+    If tests are reported as *failed*, then something may have gone wrong.
+
+Method B: Debian package
+------------------------
+
+If you are running Debian (or a derived distribution such as Ubuntu or
+Knoppix), you shoud be able to upgrade the ``nsim`` package: 
+
+* Make sure the nmag-debian repository is in your
+  ``/etc/apt/sources.list`` file (see `recommended procedure <install/debian.html#recommended-procedure>`__).
+
+* become the super user (=root), i.e.::
+
+  $> su -
+  
+* Update the database of software that is available to install by running::
+
+  $> aptitude update
+
+
+* Update the nsim package (which provides nmag) by running::
+
+  $> aptitude install nsim
+
+
+Method C: Knoppix CD
+--------------------
+
+The Knoppix distribution is Debian based, so you can follow the
+instructions for `Method B: Debian package`_ to upgrade the Knoppix
+system you have already. Or download an updated iso image. 
+
+Method D: Nmag Virtual Machine
+------------------------------
+
+The Virtual machine operating system is also a Debian Linux
+installation, so you can follow the instructions for `Method B: Debian
+package`_. Note that the default password for root is ``nmag`` if you
+have not changed this after downloading the virtual machine.
+
+You can, of course, also download the updated virtual machine from
+nmag.soton.ac.uk, but (i) you download a lot of bytes that haven't
+changed and (ii) you may have modified the virtual machine, or saved
+your own data etc. For these reasons, you may prefer to upgrade the
+Nmag software on the virtual machine you have already.
+
+
+
+
+
