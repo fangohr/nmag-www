@@ -36,17 +36,24 @@ If you have compiled Nmag `from source <install/install_a.html>`__, you have two
 *   Alternatively, ``cd`` into the ``nmag-0.1`` directory, i.e.::
 
        $> cd nmag-0.1
-
-     and run the ``make update`` command, i.e.::
+     
+    and run the ``make update`` command, i.e.::
 
        $nmag-0.1> make update
 
-     This will download just the Nmag-specific code (that is
-     everything in the subdirectory ``nmag-0.1/nsim``, and recompile
-     this. This is expected to usually work, but is somewhat experimental.
+    This will download just the Nmag-specific code (that is
+    everything in the subdirectory ``nmag-0.1/nsim``). A subsequent
+    call of ``make`` will compile the new downloaded version::
 
-     In particular, this may fail if any changes to the supporting
-     libraries have taken place.
+       $nmag-0.1> make
+
+    This way of upgrading is expected to (usually) work, but is
+    somewhat experimental. If this doesn't work for you, please let
+    us know.
+
+    In particular, this may fail if any changes to the supporting
+    libraries have taken place, but we will try to include this
+    information in any upgrade announcements.
 
 To check whether the upgrade has been successful, do two things:
 
