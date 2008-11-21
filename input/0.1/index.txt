@@ -50,8 +50,9 @@ Release 0.1 beta (5962) 20 November 2009
   
   * Added more regression tests
   
-  * Fixed bug that stopped simulations where two magnetic domains touch
-    each other (5886)
+  * Fixed bug that stopped simulations where two magnetic materials
+    (each defined as a different region in the mesh) touch each other
+    (5886)
   
   * Fixed bug that didn't allow to have different (potentially
     unrelated) simulation objects in the same nmag-program (5956)
