@@ -84,7 +84,7 @@ News
 
   :Session: EH Numerical Methods and Magnetic Simulations
 
-  :Date: Thursday 13 November 2009
+  :Date: Thursday 13 November 2008
 
   :Time: 9:24: *The macro geometry* (new approach to periodic boundary conditions as `available in Nmag <http://nmag.soton.ac.uk/nmag/current/manual/html/manual.html#example-1d-periodicity>`__)
 
