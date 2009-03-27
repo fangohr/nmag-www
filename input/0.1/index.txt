@@ -84,6 +84,12 @@ Release 0.1 beta (6140) 31 March 2009
   
   * Configuration files (RUNID_*.conf) are now only written when the
     --dumpconf switch is provided (6093)
+
+
+In this release, we update the `install from source
+<install/install_a.html>`__, the `debian package (etch)
+<install/debian.html>`_, and the `virtual machine
+<install/vmplayer.html>`_ to version 0.1-6140.
   
 
 
