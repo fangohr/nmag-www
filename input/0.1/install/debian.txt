@@ -26,6 +26,11 @@ Linux systems (such as Ubuntu, Knoppix, or plain Debian), we provide
 (at present, i386 binary-only) packages that contain the nmag library
 and the nsim framework. 
 
+We only support Debian etch with the current release. To install Nmag
+on Debian Lenny (or unstable or testing), please use the
+`compile-from-source version <install_a.html>`__.
+
+
 Recommended procedure
 ~~~~~~~~~~~~~~~~~~~~~
   
