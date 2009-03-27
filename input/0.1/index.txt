@@ -40,6 +40,53 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
+Release 0.1 beta (6140) 31 March 2009
+-------------------------------------
+
+
+* Bugfixes:
+  
+  * Fixed bug that resulted in simulation hanging when running in MPI
+    mode (6039)
+  
+  * Solved error in regression test (test_gmsh1_0_import.py). The error
+    was in the test code, not in the conversion code. (5987)
+  
+  
+* New Features:
+  
+  * New functionality: Zhang-Li spin torque coupling term for uniform
+    current densities added and documented. (6133)
+  
+* Improvements:
+  
+  * Reduced memory footprint (by approx 7% for the problem in manual/example2) 
+    (6098)
+  
+  * Documented ``load_m_from_h5file`` (6041) and ``save_restart_file`` (6096)
+  
+  * Document LLG equation of motion (new subsection in section
+    Background), and llg_gamma_G parameter in MagMaterials (6014)
+  
+  * Added more ``save=`` usage examples for hysteresis() and relax()
+    functions (6096) in documentation of hysteresis command.
+  
+  * Added MPI-regression tests (6031)
+  
+  * tidied up file tree (removing out-dated examples, etc) (6059)
+  
+  * Added mpi debug function nmag.mpi_hello() (6068)
+  
+  * Allow to switch on debug messages from slaves (usually switched off) 
+    using --slavelog
+  
+* Interface change:
+  
+  * Configuration files (RUNID_*.conf) are now only written when the
+    --dumpconf switch is provided (6093)
+  
+
+
 Release 0.1 beta (5962) 20 November 2008
 ----------------------------------------
 

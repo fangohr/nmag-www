@@ -38,11 +38,13 @@ Features in brief:
 
  - (pseudo) periodic boundary conditions ("macro geometry approach")
 
+ - Spin torque transfer (Zhang-Li model for uniform current density)
+
  - extensive documentation in `html <current/manual/html/manual.html>`__ 
    and `pdf <current/manual/manual.pdf>`__, including Tutorial
 
- - `download <current/download.html>`__ as source, debian package and
-   bootable CD ISO image
+ - `download <current/download.html>`__ as source, debian package, 
+   (VMWare) virtual machine and bootable CD/DVD ISO image
 
 
 
@@ -71,9 +73,17 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
+
+
+* *31 March 2009* 
+
+  Update `0.1 beta (6140) <0.1/index.html>`__
+
+
+
 * *20 November 2008* 
 
-  Update `0.1 beta (5962) <0.1/index.html>`__
+  Update 0.1 beta (5962)
 
 
 * *10 - 14 November, MMM Austin, Texas*
