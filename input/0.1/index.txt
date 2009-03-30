@@ -40,7 +40,7 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
-Release 0.1 beta (6140) 31 March 2009
+Release 0.1 beta (6156) 30 March 2009
 -------------------------------------
 
 
@@ -79,6 +79,8 @@ Release 0.1 beta (6140) 31 March 2009
   
   * Allow to switch on debug messages from slaves (usually switched off) 
     using --slavelog
+
+  * Adding release date to output of nsimversion (6153)
   
 * Interface change:
   

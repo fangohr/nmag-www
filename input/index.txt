@@ -75,9 +75,9 @@ News
 
 
 
-* *31 March 2009* 
+* *30 March 2009* 
 
-  Update `0.1 beta (6140) <0.1/index.html>`__
+  Update `0.1 beta (6156) <0.1/index.html>`__
 
 
 
