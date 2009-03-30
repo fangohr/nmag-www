@@ -11,6 +11,7 @@ sleep 1
 cp -a /usr/lib/nsim/interface $tmpdir
 mkdir -p $tmpdir/bin
 cp -a /usr/bin/nsim $tmpdir/bin
+cp -a /usr/bin/ncol $tmpdir/bin
 chmod -R u+w $tmpdir
 echo "#"
 echo "#"
