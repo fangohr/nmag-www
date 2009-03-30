@@ -91,7 +91,7 @@ Release 0.1 beta (6156) 30 March 2009
 In this release, we update the `install from source
 <install/install_a.html>`__, the `debian package (etch)
 <install/debian.html>`_, and the `virtual machine
-<install/vmplayer.html>`_ to version 0.1-6140.
+<install/vmplayer.html>`_ to version 0.1-6156.
   
 
 
