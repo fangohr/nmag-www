@@ -74,11 +74,17 @@ News
 ----
 
 
+* *June 2009*
+
+  The Institute of Physics Magnetism Group uses the Nmag logo for their `group flyer <http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf>`__.
+  
+  .. image:: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009_100.png
+    :target: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf
+
 
 * *30 March 2009* 
 
   Update `0.1 beta (6163) <0.1/index.html>`__
-
 
 
 * *20 November 2008* 
