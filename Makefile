@@ -102,7 +102,8 @@ nsim:
 	if [ $(NSIM_BRANCH) == trunk ]; then cd tmp/nsim-build/nmag/nsim; \
 	  rm -f svnversion; svnversion > svnversion ; fi
 
-	cd tmp/nsim-build/nmag/nsim/config; python configure.py --cflags=-march=i386
+	#cd tmp/nsim-build/nmag/nsim/config; python configure.py --cflags=-march=i386
+	cd tmp/nsim-build/nmag/nsim/config; python configure-openmpi.py --cflags=-march=i386
 	cd tmp/nsim-build/nmag/nsim; make all doc
 
 
@@ -226,4 +227,6 @@ web-repackage-local:
 #
 # to get it on the server
 
+# compile everything apart from debian packages:
+# time make NSIM_VERSION=0.1  html-toplevel r2w-call current-link tarballs webroot web-repackage-local
 
