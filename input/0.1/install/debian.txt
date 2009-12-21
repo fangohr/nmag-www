@@ -21,20 +21,16 @@ Installing nmag on a debian based Linux system
 Generic instructions
 --------------------
 
-To assist easy installation (and de-installation) on debian-based
-Linux systems (such as Ubuntu, Knoppix, or plain Debian), we provide
-(at present, i386 binary-only) packages that contain the nmag library
-and the nsim framework. 
-
-We only support Debian etch with the current release. To install Nmag
-on Debian Lenny (or unstable or testing), please use the
-`compile-from-source version <install_a.html>`__.
+We only support Debian etch with the 6163 release from 30 March 2009
+release. To install Nmag on Debian Lenny (or unstable or testing), or
+*to use the latest Nmag release, please use the* `compile-from-source
+version <install_a.html>`__.
 
 
-Recommended procedure
-~~~~~~~~~~~~~~~~~~~~~
+Install outdate version as debian package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
-Alternatively, one may add the following line to ``/etc/apt/sources.list``::
+Add the following line to ``/etc/apt/sources.list``::
   
     deb http://nmag.soton.ac.uk/debian/ stable unofficial
   
@@ -72,54 +68,59 @@ one needs to fulfill all requirements manually.
 Notes for Ubuntu
 ----------------
 
-Nsim employs the PETSc library, which provides parallelizable linear
-algebra. This appears to work fine on Ubuntu 7.04 (Feisty Fawn).
-
-Unfortunately, Ubuntu's libpetsc package appears to be
-broken. Trying to install and start nsim on Ubuntu 7.10 (Gutsy Gibbon)
-gives this error message::
-
-  $ nsim
-  /usr/bin/pyfem: symbol lookup error: /usr/lib/libpetsc.so.2.3.2:
-  undefined symebl: queue
-
-We have contacted the Ubuntu developers and asked to resolve this
-issue. In the mean time, one workaround that reportedly works is to
-replace the Ubuntu libpetsc package with Debian's. (Installing Debian
-packages in Ubuntu seems to be somewhat frowned upon by Ubuntu
-developers, but in this particular case it should be harmless.)
-
-To do so, first download the debian libpetsc package from this URL:
-
-http://ftp.debian.org/debian/pool/main/p/petsc/libpetsc2.3.2_2.3.2-1_i386.deb
-
-Then, as root, give the command::
-
-  $ dpkg -i libpetsc2.3.2_2.3.2-1_i386.deb
-
-to replace your Ubuntu libpetsc package by its Debian cousin. While 
-this should not upset anything on your system, you can, however,
-nevertheless revert this change any time by giving the command::
-
-  $ aptitude reinstall libpetsc2.3.2
+Please install by `compiling from source <install_a.html>`__.
 
 
-If you cannot get this to work on your Ubuntu release, then we suggest
-you `compile from source <install_a.html>`__, which works on any
-standard linux system (including Ubuntu).
+.. comment:
 
-
-
-
-Installing the developer version
---------------------------------
-
-Note: if you have a beta-tester password, you may gain access to the
-most recent developer debian package by using the following line instead::
-
- deb http://user:password@nmag.soton.ac.uk/debian/ unstable unofficial
-
-(Strictly speaking, this works but violates RFC1738.)
+  Nsim employs the PETSc library, which provides parallelizable linear
+  algebra. This appears to work fine on Ubuntu 7.04 (Feisty Fawn).
+  
+  Unfortunately, Ubuntu's libpetsc package appears to be
+  broken. Trying to install and start nsim on Ubuntu 7.10 (Gutsy Gibbon)
+  gives this error message::
+  
+    $ nsim
+    /usr/bin/pyfem: symbol lookup error: /usr/lib/libpetsc.so.2.3.2:
+    undefined symebl: queue
+  
+  We have contacted the Ubuntu developers and asked to resolve this
+  issue. In the mean time, one workaround that reportedly works is to
+  replace the Ubuntu libpetsc package with Debian's. (Installing Debian
+  packages in Ubuntu seems to be somewhat frowned upon by Ubuntu
+  developers, but in this particular case it should be harmless.)
+  
+  To do so, first download the debian libpetsc package from this URL:
+  
+  http://ftp.debian.org/debian/pool/main/p/petsc/libpetsc2.3.2_2.3.2-1_i386.deb
+  
+  Then, as root, give the command::
+  
+    $ dpkg -i libpetsc2.3.2_2.3.2-1_i386.deb
+  
+  to replace your Ubuntu libpetsc package by its Debian cousin. While 
+  this should not upset anything on your system, you can, however,
+  nevertheless revert this change any time by giving the command::
+  
+    $ aptitude reinstall libpetsc2.3.2
+  
+  
+  If you cannot get this to work on your Ubuntu release, then we suggest
+  you `compile from source <install_a.html>`__, which works on any
+  standard linux system (including Ubuntu).
+  
+  
+  
+  
+  Installing the developer version
+  --------------------------------
+  
+  Note: if you have a beta-tester password, you may gain access to the
+  most recent developer debian package by using the following line instead::
+  
+   deb http://user:password@nmag.soton.ac.uk/debian/ unstable unofficial
+  
+  (Strictly speaking, this works but violates RFC1738.)
 
 
 
@@ -143,8 +144,6 @@ follow these instructions:
 3. Run::
    
      $> aptitude install netgen
-
-  (this is likely to require an upgrade of the libc, and should be okay).
 
   At this point, you should have working netgen installation (you can test
   this by calling netgen)::

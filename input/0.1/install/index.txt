@@ -37,11 +37,11 @@ If you have VMware Fusion, you can run the Nmag Virtual Machine (see
 Debian Linux, Ubuntu, Knoppix and other debian derivatives
 ----------------------------------------------------------
 
-You will probably prefer to install the debian package (see `Method B
-installation instructions <debian.html>`__).
+Please `compile from source <install_a.html>`__. 
 
-You can also install nmag from source (`Method A <install_a.html>`__),
-or use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).
+There is a debian package available for the Nmag release 6131 from March 2009 (see `Debian package installation instructions <debian.html>`__).
+
+You can also use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).
 
 
 Linux/UNIX in general
@@ -75,6 +75,8 @@ of running nmag:
    disk. That is typically no problem if you just want to compute a
    few examples from the tutorial.
 
+   This release is out-of-date.
+
 
 
 
@@ -97,7 +99,7 @@ Method A: compile everything from source
 
 Download a large archive that provides nmag together with (nearly) all
 required tools, and compile everything from source. Compile time is
-between 20 minutes and one hour, disk space required about 1 GB. 
+between 15 minutes and one hour, disk space required about 1 GB. 
 
 :OS: 
 
@@ -106,6 +108,8 @@ between 20 minutes and one hour, disk space required about 1 GB.
 :Hardware: 
  
   i386, PowerPC, . . .
+
+:latest: Yes (latest version provided)
 
 :Read more: 
 
@@ -123,9 +127,11 @@ derived from Debian (such as Ubuntu).
 
 :Hardware: i386 
 
+:latest: No (version 6131 available)
+
 :Read more: 
    `Installation instructions Method B <debian.html>`__ 
-
+  
 
 Method C: Knoppix CD
 --------------------
@@ -141,6 +147,8 @@ evaluate Nmag quickly without needing any disk space.
 
 :Hardware:
   i386 
+
+:latest: No (version 5878 available)
 
 :Read more:
   `Installation instructions Method C <knoppix.html>`__.
@@ -177,6 +185,8 @@ The only requirement is that there is a lot of disk space available
 :OS: Windows (free), Linux (free), Mac OS X (requires VMWare Fusion)
 
 :Hardware: i386
+
+:latest: Yes (latest version provided)
 
 :Read More: `Installation instructions Method D <vmplayer.html>`__.
 
