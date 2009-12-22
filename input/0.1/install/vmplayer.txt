@@ -120,7 +120,7 @@ Downloading and starting the Nmag virtual machine
 
 * Download the zipped Nmag virtual appliance from `this directory <http://nmag.soton.ac.uk/vmware/0.1>`__. The appliance is split into two files (to ensure that each file does not exceed the 2GB file size limit that some file systems impose).
 
-* unzip the downloaded files. (They inflate their content into a subdirectory with name ``nmag-0.1``).
+* unzip the downloaded files: extract they content into a subdirectory with name ``nmag-0.1``.
 
 * start the VMware Player software 
 
@@ -200,7 +200,8 @@ First steps
 Using VMware player
 -------------------
 
-The help function of the VMware Player provides a useful summary of how to use it.
+The help function of the VMware Player provides a useful summary of
+how to use it.
 
 Note that you can switch to full-screen mode when pressing
 CTRL+ALT+RETURN, and that you return from full-screen mode by either
@@ -208,18 +209,6 @@ pressing CTRL+ALT, or moving the mouse to the top of the screen (to
 get the VMPlayer menu).
 
 
-
-If you want to share data with your host, then 
-
-* go to ``VMWare Player->Preferences->Shared Folders``. 
-
-* select ``Always enabled`` or ``Enabled until next power off or suspend``
-
-* click on the ``vmware`` Folder, and select ``Properties``
-
-* Modify the ``Host path`` by clicking the ``Browse`` button: Choose a
-  location which the virtual machine can read and write to, for
-  example your Desktop, or a dedicated subfolder somewhere.
 
 
   
@@ -231,6 +220,29 @@ Frequently Asked Questions
 
 .. contents::
   :local:
+
+
+How can I exchange data between the virtual machine and the host?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to share data with your host, then 
+
+* go to ``VMWare Player->Preferences->Shared Folders``. 
+
+* select ``Always enabled`` or ``Enabled until next power off or suspend``
+
+* click on the ``vmware`` Folder, and select ``Properties``
+
+* Modify the ``Host path`` by clicking the ``Browse`` button: Choose a
+  location which the virtual machine can read and write to, for
+  example your Desktop (or a dedicated subfolder somewhere).
+
+  Leave the ``Name`` as ``vmware`` so that the instructions below are easier to understand.
+
+* Click OK to close the window. The Shared folder is now configured:
+
+  On the linux system, there is now a folder ``/mnt/hgfs/vmware`` which shows the content of the ``Desktop`` folder on the host (or whichever folder has been chosen above), and can be used to exchange data.
+
 
 
 How can I change the keyboard in the Nmag virtual machine?

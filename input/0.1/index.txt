@@ -90,6 +90,7 @@ Release 0.1 beta (6481) 22 December 2009
   * We stop providing a Debian package for this release. The from source
     compile works out of the box on Debian systems.
 
+In this release, we update the `install from source <install/install_a.html>`__, and the `virtual machine <install/vmplayer.html>`_ to version 0.1-6481.
 
 
 
