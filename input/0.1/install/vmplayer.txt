@@ -30,7 +30,7 @@ machine. Once the software is installed, it can be started like any
 other application. Once this virtual machine software is running, it
 will simulate a PC environment so that one can have a second (virtual)
 machine running in that window. The 'virtual' hard drive of that
-virtual machine is realised through a few big files gathered in a
+virtual machine is realised through a (few) big files gathered in a
 particular directory on the hard drive of the (Windows) host
 machine. It is of course required to provide an operating system for
 the virtual machine, which could be, for example, Linux.
@@ -65,7 +65,8 @@ Installing the VMware Player
 VMware_ provides a multitude of different products that allow
 different degrees of virtualisation. Some of them are free and some
 have to be paid for. We try to point to exactly the right product
-here, and to keep things simple.
+here, and to keep things simple although VMWare is frequently changing
+the names of their products.
 
 
 If your host runs **MS Windows** or **Linux**, then you can download
@@ -133,48 +134,66 @@ Downloading and starting the Nmag virtual machine
 
   * and click open.
 
-When you do this the first time, the VMware Player will ask you
-whether this virtual machine has been *moved* or *copied*. The right
-answer is *copied*.
+When you do this the first time, the VMware Player may warn that the machine is already in use. If so, select ``Take ownership``.
+
+It will ask you whether this virtual machine has been *moved* or
+*copied*. The right answer is *copied*.
 
 Once you have done this, the virtual machine will boot.
+
+When the kernel boot menu appears (the first line starts "GNU GRUB"), do nothing, or press return.
+
+Wait until the graphical login turns up.
 
 
 Using the Nmag virtual machine
 ------------------------------
 
-The Nmag virtual machine is a Debian Linux installation which provides
+The Nmag virtual machine is a Debian Linux (Lenny) installation which provides
 all the software required to run micromagnetic simulations with Nmag.
 
-After booting, a login screen appears to ask you to provide the
-password for user ``guest``. The login manager has been setup such
-that no password has to be entered for this user. 
+After booting, a login screen appears. There is only one user
+registered. The username is ``nmag`` and the password is
+``nmag``. (The root account has the same password; should you ever
+need it.)
 
-There is only one user registered. The username is ``guest`` and the
-password is ``nmag``, should you ever need it. (The root account has
-the same password; should you ever need it.)
-
-The default desktop environment is KDE, and looks fairly similar to Windows.
+The default desktop environment is Gnome. 
 
 At this point, you have a complete environment to start simulations,
 and the guided tour in the manual is a good starting point to explore
-nmag. You find a link on the Desktop which will take you to a local
-copy of the manual on your harddrive.
+nmag. You find a link on the Desktop (``show_manual.sh``) which will display a local copy of the manual on your harddrive (select 'Run' after double clicking).
 
 If you want to see the examples that are discussed in the manual
-directly, you can go to ``/home/guest/nmag_manual``. Each directory in
+directly, you can go to
+``/home/nmag/nmag-0.1/nsim/interface/nmag/manual``. Each subdirectory in
 there corresponds to one example. Note that there are sometimes
 additional files in the directory that are used for automatic creation
 of plots in the manual, and for automatic testing (you may want to
-ignore those).
+ignore those). There is a shortcut ``manual`` for this directory on the Desktop, and also in the home directory of the nmag user.
 
-We understand that it may be a daunting task to start working with a
-Linux environment if you had no previous exposure. We aim to expand
-this section to answer questions that are raised by users, and invited
-your feedback to tell us where you are stuck, or could do with further
-guidance (Contact nmag@soton.ac.uk, or the mailing lists as shown on
-http://nmag.soton.ac.uk).
 
+First steps
+-----------
+
+#. Login as ``nmag``, password ``nmag``.
+
+#. Double click on `show_manual.sh`, then ``run`` to display the Nmag manual.
+
+#. Navigate to example 1 in the guided tour (Example: Demag field in uniformly magnetised sphere).
+
+#. Open a terminal (either through clicking on the terminal icon at the top, roughly in the middle, or by going through Applications->Accessories->Terminal.)
+
+#. change into the directory with the manual examples by typing::
+
+     cd manual
+
+#. change into the directory for the first example::
+
+     cd example1
+
+#. run the simulation that is described in the manual by typing::
+
+     nsim sphere1.py
 
 
 
@@ -189,22 +208,21 @@ pressing CTRL+ALT, or moving the mouse to the top of the screen (to
 get the VMPlayer menu).
 
 
-.. comment:
-  If you want to share data with your host, then select ``Shared
-  Folders`` from the ``VMware Player`` menu (you may have to do this as
-  the Administrator).
+
+If you want to share data with your host, then 
+
+* go to ``VMWare Player->Preferences->Shared Folders``. 
+
+* select ``Always enabled`` or ``Enabled until next power off or suspend``
+
+* click on the ``vmware`` Folder, and select ``Properties``
+
+* Modify the ``Host path`` by clicking the ``Browse`` button: Choose a
+  location which the virtual machine can read and write to, for
+  example your Desktop, or a dedicated subfolder somewhere.
+
+
   
-  If you need more help here, please let the nmag team know, and we'll
-  expand the explanation.
-
-  Hans: it appears that sharing folders is restricted to a paid-for
-  version (very annoying), so that data transfer has to be done via
-  ftp, scp, email, USB sticks, ...
-
-  Hmm.
-
-  Would vmware server be an alternative?
-
 
   
 
@@ -218,12 +236,8 @@ Frequently Asked Questions
 How can I change the keyboard in the Nmag virtual machine?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You should find a flag at the right end of the bar at the bottom of
-the screen with a flag (by default, this may be the US flag). If you
-right-click on this, you can configure which keyboard layout you would
-like to use.
+Log in, then go to System->Preferences->Keyboard->Layouts.
 
- 
 
 Can I also use other VMware products with the Nmag Virtual machine?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

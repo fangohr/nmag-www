@@ -9,13 +9,11 @@ restindex
     build: Yes
 /restindex
 
-
-
-nmag
+Nmag
 ====
 
-nmag is a micromagnetic simulation package based on the general
-purpose multi-physics library `nsim
+Nmag is a micromagnetic simulation package based on the general
+purpose multi-physics library `Nsim
 <http://www.soton.ac.uk/~fangohr/nsim/index.html>`__. It is developed
 by the group of Hans Fangohr and Thomas Fischbacher in the `School of
 Engineering Sciences <http://www.soton.ac.uk/ses>`__ at the
@@ -40,11 +38,14 @@ Features in brief:
 
  - Spin torque transfer (Zhang-Li model for uniform current density)
 
+ - Supports use of matrix compression library (HLib) for BEM
+
  - extensive documentation in `html <current/manual/html/manual.html>`__ 
    and `pdf <current/manual/manual.pdf>`__, including Tutorial
 
- - `download <current/download.html>`__ as source, debian package, 
-   (VMWare) virtual machine and bootable CD/DVD ISO image
+ - download as `source tar ball <current/download/nmag-0.1-all.tar.gz>`__, (VMWare) virtual machine
+   image (and older versions as debian package, and bootable CD/DVD ISO
+   image)
 
 
 
@@ -64,14 +65,21 @@ its quality, reliability, or any other characteristic.
 
 
 
-.. raw:: html		  
+.. comment:
 
-   <p><font color="red">New: </font>Fully funded PhD <a href="http://www.soton.ac.uk/~fangohr/vacancies.html"> studentships in micromagnetic modelling available </a> for 2009.</p>
-
+  .. raw:: html		  
+  
+     <p><font color="red">New: </font>Fully funded PhD <a href="http://www.soton.ac.uk/~fangohr/vacancies.html"> studentships in micromagnetic modelling available </a> for 2010.</p>
+  
 
 
 News
 ----
+
+* *22 December 2009* 
+
+  Update `0.1 beta (6481) <0.1/index.html>`__ released, includes support for Matrix compression.
+
 
 
 * *June 2009*
@@ -80,51 +88,6 @@ News
   
   .. image:: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009_100.png
     :target: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf
-
-
-* *30 March 2009* 
-
-  Update `0.1 beta (6163) <0.1/index.html>`__
-
-
-* *20 November 2008* 
-
-  Update 0.1 beta (5962)
-
-
-* *10 - 14 November, MMM Austin, Texas*
-
-  Matteo Franchin and Andreas Knittel represent the Nmag team at the
-  MMM. They are happy to approached with Nmag-related queries. They
-  will give the following presentations:
-
-  :Session: EH Numerical Methods and Magnetic Simulations
-
-  :Date: Thursday 13 November 2008
-
-  :Time: 9:24: *The macro geometry* (new approach to periodic boundary conditions as `available in Nmag <http://nmag.soton.ac.uk/nmag/current/manual/html/manual.html#example-1d-periodicity>`__)
-
-  :Time: 9:36: *Scriptability and interactive parallel micromagnetic simulations* (about the Nmag concept of 'writing micromagnetic simulation programs')
-
-  :Time: 9:48: *Matrix compression using the H-Lib* (for large simulations of systems with large surface area) 
-
-  :Location: Meeting Room 410
-
-  They will also attend the Open Forum on Micromagnetic Modelling
-  Wednesday evening (20:00-22:00).
-
-* *13 October 2008* 
-
-  Update 0.1 beta (5878)
-
-* *2 September 2008* 
-
-  Update 0.1 beta (5834)
-
-* *8 August 2008* 
-
-  Update 0.1 beta (5787)
-
 
 
 `Older news items <oldnews.html>`__
@@ -140,21 +103,10 @@ Mailing list & Contact
 The development team can be contacted at nmag@soton.ac.uk.
 
 
-Versions
---------
-
-The following versions are available:
-
-* the `current version (nmag 0.1) <current/index.html>`__.
-
-* the `developer's version <devel/index.html>`__ (access restricted)
-
-
-
 Acknowledgement
 ---------------
 
-The development of the nmag tool has been financially supported by the `EPSRC <http://www.epsrc.ac.uk>`__, Grant GR/T09156/01, EP/E039944/1 (United Kingdom).
+The development of the nmag tool has been financially supported by the `EPSRC <http://www.epsrc.ac.uk>`__, Grant GR/T09156/01, EP/E039944/1 (United Kingdom), the European Community's Seventh Framework Programme (FP7/2007-2013) under Grant Agreement no 233552, and the University of Southampton.
 
 
 .. raw:: html

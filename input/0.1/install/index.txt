@@ -61,12 +61,10 @@ There is currently no nmag version for Windows. You have two options
 of running nmag:
 
 1. You install a virtual machine player on your Windows machine, and
-   run the Nmag virtual machine in this application (`Method D
-   <vmplayer.html>`__). This is the right choice for most users who want
+   run the Nmag virtual machine in this application (`Method D <vmplayer.html>`__). This is the right choice for most users who want
    to use nmag.
 
-2. You can use the bootable CD (`download  <http://nmag.soton.ac.uk/cd-images>`__, `Method C instructions
-   <knoppix.html>`__) to boot your PC from the CD into a running (linux)
+2. You can use the bootable CD (`download  <http://nmag.soton.ac.uk/cd-images>`__, `Method C instructions <knoppix.html>`__) to boot your PC from the CD into a running (linux)
    system. This is ideal to test nmag (and will not modify your
    hard drive).
 

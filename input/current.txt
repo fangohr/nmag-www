@@ -2,7 +2,7 @@ restindex
     crumb: current version
     format: rest
     page-title: The current release of nmag
-    include: Yes
+    include: No
     page-description:
 	The current release of the software
     /description

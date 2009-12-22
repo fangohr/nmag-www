@@ -123,7 +123,7 @@ tarballs: fetchtrunk installation-system nsim
 	mkdir -p output/$(NSIM_VERSION)/download
 	rm -rf tmp/$(SRCDIR)/nmag/doc/nmag
 	mkdir -p tmp/$(SRCDIR)/nmag/doc/nmag
-	ln -s nsim/interface/nmag/manual tmp/$(SRCDIR)/nmag/doc/nmag
+	ln -s ../nsim/interface/nmag/manual tmp/$(SRCDIR)/nmag/doc
 
 
 	echo " *** REMOVING OLD TARBALLS *** "

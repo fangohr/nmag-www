@@ -25,10 +25,10 @@ restindex
 
 
 
-Download
-========
+Download and install
+====================
 
-The code can be obtained from the `download page <download.html>`__.
+The code can be obtained from the `installation page <install/index.html>`__.
 
 
 Manual
@@ -40,9 +40,61 @@ Read the manual as `html <manual/html/manual.html>`__ or `pdf <manual/manual.pdf
 Changelog
 =========
 
+Release 0.1 beta (6481) 22 December 2009
+----------------------------------------
+
+* New Features
+
+  * Support of Hierarchical Matrix compression for boundary element matrix. See
+    `example in documentation <manual/html/manual.html#compression-of-the-boundary-element-matrix-using-hlib>`__ for details, and `Knittel et al 105, 07D542 (2009)
+    <http://link.aip.org/link/?JAPIAU/105/07D542/1>`__ (`postprint pdf
+    <http://www.soton.ac.uk/~fangohr/publications/postprint/Knittel_etal_JAP_105_07D542_2009.pdf>`__). This reduces the memory requirements for the boundary element matrix substantially.
+  
+* Bugfixes/Improvements
+  
+  * Minor improvements manual (Example 1 and 2, nmagpp, mayavi, 6170, updated MPI section)
+  
+  * Updated plot.dat and plots for Example Hysteresis loop for thin disk to fix
+    documentation bug (thanks to Weiwei Wang for spotting this, 6326).
+  
+  * The time stopping criteria are now more faithfully respected. A new optional
+    argument, 'exact_tstop', has been added to 'Simulation.advance_time' and to
+    'Simulation.set_params' to give more freedom to the time integrator, in case
+    performance is a concern and exact time-stopping is not really needed.
+  
+  * Updated packages to their latest stable release in the compile from source.
+    We are now using: Sundials 2.3.0, HDF5 1.6.10, Python 2.6.4, pytables 2.1.2,
+    NumPy 1.3.0, IPython 0.10. 
+
+    This means an existing from-source installation *can not* be
+    updated using ``make update``.
+
+  * The regression tests can now be called with three different targets (6430):
+  
+    make check : runs all fast tests (should complete in less than 5
+    minutes). This is a good test to run after compiling nmag (from source).
+  
+    make checkmpi   : runs mpi-related checks
+  
+    make checkslow  : runs tests that take longer (order of hours)
+  
+    make checkall   : run all tests together  
+  
+    (Previously, the mpi tests were part of target 'check'.)
+  
+  * The virtual machine is now based on Debian Lenny (the current
+    stable version of Lenny).
+
+* Interface changes
+  
+  * We stop providing a Debian package for this release. The from source
+    compile works out of the box on Debian systems.
+
+
+
+
 Release 0.1 beta (6163) 30 March 2009
 -------------------------------------
-
 
 * Bugfixes:
   
@@ -88,155 +140,8 @@ Release 0.1 beta (6163) 30 March 2009
     --dumpconf switch is provided (6093)
 
 
-In this release, we update the `install from source
-<install/install_a.html>`__, the `debian package (etch)
-<install/debian.html>`_, and the `virtual machine
-<install/vmplayer.html>`_ to version 0.1-6163.
+In this release, we update the `install from source <install/install_a.html>`__, the `debian package (etch) <install/debian.html>`_, and the `virtual machine <install/vmplayer.html>`_ to version 0.1-6163.
   
-
-
-Release 0.1 beta (5962) 20 November 2008
-----------------------------------------
-
-* Bugfixes/Improvements
-
-  * New feature: Can read finite element meshes produced with Gmsh using
-    the new ``--gmsh`` switch for the ``nmeshimport`` tool. (5924)
-  
-  * Added more regression tests
-  
-  * Fixed bug that stopped simulations where two magnetic materials
-    (each defined as a different region in the mesh) touch each other
-    (5886)
-  
-  * Fixed bug that didn't allow to have different (potentially
-    unrelated) simulation objects in the same nmag-program (5956)
-  
-  * Fixed bug that (sometimes) stopped the --restart mechanism 
-    to continue interrupted hysteresis loop calculations (5907)
-  
-  * Fixed bug that prevented ``sim.get_subfield_positions`` and
-    ``sim.get_subfield_sites()`` from working. (5933)
-  
-  
-
-
-Release 0.1 beta (5878) 13 October 2008
----------------------------------------
-
-* Bugfixes/Improvements
-  
-  * bugfix: reinitialisation used to reset the stage_time and stage_step
-    counters. This is now fixed and is done explicitly in the hysteresis method.
-    This functionality is needed to study systems where the applied field
-    changes in time (5848).
-  
-  * bugfix: allow from source compilation on (K)Ubuntu 8.04. The bug is
-    with the Petsc library 2.3.2. We have upgraded the Petsc library to
-    2.3.3 in the compile from source installation, which resolves the
-    problem (5851). 
-  
-  * bugfix: reading Gambit meshes works without warnings (5852).
-  
-  * bugfix: A missing ``.petsc`` file in the user's home directory
-    resulted in an error message when nsim was started. This did create
-    the missing file, so all is fine the next time nsim is
-    called. Revision (5853) fixes this.
-  
-  * Improvement: Split hysteresis example in tutorial into two
-    examples. The first can be used to play around with thecommand andto
-    quickly complete a simulation. The second allows to compare the
-    resulting hysteresis loop with an analytical prediction (5876).
-  
-  * minor improvements in makefile for installation from source (5859).
-  
-* Interface changes
-  
-  None.
-
-
-
-Release 0.1 beta (5834) 2 September 2008
-----------------------------------------
-
-* Bugfixes/Improvements/New Features
-
-  * bugfix: disabled diagnostic debug code that caused segfault for
-    large meshes (approximately over 130,000 volume elements)
-
-  * bugfix: including documentation for
-    Simulation.get_subfield_average() in manual
-  
-  * nmeshipmort has slightly improved error reporting when attempting to
-    import an unknown mesh format
-  
-
-* Interface changes
-  
-  None.
-  
-
-Release 0.1 beta (5787) 8 August 2008
--------------------------------------
-
-
-* Bugfixes/Improvements/New Features
-  
-  * We have a new distribution mode using VMWare's vmplayer. This is
-    particularly attractive to MS Windows users. This is at a very
-    early stage and and we invite feedback from early adaptors (see
-    installation Method D).
-  
-  * Updated the Knoppix CD to the most recent version (installation Method C). 
-    Also included Netgen, a mesh generator, in the CD image.
-  
-  * ncol can now process OOMMF's odt files (use --odt switch)
-  
-  * Bugfix: the previous debian package could only execute on CPUs with sse2 extension.
-  
-  * Bugfix: fixed embarrassing bug that appeared with the last release
-    (printing of applied field brakes when first component is zero).
-  
-* Interface change
-  
-  * removed support for thermal fluctuations. There appeared to be no
-    up-take of this feature, and maintaining this (while developing the
-    code further, parallelising it and making faster and leaner) was
-    unnecessarily binding resources.
-
-
-
-Release 0.1 beta (5734) 1 August 2008
--------------------------------------
-
-
-* Bug fixes/Improvements/New Features
-
-  * Reduced memory requirements by approximately 20% (due to better
-    compression of sparse matrices)
-  
-  * Updated code working with hdf5 files to be compatible with pytables
-    version 1 and 2 (no immediate effect on user if using compile from
-    source, but allows to link to existing pytables2). By default we
-    are still using pytables1 (but expect to switch at some point in the
-    future, which should be transparent to users).
-    
-  * Change from numpy 1.0.1 to 1.1.0. in compile from source distribution.
-  
-  * More detailed progress reporting in nmagpp (useful if data files
-    become large, i.e. a GB and more).
-  
-  * More detailed progress report in setup phase.
-  
-  * More detailed progress reporting in hysterises/relax commands.
-  
-  * Made compile from source work for Mac OS X 10.5 (Leopard)
-
-  * Introduced unit and regression tests.
-
-* Interface changes
-
-  (None)
 
 
 
