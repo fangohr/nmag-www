@@ -1,0 +1,13 @@
+restindex
+    crumb: Wiki
+    format: rest
+    page-title: Nmag Wiki 
+    include: Yes
+    page-description:
+      Nmag Wiki
+    /description
+    build: No
+    target: ../community/wiki/nmag
+/restindex
+
+

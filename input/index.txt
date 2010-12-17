@@ -1,10 +1,10 @@
 restindex
-    crumb: nmag home
+    crumb: Nmag home
     format: rest
-    page-title: nmag - computational micromagnetics
+    page-title: Nmag - computational micromagnetics
     include: Yes
     page-description:
-      Home page of nmag - nmag - computational micromagnetics
+      Home page of Nmag - Nmag - computational micromagnetics
     /description
     build: Yes
 /restindex
@@ -106,7 +106,7 @@ The development team can be contacted at nmag@soton.ac.uk.
 Acknowledgement
 ---------------
 
-The development of the nmag tool has been financially supported by the `EPSRC <http://www.epsrc.ac.uk>`__, Grant GR/T09156/01, EP/E039944/1 (United Kingdom), the European Community's Seventh Framework Programme (FP7/2007-2013) under Grant Agreement no 233552, and the University of Southampton.
+The development of the Nmag tool has been financially supported by the `EPSRC <http://www.epsrc.ac.uk>`__, Grant GR/T09156/01, EP/E039944/1 (United Kingdom), the European Community's Seventh Framework Programme (FP7/2007-2013) under Grant Agreement no 233552, and the University of Southampton.
 
 
 .. raw:: html

@@ -1,0 +1,58 @@
+restindex
+    crumb: Mailing list	
+    format: rest
+    page-title: Nmag Mailing list	 
+    include: Yes
+    page-description:
+      Mailing list	
+    /description
+    build: yes
+/restindex
+
+
+
+Nmag Mailing list
+-----------------
+
+If you are using |nmag|, we recommend that you subscribe to at least
+one of these following two lists to be aware of any major bugs or
+improvements. If you have a question about how to use the software, we
+suggest you subscribe to nmag-users_, and post it there. (If you
+prefer to contact only the developers, email ``nmag@soton.ac.uk``).
+
+nmag-announce
+~~~~~~~~~~~~~
+
+**nmag-announce@lists.soton.ac.uk** is a low traffic read-only mailing
+list which will broadcast updates of nmag and any other relevant news.
+
+To subscribe to this list, send an email to
+`nmag-announce-request@lists.soton.ac.uk
+<mailto:nmag-announce-request@lists.soton.ac.uk>`__ with an empty
+subject and the word ``subscribe`` in the body of the email.
+
+The **archives** can be found and searched at
+http://groups.google.com/group/nmag-announce.
+
+nmag-users
+~~~~~~~~~~
+
+**nmag-users@lists.soton.ac.uk** is a mailing list to discuss the use of
+nmag. Any announcements to ``nmag-announce`` will also be sent to this
+mailing list.
+
+To subscribe to this list, send an email to
+`nmag-users-request@lists.soton.ac.uk
+<mailto:nmag-users-request@lists.soton.ac.uk>`__ with an empty subject
+and the word ``subscribe`` in the body of the email.
+
+Information about how to unsubscribe are provided with the welcome
+message once you have subscribed.
+
+The **archives** can be found and searched at
+http://groups.google.com/group/nmag-users.
+
+
+
+
+.. |nmag| replace:: Nmag
