@@ -1,4 +1,5 @@
-WEBSERVER=nmag.soton.ac.uk
+#WEBSERVER=nmag.soton.ac.uk
+WEBSERVER=152.78.138.239
 DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
 #on alpha
 #LIBSOURCE_FILE=/var/local/www/webroot/nmag/pkgs.tar
