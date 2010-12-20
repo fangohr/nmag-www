@@ -7,7 +7,7 @@ restindex
       Nmag Wiki
     /description
     build: No
-    target: ../community/wiki/nmag
+    target: \../community/wiki/nmag
 /restindex
 
 

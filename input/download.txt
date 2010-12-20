@@ -14,9 +14,9 @@ Download version 0.1
 
 * `Source code <0.1/download>`__ (`Installation instructions <0.1/install/install_a.html>`__)
 
-* `VMWare Virtual Machine <../vmware/0.1/>`__ (`Installation instructions <0.1/install/vmplayer.html>`__)
+* `VMWare Virtual Machine <vmware/0.1/>`__ (`Installation instructions <0.1/install/vmplayer.html>`__)
 
-* `A Knoppix-based stand-alone Live Linux system <../cd-images/>`__ (Knoppix based)
+* `A Knoppix-based stand-alone Live Linux system <cd-images/>`__ (Knoppix based)
 
 Note that the source-code distribution will always be the most recent,
 and updates of the Virtual machine and Knoppix-based system may lag
