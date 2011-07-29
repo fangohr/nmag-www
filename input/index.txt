@@ -76,6 +76,16 @@ its quality, reliability, or any other characteristic.
 News
 ----
 
+* *29 July 2011*
+
+  `Nmag 0.1.1 Release Candidate 2 <http://dl.dropbox.com/u/1820549/soton/nmag/nmag-0.1.1-rc2.tar.gz>`__ available for download.
+
+.. comment:
+
+  - `Nmag Wiki pages <https://nmag.soton.ac.uk/community/wiki/nmag>`__ collecting tips and tricks and contributions from Nmag users.
+
+
+
 * *22 December 2009* 
 
   Update `0.1 beta (6481) <0.1/index.html>`__ released, includes support for Matrix compression.
