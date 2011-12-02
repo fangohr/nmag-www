@@ -1,0 +1,214 @@
+restindex
+    crumb: installation
+    format: rest
+    page-title: nmag 0.2 installation instructions
+    include: Yes
+    page-description:
+      nmag 0.2 installation instructions
+    /description
+    build: Yes
+/restindex
+
+
+======================
+ Installation methods
+======================
+
+.. sectnum::
+
+.. contents:: 
+
+
+Installation on Ubuntu 10.11
+============================
+
+To be added ...
+
+.. comment:
+
+  How can I install nmag for Windows/Linux/Mac OSX?
+  =================================================
+  
+  Mac OS X
+  --------
+  
+  You can compile nmag and required helping libraries from source
+  (`download tar file <../download/nmag-0.1-all.tar.gz>`__, `Method A
+  installation instructions <install_a.html>`__).
+  
+  If you have VMware Fusion, you can run the Nmag Virtual Machine (see
+  `Method D <vmplayer.html>`_).
+  
+  
+  Debian Linux, Ubuntu, Knoppix and other debian derivatives
+  ----------------------------------------------------------
+  
+  Please `compile from source <install_a.html>`__. 
+  
+  There is a debian package available for the Nmag release 6131 from March 2009 (see `Debian package installation instructions <debian.html>`__).
+  
+  You can also use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).
+  
+  
+  Linux/UNIX in general
+  ---------------------
+  
+  You can compile nmag and required helping libraries from source
+  (`download tar file <../download/nmag-0.1-all.tar.gz>`__, `Method A
+  installation instructions <install_a.html>`__)
+  
+  You can also use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).
+  
+  
+  Windows
+  -------
+  
+  There is currently no nmag version for Windows. You have two options
+  of running nmag:
+  
+  1. You install a virtual machine player on your Windows machine, and
+     run the Nmag virtual machine in this application (`Method D <vmplayer.html>`__). This is the right choice for most users who want
+     to use nmag.
+  
+  2. You can use the bootable CD (`download  <http://nmag.soton.ac.uk/cd-images>`__, `Method C instructions <knoppix.html>`__) to boot your PC from the CD into a running (linux)
+     system. This is ideal to test nmag (and will not modify your
+     hard drive).
+  
+     Note that with this setup you will run out of memory sooner than
+     with any other method, as part of the RAM is used as a RAM
+     disk. That is typically no problem if you just want to compute a
+     few examples from the tutorial.
+  
+     This release is out-of-date.
+  
+  
+  
+  
+  -------------------------------------------
+  
+  
+  
+  
+  What installation methods are provided?
+  =======================================
+  
+  This section repeats information listed above under `How can I install
+  nmag for Windows/Linux/Mac OSX?`_. Here, it is not ordered according
+  to the operating system you are interested in, but lists the different
+  installation methods that are provided.
+  
+  
+  Method A: compile everything from source
+  ----------------------------------------
+  
+  Download a large archive that provides nmag together with (nearly) all
+  required tools, and compile everything from source. Compile time is
+  between 15 minutes and one hour, disk space required about 1 GB. 
+  
+  :OS: 
+  
+    all Linux systems, Mac OS X
+  
+  :Hardware: 
+   
+    i386, PowerPC, . . .
+  
+  :latest: Yes (latest version provided)
+  
+  :Read more: 
+  
+    `Installation instructions Method  A <install_a.html>`__.
+  
+  
+  Method B: Debian package
+  ------------------------
+  
+  A debian package is provided. This is very convenient if you happen to
+  run a debian (etch) distribution, or linux distributions that are
+  derived from Debian (such as Ubuntu).
+  
+  :OS: Debian and related
+  
+  :Hardware: i386 
+  
+  :latest: No (version 6131 available)
+  
+  :Read more: 
+     `Installation instructions Method B <debian.html>`__ 
+    
+  
+  Method C: Knoppix CD
+  --------------------
+  
+  An CD iso image is provided which can be burnt to an CD. Any i386
+  machine can use this CD to boot from. This will boot into a special
+  Linux distribution (*Knoppix*) which has nmag installed. This process
+  will not touch the harddrives in the machine, and can thus be used to
+  evaluate Nmag quickly without needing any disk space. 
+  
+  :OS:
+    All (as the installed operating system will not be used, but an operating system is provided on the CD)
+  
+  :Hardware:
+    i386 
+  
+  :latest: No (version 5878 available)
+  
+  :Read more:
+    `Installation instructions Method C <knoppix.html>`__.
+  
+  
+  Method D: Virtual Appliance
+  ---------------------------
+  
+  A *Virtual appliance* (also called virtual machine) is provided that
+  provides a (Debian etch) Linux environment, including nmag, a mesh
+  generactor (Netgen) and many post-processing tools (MayaVi, Gnuplot,
+  Xmgrace, ...)
+  
+  The Virtual appliance is basically an operating system together with
+  applications stored in a directory, and can be executed using the
+  VMWare Player. One therefore needs to download an install VMWare
+  Player, and can subsequently run this Virtual appliance in a window
+  (or in full-screen mode) along side your usual operating system.
+  
+  The advantages of this approach are that
+  
+  * one can carry on using your normal Operating system (say, Windows)
+  
+  * No need to compile anything, or install extra software
+  
+  * Data can be saved and kept on the Virtual Machine, or transferred to
+    the host system (the Windows machine) using the 'shared folders'
+    mechanism.
+  
+  The only requirement is that there is a lot of disk space available
+  (about 5GB) to keep the virtual machine.
+  
+  
+  :OS: Windows (free), Linux (free), Mac OS X (requires VMWare Fusion)
+  
+  :Hardware: i386
+  
+  :latest: Yes (latest version provided)
+  
+  :Read More: `Installation instructions Method D <vmplayer.html>`__.
+  
+  
+  
+  ----------------------------
+  
+  
+  Abbreviations used
+  ==================
+  
+  :OS: Operating System (i.e. MS Windows, Linux, Mac OS X, UNIX, VMS, ...)
+  
+  :i386: 
+    An intel i386 compatible processor. All modern PC have such a
+    processor.
+  
+    The new Apple machines (including MacBook, Airbook,
+    MacBook Pro) also have such Intel CPUs. However, the old Apples
+    (including Powerbooks and ibooks) have the PowerPC chip, which is
+    different.

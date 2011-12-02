@@ -1,14 +1,13 @@
 restindex
-    crumb: nmag 0.1
+    crumb: nmag 0.2
     format: rest
     page-title: nmag - computational micromagnetics
     include: Yes
     build: Yes
     page-description:
-      Home page of nmag - nmag - computational micromagnetics
+      Nmag 0.2 
     /description
 /restindex
-
 
 
 
@@ -17,7 +16,7 @@ restindex
   <# 
   svnversion = include('svnversion','(rev not found)')
   releaseversion = include('release_version.uyu')
-  print "<p> This documentation refers to the %s beta (rev %s) release.</p>" % (releaseversion,svnversion)
+  print "<p> This documentation refers to the %s (%s) release.</p>" % (releaseversion,svnversion)
   #>
 
 
