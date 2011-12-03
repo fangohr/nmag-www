@@ -1,5 +1,6 @@
 WEBSERVER=152.78.138.239
 DATE=$(shell date +%Y-%m-%d-T%H-%M-%S)
+MREV=0.2
 
 WEBROOT=webroot
 
@@ -13,6 +14,12 @@ r2w:
 publish:
 	rsync -rvu -e ssh $(WEBROOT)/* www-data@$(WEBSERVER)://var/www/nmag
 
+fetch-docs:
+	mkdir -p webroot/$(MREV)/manual
+	echo "Getting documenation from ../doc"
+	cp -vr ../doc/nmag/_build/latex/NMAGUserManual.pdf webroot/$(MREV)/manual/manual.pdf
+	cp -rv ../doc/nmag/_build/html webroot/$(MREV)/manual
+	cp -rv ../doc/nmag/_build/singlehtml webroot/$(MREV)/manual	
 
 
 

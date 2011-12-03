@@ -9,17 +9,43 @@ restindex
     build: Yes
 /restindex
 
-Download version 0.1
+
+Download version 0.2
 ====================
 
-* `Source code <0.1/download>`__ (`Installation instructions <0.1/install/install_a.html>`__)
 
-* `VMWare Virtual Machine <vmware/0.1/>`__ (`Installation instructions <0.1/install/vmplayer.html>`__)
+* `Core and (nearly) all support libraries and tools <0.2/download/all>`__ (`Installation instructions <0.2/install/install_a.html>`__) -- Tarball including most supporting libraries (brings it's own Python etc)
 
-* `A Knoppix-based stand-alone Live Linux system <cd-images/>`__ (Knoppix based)
 
-Note that the source-code distribution will always be the most recent,
-and updates of the Virtual machine and Knoppix-based system may lag
-somewhat. The filenames should reveal the release number.
+* `Core code only <0.2/download/core>`__ (`Installation instructions <0.2/install/install_a.html>`__) 
+
+
+
+.. comment:
+
+  * `VMWare Virtual Machine <vmware/0.1/>`__ (`Installation instructions <0.1/install/vmplayer.html>`__)
+  
+
+
+
+
+
+
+
+.. comment:
+
+  
+  Download version 0.1
+  ====================
+  
+  * `Source code <0.1/download>`__ (`Installation instructions <0.1/install/install_a.html>`__)
+  
+  * `VMWare Virtual Machine <vmware/0.1/>`__ (`Installation instructions <0.1/install/vmplayer.html>`__)
+  
+  * `A Knoppix-based stand-alone Live Linux system <cd-images/>`__ (Knoppix based)
+  
+  Note that the source-code distribution will always be the most recent,
+  and updates of the Virtual machine and Knoppix-based system may lag
+  somewhat. The filenames should reveal the release number.
 
 

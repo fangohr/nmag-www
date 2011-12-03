@@ -12,13 +12,10 @@ restindex
 Nmag
 ====
 
-Nmag is a micromagnetic simulation package based on the general
-purpose multi-physics library `Nsim
-<http://www.soton.ac.uk/~fangohr/nsim/index.html>`__. It is developed
-by the group of `Hans Fangohr <http://www.soton.ac.uk/~fangohr>`__ and `Thomas Fischbacher <http://www.soton.ac.uk/~doctom>`__ in the `School of
-Engineering Sciences <http://www.soton.ac.uk/ses>`__ at the
-`University of Southampton <http://www.soton.ac.uk>`__ and released
-under the `GNU GPL <http://www.gnu.org/licenses/gpl2.txt>`__.
+Nmag is a micromagnetic simulation package. It has been developed at
+the University of Southampton with substantial contributions from Hans
+Fangohr, Thomas Fischbacher, Matteo Franchin. It is released under the
+`GNU GPL <http://www.gnu.org/licenses/gpl2.txt>`__.
 
 
 Features in brief:
@@ -57,50 +54,47 @@ Kingdom. It is released under the GNU General Public License (GNU GPL_)
 as published by the Free Software Foundation; either version 2, or (at
 your option) any later version.
 
-
 Nmag is an experimental system. Neither the University of Southampton
 nor the authors assume any responsibility whatsoever for its use by
 other parties, and makes no guarantees, expressed or implied, about
 its quality, reliability, or any other characteristic.
 
-
-
-.. comment:
-
-  .. raw:: html		  
-  
-     <p><font color="red">New: </font>Fully funded PhD <a href="http://www.soton.ac.uk/~fangohr/vacancies.html"> studentships in micromagnetic modelling available </a> for 2010.</p>
-  
-
-
-News
-----
-
-* *29 July 2011*
-
-  `Nmag 0.1.1 Release Candidate 2 <http://dl.dropbox.com/u/1820549/soton/nmag/nmag-0.1.1-rc2.tar.gz>`__ available for download.
+The software is provided free and open source. However, there is no
+resource available to provide installation support, user support, bug
+fixes or extensions of functionality, and the default expectation
+should be that the software is provided as is.
 
 .. comment:
 
-  - `Nmag Wiki pages <https://nmag.soton.ac.uk/community/wiki/nmag>`__ collecting tips and tricks and contributions from Nmag users.
-
-
-
-* *22 December 2009* 
-
-  Update `0.1 beta (6481) <0.1/index.html>`__ released, includes support for Matrix compression.
-
-
-
-* *June 2009*
-
-  The Institute of Physics Magnetism Group uses the Nmag logo for their `group flyer <http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf>`__.
   
-  .. image:: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009_100.png
-    :target: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf
-
-
-`Older news items <oldnews.html>`__
+  News
+  ----
+  
+  
+  
+  * *29 July 2011*
+  
+    `Nmag 0.1.1 Release Candidate 2 <http://dl.dropbox.com/u/1820549/soton/nmag/nmag-0.1.1-rc2.tar.gz>`__ available for download.
+  
+  .. comment:
+  
+    - `Nmag Wiki pages <https://nmag.soton.ac.uk/community/wiki/nmag>`__ collecting tips and tricks and contributions from Nmag users.
+  
+  
+  
+  * *22 December 2009* 
+  
+    Update `0.1 beta (6481) <0.1/index.html>`__ released, includes support for Matrix compression.
+  
+  * *June 2009*
+  
+    The Institute of Physics Magnetism Group uses the Nmag logo for their `group flyer <http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf>`__.
+    
+    .. image:: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009_100.png
+      :target: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf
+  
+  
+  `Older news items <oldnews.html>`__
 
 
 Mailing list & Contact
@@ -110,7 +104,9 @@ Mailing list & Contact
 <http://groups.google.com/group/nmag-users>`__ of the
 ``nmag-users`` `mailing list <http://nmag.soton.ac.uk/nmag/current/manual/html/manual.html#mailing-list>`__. 
 
-The development team can be contacted at nmag@soton.ac.uk.
+.. comment:
+
+  The development team can be contacted at nmag@soton.ac.uk.
 
 
 Acknowledgement

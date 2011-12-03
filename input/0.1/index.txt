@@ -2,7 +2,7 @@ restindex
     crumb: nmag 0.1
     format: rest
     page-title: nmag - computational micromagnetics
-    include: Yes
+    include: No
     build: Yes
     page-description:
       Home page of nmag - nmag - computational micromagnetics

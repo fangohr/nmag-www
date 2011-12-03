@@ -1,7 +1,7 @@
 restindex
     crumb: Manual (pdf)
     format: rest
-    page-title: Nmag Manual
+    page-title: Nmag 0.2 Manual (pdf)
     include: Yes
     page-description:
       Nmag Manual (pdf)

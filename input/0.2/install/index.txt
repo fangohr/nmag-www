@@ -19,8 +19,17 @@ restindex
 .. contents:: 
 
 
-Installation on Ubuntu 10.11
-============================
+Installation from big tar ball 
+==============================
+
+
+To be added ...
+
+
+
+Installation from small tar ball 
+================================
+
 
 To be added ...
 
@@ -60,33 +69,6 @@ To be added ...
   You can also use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).
   
   
-  Windows
-  -------
-  
-  There is currently no nmag version for Windows. You have two options
-  of running nmag:
-  
-  1. You install a virtual machine player on your Windows machine, and
-     run the Nmag virtual machine in this application (`Method D <vmplayer.html>`__). This is the right choice for most users who want
-     to use nmag.
-  
-  2. You can use the bootable CD (`download  <http://nmag.soton.ac.uk/cd-images>`__, `Method C instructions <knoppix.html>`__) to boot your PC from the CD into a running (linux)
-     system. This is ideal to test nmag (and will not modify your
-     hard drive).
-  
-     Note that with this setup you will run out of memory sooner than
-     with any other method, as part of the RAM is used as a RAM
-     disk. That is typically no problem if you just want to compute a
-     few examples from the tutorial.
-  
-     This release is out-of-date.
-  
-  
-  
-  
-  -------------------------------------------
-  
-  
   
   
   What installation methods are provided?
@@ -118,44 +100,6 @@ To be added ...
   :Read more: 
   
     `Installation instructions Method  A <install_a.html>`__.
-  
-  
-  Method B: Debian package
-  ------------------------
-  
-  A debian package is provided. This is very convenient if you happen to
-  run a debian (etch) distribution, or linux distributions that are
-  derived from Debian (such as Ubuntu).
-  
-  :OS: Debian and related
-  
-  :Hardware: i386 
-  
-  :latest: No (version 6131 available)
-  
-  :Read more: 
-     `Installation instructions Method B <debian.html>`__ 
-    
-  
-  Method C: Knoppix CD
-  --------------------
-  
-  An CD iso image is provided which can be burnt to an CD. Any i386
-  machine can use this CD to boot from. This will boot into a special
-  Linux distribution (*Knoppix*) which has nmag installed. This process
-  will not touch the harddrives in the machine, and can thus be used to
-  evaluate Nmag quickly without needing any disk space. 
-  
-  :OS:
-    All (as the installed operating system will not be used, but an operating system is provided on the CD)
-  
-  :Hardware:
-    i386 
-  
-  :latest: No (version 5878 available)
-  
-  :Read more:
-    `Installation instructions Method C <knoppix.html>`__.
   
   
   Method D: Virtual Appliance
