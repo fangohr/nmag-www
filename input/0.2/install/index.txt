@@ -19,12 +19,39 @@ restindex
 .. contents:: 
 
 
-Installation from big tar ball 
-==============================
+Installation of Nmag from big tar ball
+======================================
+
+* `Detailed instructions <install_a.html>`__ and 
+* `Available tarballs <../download/all>`__
 
 
-To be added ...
+What is it?
+-----------
 
+The compilation of Nmag from the tar balls with names
+``nmag-0.2.0-all.tar.gz`` and similar provides (nearly) all the
+required libraries and tools, including Python, Petsc, Sundials, Metis
+and others.
+
+Should I use it?
+----------------
+
+Probably yes.
+
+An advantage of this installation method is that it is (more)
+independent from changing library versions: by not relying on the
+Python (and Petsc, etc) provided on the system, there is no danger
+that the interface of these libraries and tools is different from the
+interface that the nmag code expects.
+
+The disadvantages include that Nmag brings it's own Python and it will
+thus not benefit from the Python library ``scipy`` if this is
+installed for the system Python. To be able to use it within an Nmag
+script, ``scipy`` would have to be installed for Nmag's Python. (This
+is possible, but inconvenient.)
+
+This way of installing Nmag is the most robust way.
 
 
 Installation from small tar ball 

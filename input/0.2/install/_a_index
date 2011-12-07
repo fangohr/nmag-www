@@ -1,0 +1,11 @@
+restindex
+    crumb: tarball (big)
+    format: rest
+    page-title: Installation Nmag from source (big tar ball)
+    include: Yes
+    page-description:
+     Nmag installation from source
+    /description
+    build: Yes
+/restindex
+

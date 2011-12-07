@@ -1,0 +1,122 @@
+restindex
+    crumb: tarball (small)
+    format: rest
+    page-title: Installation Nmag from source (small tar ball)
+    include: Yes
+    page-description:
+     Nmag installation from source, using system libraries where possible
+    /description
+    build: Yes
+/restindex
+
+
+
+====================================================================
+GUIDE FOR INSTALLING ``nsim``/``nmag`` FROM SOURCES (small tar ball)
+====================================================================
+
+.. contents:: Table of Contents Installing Nmag from small tarball
+
+This is installation is more complicated than the procedure involving the big tarball which is `described here <install_a.html>`__.
+
+Installation requirements
+-------------------------
+
+Building ``nmag`` using the small tarball requires a number of
+libraries from the system, including:
+
+* atlas3.6.0
+* findlib-1.2.1
+* gsl-1.14
+* hdf5-1.8.7
+* ipython-0.10
+* mpich2-1.2.1p1
+* numarray-1.5.2
+* numpy-1.5.0
+* ocaml-3.12.0
+* ocamlgsl-0.6.0
+* ParMetis-3.1.1
+* petsc-lite-3.1-p5
+* ply-3.3
+* py-0.9.1
+* Python-2.7.2
+* PyVTK-0.latest
+* qhull-2003.1
+* sundials-2.3.0
+* tables-2.1.2
+
+The version numbers listed above are those of the libraries that are
+included in the big tar ball and for which nmag 0.2 is known to
+compile. You may be able to deviate from these but if the library has
+changed its interface, the compilation may fail (as the changed
+interface would require updates to the nmag/nsim source code).
+
+You also need a `sane build environment <install_a.html>`__.
+
+Depending on hardware characteristics, compilation will take a few
+minutes.
+
+Configure
+---------
+
+Untar the archive in its final location::
+
+  $ tar xvzf nmag-0.2.0-all.tar.gz
+
+(Once the package has been compiled, you won't be able to move the
+nmag-0.2.0 directory to another location.  Doing so would make the
+package unusable, since absolute paths are hard-coded inside the
+executables).
+
+Then::
+
+  $ cd nmag-0.2.0
+
+and run the ``configure.py`` script using the Python interpreter which you want to use for Nmag::
+
+  $ python configure.py
+
+Build
+-----
+
+Run::
+
+  $ make
+
+to build the software
+
+and::
+
+  $ make install
+
+to create the executables. By default the "installation" takes place in the local directory, not /usr/local or such. (In theory this might be possible using configuration flags but is untested.)
+
+Testing
+-------
+
+The testing and setting of environment variables is analog to the `installation instructions <install_a.html>`__ from the big tarball.
+
+
+Special instructions
+--------------------
+
+Ubuntu 11.10
+~~~~~~~~~~~~
+
+The required libraries (with the exception of Sundials) can be installed using::
+
+  $ sudo aptitude install libpetsc3.1-dev libpetsc3.1  \
+  libfindlib-ocaml-dev libqhull-dev python-tables python-ply \
+  libparmetis-dev python-dev python-py
+
+To install Sundials (into /usr/local), you can use the following commands::
+
+  mkdir -p build-sundials
+  cd build-sundials
+  wget http://dl.dropbox.com/u/357850/libs/sundials-2.3.0.tar.gz
+  tar xfvz sundials-2.3.0.tar.gz 
+  cd sundials-2.3.0
+  ./configure --prefix=/usr/local --enable-shared
+  make 
+  sudo make install
+  cd ..
