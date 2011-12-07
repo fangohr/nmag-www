@@ -54,11 +54,29 @@ is possible, but inconvenient.)
 This way of installing Nmag is the most robust way.
 
 
-Installation from small tar ball 
-================================
+Installation of Nmag from small tar ball
+========================================
+
+* `Detailed instructions <install_b.html>`__ and 
+* `Available tarballs <../download/core>`__
 
 
-To be added ...
+What is it?
+-----------
+
+The compilation of Nmag from the small tar balls with names
+``nmag-0.2.0.tar.gz`` and requires all the
+support libraries and tools, including Python, Petsc, Sundials, Metis
+and others to be present in the system already, including their header files etc (typically provided by corresponding -dev packages).
+
+Should I use it?
+----------------
+
+An advantage of this installation method is that it allows you to use the system Python to run Nmag. This might be handy if you want to use third-party Python libraries in your Nmag scripts. This method also needs less disk space. 
+
+The disadvantages include that the versions of the installed support libraries have to be compatible with Nmag's expectations.
+
+
 
 .. comment:
 
