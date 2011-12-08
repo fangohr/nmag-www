@@ -114,3 +114,8 @@ Bugfixes/Improvements
 
 * Ported the documentation to Sphinx.
 
+* Added examples to guided tour, and extended FAQ.
+
+
+The documentation and changelog for Nmag 0.1 is available `here <../0.1/index.html>`__. 
+

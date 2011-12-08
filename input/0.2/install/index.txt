@@ -19,8 +19,8 @@ restindex
 .. contents:: 
 
 
-Installation of Nmag from big tar ball
-======================================
+Installation of Nmag all from big tar ball
+==========================================
 
 * `Detailed instructions <install_a.html>`__ and 
 * `Available tarballs <../download/all>`__
@@ -29,7 +29,7 @@ Installation of Nmag from big tar ball
 What is it?
 -----------
 
-The compilation of Nmag from the tar balls with names
+The compilation of Nmag all from the tar balls with names
 ``nmag-0.2.0-all.tar.gz`` and similar provides (nearly) all the
 required libraries and tools, including Python, Petsc, Sundials, Metis
 and others.
@@ -54,8 +54,8 @@ is possible, but inconvenient.)
 This way of installing Nmag is the most robust way.
 
 
-Installation of Nmag from small tar ball
-========================================
+Installation of Nmag core from small tar ball
+=============================================
 
 * `Detailed instructions <install_b.html>`__ and 
 * `Available tarballs <../download/core>`__

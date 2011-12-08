@@ -1,0 +1,13 @@
+restindex
+    crumb: Manual (one html file)
+    format: rest
+    page-title: Nmag 0.2 Manual (one html file)
+    include: Yes
+    page-description:
+      Nmag Manual (html)
+    /description
+    build: No
+    target: manual/singlehtml/manual.html
+/restindex
+
+
