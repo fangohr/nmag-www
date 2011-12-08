@@ -1,7 +1,7 @@
 restindex
     crumb: tarball (all)
     format: rest
-    page-title: Installation Nmag from source (big tar ball, "all")
+    page-title: Installation Nmag from source (big tarball, "all")
     include: Yes
     page-description:
      Nmag installation from source

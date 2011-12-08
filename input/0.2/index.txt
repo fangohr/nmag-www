@@ -73,16 +73,16 @@ New Features
   PBC+HLib may not give any benefits with respect to PBC alone.
 
 * Major restructuring of the installation procedure. In addition to
-  the installation from a large tar ball as in the previous release,
-  it is now easier to install Nmag using the system's Python and other
+  the installation from a large tarball as in the previous release,
+  it is now possible to install Nmag using the system's Python and other
   libraries (assuming the versions are compatible). This has been
   tested for Ubuntu 11.10 and 11.04.
 
 Bugfixes/Improvements
 
 * Adjusted flags in compilation Makefile.
-  PETSc compiled --with-debugging=no (~10 % speed improvement). Stopping
-  when HLib compilation fails.
+  PETSc compiled --with-debugging=no (~10 % speed improvement).
+  The compilation also stops when HLib compilation fails.
 
 * Optimisation of mesh module: topology information generated only on demand,
   mesh datastructures re-engineered to occupy less memory. As a consequence
@@ -93,7 +93,7 @@ Bugfixes/Improvements
 * Added a bug report script to collect compilation logs into a single file.
   That should considerably simplify the submission of bug reports.
 
-* Updated packages to latest stable release in the compile from source.
+* Updated packages in the compile from source.
   We are now using: Mpich2 1.2.1p1, Petsc 3.1-p5, Ocaml 3.12.0, Findlib 1.2.1,
   Gsl 1.14, Parmetis 3.1.1, NumPy 1.5
 
@@ -101,14 +101,11 @@ Bugfixes/Improvements
   (makes it faster to set and retrieve fields)
 
 * Fixed bug when reloading data from an MPI simulation with different number
-  of node with respect to the one which saved the data (data is now reordered
+  of nodes with respect to the one which saved the data (data is now reordered
   when loading it, if necessary)
 
 * Reworked build system. All Nmag OCaml sources are now in one single directory
   which makes it easy to configure and build the nsim executable.
-
-* Native compilation on Ubuntu 11.10 should now be possibe
-  and relatively straightforward.
 
 * Rewrote the test system and fixed bugs.
 
@@ -118,4 +115,3 @@ Bugfixes/Improvements
 
 
 The documentation and changelog for Nmag 0.1 is available `here <../0.1/index.html>`__. 
-

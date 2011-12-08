@@ -1,7 +1,7 @@
 restindex
     crumb: tarball (core)
     format: rest
-    page-title: Installation Nmag from source (small tar ball, "core")
+    page-title: Installation Nmag from source (small tarball, "core")
     include: Yes
     page-description:
      Nmag installation from source, using system libraries where possible
@@ -11,9 +11,9 @@ restindex
 
 
 
-=========================================================================
-GUIDE FOR INSTALLING ``nsim``/``nmag`` core FROM SOURCES (small tar ball)
-=========================================================================
+========================================================================
+GUIDE FOR INSTALLING ``nsim``/``nmag`` core FROM SOURCES (small tarball)
+========================================================================
 
 .. contents:: Table of Contents Installing Nmag from small tarball
 
@@ -46,7 +46,7 @@ libraries from the system, including:
 * tables-2.1.2
 
 The version numbers listed above are those of the libraries that are
-included in the big tar ball and for which nmag 0.2 core is known to
+included in the big tarball and for which nmag 0.2 core is known to
 compile. You may be able to deviate from these but if the library has
 changed its interface, the compilation may fail (as the changed
 interface would require updates to the nmag/nsim source code).
@@ -59,7 +59,7 @@ minutes.
 Download
 --------
 
-Download the tar ball from `this directory <../download/core>`__.
+Download the tarball from `this directory <../download/core>`__.
 
 Configure
 ---------
