@@ -6,7 +6,8 @@ restindex
     page-description:
       Download page Nmag 
     /description
-    build: Yes
+    build: No
+    target: ../download.html
 /restindex
 
 
