@@ -1,0 +1,103 @@
+restindex
+    crumb: News archive
+    format: rest
+    page-title: News archive
+    include: No
+    build: Yes
+    page-description:
+      News Archive
+    /description
+/restindex
+
+
+Old news
+========
+
+
+
+* *29 July 2011*
+  
+  `Nmag 0.1.1 Release Candidate 2 <http://dl.dropbox.com/u/1820549/soton/nmag/nmag-0.1.1-rc2.tar.gz>`__ available for download.
+  
+.. comment:
+  
+  - `Nmag Wiki pages <https://nmag.soton.ac.uk/community/wiki/nmag>`__ collecting tips and tricks and contributions from Nmag users.
+  
+  
+  
+* *22 December 2009* 
+  
+  Update `0.1 beta (6481) <0.1/index.html>`__ released, includes support for Matrix compression.
+
+
+
+.. raw:: html
+
+  <ul>
+  <li><p class="first"><em>30 March 2009</em></p>
+  <p>Update 0.1 beta (6163)</p>
+  </li>
+  <li><p class="first"><em>20 November 2008</em></p>
+  <p>Update 0.1 beta (5962)</p>
+  </li>
+  <li><p class="first"><em>10 - 14 November, MMM Austin, Texas</em></p>
+  <p>Matteo Franchin and Andreas Knittel represent the Nmag team at the
+  MMM. They are happy to approached with Nmag-related queries. They
+  will give the following presentations:</p>
+  <table class="docutils field-list" frame="void" rules="none">
+  <col class="field-name" />
+  <col class="field-body" />
+  <tbody valign="top">
+  <tr class="field"><th class="field-name">Session:</th><td class="field-body">EH Numerical Methods and Magnetic Simulations</td>
+  </tr>
+  <tr class="field"><th class="field-name">Date:</th><td class="field-body">Thursday 13 November 2008</td>
+  </tr>
+  <tr class="field"><th class="field-name">Time:</th><td class="field-body">9:24: <em>The macro geometry</em> (new approach to periodic boundary conditions as <a class="reference external" href="http://nmag.soton.ac.uk/nmag/current/manual/html/manual.html#example-1d-periodicity">available in Nmag</a>)</td>
+  </tr>
+  <tr class="field"><th class="field-name">Time:</th><td class="field-body">9:36: <em>Scriptability and interactive parallel micromagnetic simulations</em> (about the Nmag concept of 'writing micromagnetic simulation programs')</td>
+  </tr>
+  <tr class="field"><th class="field-name">Time:</th><td class="field-body">9:48: <em>Matrix compression using the H-Lib</em> (for large simulations of systems with large surface area)</td>
+  </tr>
+  <tr class="field"><th class="field-name">Location:</th><td class="field-body">Meeting Room 410</td>
+  </tr>
+  </tbody>
+  </table>
+  <p>They will also attend the Open Forum on Micromagnetic Modelling
+  Wednesday evening (20:00-22:00).</p>
+  </li>
+  <li><p class="first"><em>13 October 2008</em></p>
+  <p>Update 0.1 beta (5878)</p>
+  </li>
+  <li><p class="first"><em>2 September 2008</em></p>
+  <p>Update 0.1 beta (5834)</p>
+  </li>
+  <li><p class="first"><em>8 August 2008</em></p>
+  <p>Update 0.1 beta (5787)</p>
+  </li>
+  <li><p class="first"><em>1 August 2008</em></p>
+  <p>Update 0.1 beta (5734)</p>
+  </li>
+  <li><p class="first"><em>02 June 2008</em></p>
+  <p>Update 0.1 beta (5531)</p>
+  </li>
+  <li><p class="first"><em>05 February 2008</em></p>
+  <p>Update 0.1 beta (5282)</p>
+  </li>
+  <li><p class="first"><em>04 January 2008</em></p>
+  <p><a class="reference external" href="http://nmag.soton.ac.uk">http://nmag.soton.ac.uk</a> back online (again). Please accept our
+  apologies for the unscheduled downtime over the past week. This was
+  due to a (unscheduled) problem with a network switch over the
+  Christmas break, followed by (scheduled) university wide internet
+  outage. We believe that everything should be back to normal now.</p>
+  </li>
+  <li><p class="first"><em>22 December 2007</em></p>
+  <p>Update 0.1 beta (4947)</p>
+  </li>
+  <li><p class="first"><em>27 November 2007</em></p>
+  <p>Update 0.1 beta (4785)</p>
+  </li>
+  <li><p class="first"><em>2 November 2007</em></p>
+  <p>First release, version 0.1 beta (4625) available.</p>
+  </li>
+  </ul>
+

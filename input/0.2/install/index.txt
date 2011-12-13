@@ -30,7 +30,7 @@ What is it?
 -----------
 
 The compilation of Nmag all from the tarballs with names
-``nmag-0.2.0-all.tar.gz`` and similar provides (nearly) all the
+``nmag-0.2.0.tar.gz`` and similar provides (nearly) all the
 required libraries and tools, including Python, Petsc, Sundials, Metis
 and others.
 
@@ -87,7 +87,7 @@ The disadvantages include that the versions of the installed support libraries h
   --------
   
   You can compile nmag and required helping libraries from source
-  (`download tar file <../download/nmag-0.1-all.tar.gz>`__, `Method A
+  (`download tar file <../download/nmag-0.1.tar.gz>`__, `Method A
   installation instructions <install_a.html>`__).
   
   If you have VMware Fusion, you can run the Nmag Virtual Machine (see
@@ -108,7 +108,7 @@ The disadvantages include that the versions of the installed support libraries h
   ---------------------
   
   You can compile nmag and required helping libraries from source
-  (`download tar file <../download/nmag-0.1-all.tar.gz>`__, `Method A
+  (`download tar file <../download/nmag-0.1.tar.gz>`__, `Method A
   installation instructions <install_a.html>`__)
   
   You can also use the Nmag Virtual Machine (`Method D <vmplayer.html>`__).

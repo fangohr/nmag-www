@@ -64,37 +64,30 @@ resource available to provide installation support, user support, bug
 fixes or extensions of functionality, and the default expectation
 should be that the software is provided as is.
 
+  
+News
+----
+
+
+* *3 January 2012 to 6 January 2012*
+
+  Anticipated server downtime (due central infrastructure works)
+
+* *December 2011* 
+
+  Release of `Nmag 0.2 <0.2/index.html>`__
+  
+* *June 2009*
+  
+  The Institute of Physics Magnetism Group uses the Nmag logo for their `group flyer <http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf>`__.
+  
+  .. image:: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009_100.png
+    :target: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf
+  
+  
 .. comment:
 
-  
-  News
-  ----
-  
-  
-  
-  * *29 July 2011*
-  
-    `Nmag 0.1.1 Release Candidate 2 <http://dl.dropbox.com/u/1820549/soton/nmag/nmag-0.1.1-rc2.tar.gz>`__ available for download.
-  
-  .. comment:
-  
-    - `Nmag Wiki pages <https://nmag.soton.ac.uk/community/wiki/nmag>`__ collecting tips and tricks and contributions from Nmag users.
-  
-  
-  
-  * *22 December 2009* 
-  
-    Update `0.1 beta (6481) <0.1/index.html>`__ released, includes support for Matrix compression.
-  
-  * *June 2009*
-  
-    The Institute of Physics Magnetism Group uses the Nmag logo for their `group flyer <http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf>`__.
-    
-    .. image:: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009_100.png
-      :target: http://www.soton.ac.uk/~fangohr/publications/other/IoP_Magnetism_group_flyer_2009.pdf
-  
-  
-  `Older news items <oldnews.html>`__
+  `Older news items <newsarchive.html>`__
 
 
 Mailing list & Contact

@@ -66,7 +66,7 @@ Configure
 
 Untar the archive in its final location::
 
-  $ tar xvzf nmag-0.2.0.tar.gz
+  $ tar xvzf nmag-core-0.2.0.tar.gz
 
 (Once the package has been compiled, you won't be able to move the
 nmag-0.2.0 directory to another location.  Doing so would make the
@@ -75,7 +75,7 @@ executables).
 
 Then::
 
-  $ cd nmag-0.2.0
+  $ cd nmag-core-0.2.0
 
 and run the ``configure.py`` script using the Python interpreter which you want to use for Nmag::
 

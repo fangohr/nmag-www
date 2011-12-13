@@ -12,7 +12,8 @@ r2w:
 
 #copy local webroot folder to server
 publish:
-	rsync -rvu -e ssh $(WEBROOT)/* www-data@$(WEBSERVER)://var/www/nmag
+	#rsync -rvu -e ssh $(WEBROOT)/* www-data@$(WEBSERVER)://var/www/nmag
+	rsync -rvu -e ssh $(WEBROOT)/* $(WEBSERVER)://home/www-data/nmag
 
 fetch-docs:
 	mkdir -p webroot/$(MREV)/manual
