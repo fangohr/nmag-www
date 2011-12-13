@@ -40,9 +40,8 @@ Features in brief:
  - extensive documentation in `html <current/manual/html/manual.html>`__ 
    and `pdf <current/manual/manual.pdf>`__, including Tutorial
 
- - download as `source tarball <current/download/nmag-0.1-all.tar.gz>`__, (VMWare) virtual machine
-   image (and older versions as debian package, and bootable CD/DVD ISO
-   image)
+ - download as source tarball `with all libraries <current/download/all>`__,
+   or only `the core nmag code <current/download/core>`__ (see `installation <current/install/index.html>`__)
 
 
 
