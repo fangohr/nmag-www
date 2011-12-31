@@ -112,7 +112,7 @@ The required libraries (with the exception of Sundials) can be installed using::
 
   $ sudo aptitude install libpetsc3.1-dev libpetsc3.1  \
   libfindlib-ocaml-dev libqhull-dev python-tables python-ply \
-  libparmetis-dev python-dev python-py
+  libparmetis-dev python-dev python-py libreadline-dev
 
 To install Sundials (into /usr/local), you can use the following commands::
 
@@ -125,3 +125,4 @@ To install Sundials (into /usr/local), you can use the following commands::
   make 
   sudo make install
   cd ..
+
