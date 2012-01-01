@@ -76,9 +76,16 @@ An advantage of this installation method is that it allows you to use the system
 
 The disadvantages include that the versions of the installed support libraries have to be compatible with Nmag's expectations.
 
-
-
 .. comment:
+
+  Installation of Nmag via a virtual machine (VMWare)
+  ===================================================
+  
+  * `Detailed instructions <vmware.html>`__ and 
+  * `Available diskimages <../download/vmware>`__
+
+
+
 
   How can I install nmag for Windows/Linux/Mac OSX?
   =================================================

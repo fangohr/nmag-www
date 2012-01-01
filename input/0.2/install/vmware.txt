@@ -1,0 +1,320 @@
+restindex
+    crumb: Virtual Machine
+    format: rest
+    page-title: nmag installation instructions using VMware Player
+    include: No
+    page-description:
+      nmag installation instructions using VMware Player
+    /description
+    build: Yes
+/restindex
+
+
+
+Installing Nmag using the VMware Player
+=======================================
+
+
+.. contents::
+
+
+
+Introduction
+------------
+
+VMware_ is a company that provides a software that emulates a virtual
+computer. Let's assume for simplicity that we have an existing machine
+with MS Windows. This is called the host machine. One needs to install
+the vmware software (see `Installing the VMware Player`_) on this host
+machine. Once the software is installed, it can be started like any
+other application. Once this virtual machine software is running, it
+will simulate a PC environment so that one can have a second (virtual)
+machine running in that window. The 'virtual' hard drive of that
+virtual machine is realised through a (few) big files gathered in a
+particular directory on the hard drive of the (Windows) host
+machine. It is of course required to provide an operating system for
+the virtual machine, which could be, for example, Linux.
+
+One would then have the normal MS Windows Operating system running on
+the host machine, and a Linux operating system in the VMware
+window. (In fact, the window can be blown up to appear as a
+full-screen, by pressing CTRL+ALT+Return, or clicking of the
+`maximise` icon of the window.)
+
+The performance penalty of running any software in the virtual machine
+(rather than on a real machine of similar specification) is usually
+less than 10%. In other words, a simulation that takes 10 minutes in
+the virtual machine, is not going to be faster than 9 minutes if run
+natively.
+
+The nice thing about having this virtual machine is that one can
+continue to use one's email, word processing, web browsing and all
+other applications in one's usual operating system (Windows in our
+example), and simultaneously have a simulation environment for
+micromagnetic simulations (which provides all the necessary pre and
+postprocessing tools).
+
+In terms of performance, the host machine should have at least 2 GB of
+RAM (the more the better). The virtual machine is set to use 1.5 GB
+RAM and 1 processor core. It currently needs about 5GB of disk space
+on the host machine.
+
+
+
+Installing the VMware Player
+----------------------------
+
+VMware_ provides a multitude of different products that allow
+different degrees of virtualisation. Some of them are free and some
+have to be paid for. We try to point to exactly the right product
+here, and to keep things simple although VMWare is frequently changing
+the names of their products.
+
+
+If your host runs **MS Windows** or **Linux**, then you can download
+the free `VMware Player <http://www.vmware.com/products/player>`__:
+
+ * click on the ``Download`` button
+ 
+ * click on ``Download now`` button
+
+ * At this stage, VMware_ asks you to provide some information to
+   profile their customer base.  Complete the form and click ``Submit``.
+
+ * click on the ``Download now`` button
+
+ * Agree to license agreement by pressing ``Accept``
+
+ * Select the right version to download:
+
+   * If your host runs **MS Windows**, then download the latest version of the VMware Player for Windows
+
+   * If your host runs **Linux**, then chose
+
+     * ``.rpm`` for red-hat based systems, or 
+
+     * ``.tar`` for all other Linux systems
+
+     Note that there are also 64-bit versions if you have a 64 bit CPU
+     (such as an Opteron)
+
+
+ * After having downloaded the file, install it as you install any
+   other application for your operating system (i.e. for Windows,
+   double click on the executable) and follow the instructions.
+
+If your computer is an **IntelMac**, there is unfortunately no version of
+the free VMware Player for your machine. However, if you happen to own
+`VMware's Fusion <http://www.vmware.com/download/fusion/>`__ product
+(or are happy to pay for it), then install VMware fusion and use this
+as (a more powerful) VMware player.
+
+If you computer is a **PowerPC Mac**, then you cannot use the Virtual
+Machine method.
+
+At this stage, we have installed the VMware Player. Next, we need to
+obtain the 'virtual machine' that we want to execute.
+
+
+Downloading and starting the Nmag virtual machine
+-------------------------------------------------
+
+* Download the zipped Nmag virtual appliance from 
+  `this directory <http://nmag.soton.ac.uk/0.2/download/vmware>`__. 
+
+.. comment:
+  The appliance is split into two files (to ensure that each file does not exceed the 2GB file size limit that some file systems impose).
+
+* unzip the downloaded files: extract they content into a subdirectory with name ``nmag-0.2``.
+
+* start the VMware Player software 
+
+* Within the VMware Player window, select ``Open`` or ``Browse`` to 
+
+  * locate the directory into which you have unzipped the virtual machine.
+
+  * change into that directory and 
+ 
+  * select the file ending in ``.vmx`` to open (for example ``nmag0-2-Ubuntu64_1.vmx``)
+
+  * and click open.
+
+When you do this the first time, the VMware Player may warn that the machine is already in use. If so, select ``Take ownership``.
+
+It will ask you whether this virtual machine has been *moved* or
+*copied*. The right answer is *copied*.
+
+Once you have done this, the virtual machine will boot.
+
+When the kernel boot menu appears (the first line starts "GNU GRUB"), do nothing, or press return.
+
+Wait until the graphical login turns up.
+
+
+Using the Nmag virtual machine
+------------------------------
+
+The Nmag virtual machine is an Ubuntu64Bit 11.10 installation which provides
+all the software required to run micromagnetic simulations with Nmag.
+
+After booting, a login screen appears. There is only one user
+registered. The username is ``nmag`` and the password is
+``nmag``. (The root account has the same password; should you ever
+need it.)
+
+At this point, you have a complete environment to start simulations,
+and the guided tour in the manual is a good starting point to explore
+nmag. 
+
+Click CTRL+ALT+T to get a terminal (a shell window).
+
+
+You find a link on the Desktop (``show_manual.sh``) which will display a local copy of the manual on your harddrive (select 'Run' after double clicking).
+
+If you want to see the examples that are discussed in the manual
+directly, you can go to
+``/home/nmag/nmag-0.1/nsim/interface/nmag/manual``. Each subdirectory in
+there corresponds to one example. Note that there are sometimes
+additional files in the directory that are used for automatic creation
+of plots in the manual, and for automatic testing (you may want to
+ignore those). There is a shortcut ``manual`` for this directory on the Desktop, and also in the home directory of the nmag user.
+
+
+First steps
+-----------
+
+#. Login as ``nmag``, password ``nmag``.
+
+#. Double click on `show_manual.sh`, then ``run`` to display the Nmag manual.
+
+#. Navigate to example 1 in the guided tour (Example: Demag field in uniformly magnetised sphere).
+
+#. Open a terminal (either through clicking on the terminal icon at the top, roughly in the middle, or by going through Applications->Accessories->Terminal.)
+
+#. change into the directory with the manual examples by typing::
+
+     cd manual
+
+#. change into the directory for the first example::
+
+     cd example1
+
+#. run the simulation that is described in the manual by typing::
+
+     nsim sphere1.py
+
+
+
+Using VMware player
+-------------------
+
+The help function of the VMware Player provides a useful summary of
+how to use it.
+
+Note that you can switch to full-screen mode when pressing
+CTRL+ALT+RETURN, and that you return from full-screen mode by either
+pressing CTRL+ALT, or moving the mouse to the top of the screen (to
+get the VMPlayer menu).
+
+
+
+
+  
+
+  
+
+Frequently Asked Questions
+--------------------------
+
+.. contents::
+  :local:
+
+
+How can I exchange data between the virtual machine and the host?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to share data with your host, then 
+
+* go to ``VMWare Player->Preferences->Shared Folders``. 
+
+* select ``Always enabled`` or ``Enabled until next power off or suspend``
+
+* click on the ``vmware`` Folder, and select ``Properties``
+
+* Modify the ``Host path`` by clicking the ``Browse`` button: Choose a
+  location which the virtual machine can read and write to, for
+  example your Desktop (or a dedicated subfolder somewhere).
+
+  Leave the ``Name`` as ``vmware`` so that the instructions below are easier to understand.
+
+* Click OK to close the window. The Shared folder is now configured:
+
+  On the linux system, there is now a folder ``/mnt/hgfs/vmware`` which shows the content of the ``Desktop`` folder on the host (or whichever folder has been chosen above), and can be used to exchange data.
+
+
+
+How can I change the keyboard in the Nmag virtual machine?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Log in, then go to the button on the right top, a menu pop downs. Then
+select System Settings. A window should appear in which you can select
+the ``Keyboard`` item. Then click on ``Layout Settings`` at the
+bottom, then click on the ``+`` (plus) symbol and take it from there.
+
+
+Can I also use other VMware products with the Nmag Virtual machine?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Yes, as far as we know. For example, if you have the VMware Work
+station or VMware Server, then these can run the Nmag virtual machine
+as well. (It may, in fact, be easier to exchange data between the host
+and the virtual machine with these more powerful products.)
+
+Can I use other virtual machine products, such as VirtualBox?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Yes, although you will not be able to use the image we provide for
+download. This will only work with VMWare. We use VMWare for
+historical reasons (it has been around for some time), but we are not
+aware of any problems with other virtual machine tools. 
+
+If you go this way, we suggest Ubuntu Linux as the client operating
+system as Nmag installs most easily in this.
+
+I know Ubuntu or Debian Linux -- can I modify this system?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Of course. Once you become root, you can use ``aptitude``, ``apt-get`` and all
+other tools to configure your debian system. This is, after all, a
+normal installation (even though it is executed within a virtual
+machine).
+
+How can I learn more about Linux or this distribution?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Follow the `Ubuntu <http://www.ubuntu.com/>`__ tutorials.
+
+
+
+
+
+
+
+#Install extra software using:
+
+sudo install gmsh netgen paraview mayavi2 emacs grace gnuplot
+python-scipy
+
+
+
+
+
+
+
+
+
+	 
+
+
+
+.. _VMware : http://www.vmware.com
