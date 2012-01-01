@@ -99,8 +99,27 @@ to create the executables. By default the "installation" takes place in the loca
 Testing
 -------
 
-The testing and setting of environment variables is analog to the `installation instructions <install_a.html>`__ from the big tarball.
+To run the tests, the following steps need to be executed (from the
+installation directory in which ``make`` and ``make install`` where 
+executed):
 
+First, we need to add the nmag executables to the system path::
+  
+  $ export PATH=$PATH:`pwd`/bin    
+
+The we let the testing subsystem find the executable and store the path in
+the testing directories::
+
+  $ cd tests/config/
+  $ sh find_nsim.sh 
+  $ cd ../..
+
+Finally, we can run the tests in the subdirectory ``tests``::
+
+  $ cd tests
+  $ make check
+  $ make checkslow
+  
 
 Special instructions
 --------------------
