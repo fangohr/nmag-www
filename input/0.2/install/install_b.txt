@@ -49,9 +49,13 @@ The version numbers listed above are those of the libraries that are
 included in the big tarball and for which nmag 0.2 core is known to
 compile. You may be able to deviate from these but if the library has
 changed its interface, the compilation may fail (as the changed
-interface would require updates to the nmag/nsim source code).
+interface would require updates to the nmag/nsim source code). In this
+case, the most practical advise would be to install from the big
+tarball (that brings all the libraries with it).
 
 You also need a `sane build environment <install_a.html>`__.
+
+If you are running Ubuntu 11.10, have a look at the section `Ubuntu 11.10`_ below which details how to install these requirements.
 
 Depending on hardware characteristics, compilation will take a few
 minutes.
@@ -143,5 +147,9 @@ To install Sundials (into /usr/local), you can use the following commands::
   ./configure --prefix=/usr/local --enable-shared
   make 
   sudo make install
+<<<<<<< local
   cd ..
 
+=======
+  cd ../..
+>>>>>>> other

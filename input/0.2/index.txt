@@ -28,7 +28,7 @@ restindex
 Download and install
 ====================
 
-The code can be obtained from the `installation page <install/index.html>`__. 
+The code can be `downloaded from here <../download.html>`__; see also the `installation page <install/index.html>`__. 
 
 
 Manual
