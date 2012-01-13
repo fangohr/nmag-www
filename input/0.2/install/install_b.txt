@@ -100,6 +100,14 @@ and::
 
 to create the executables. By default the "installation" takes place in the local directory, not /usr/local or such. (In theory this might be possible using configuration flags but is untested.)
 
+To add all nmag executables to the system path add the subdirectory
+``bin`` to your system path, for example
+
+  $ export PATH=$PATH:`pwd`/bin    
+
+(This is not required for the testing below, just convenience for
+later use of Nmag.)
+
 Testing
 -------
 
@@ -107,16 +115,16 @@ To run the tests, the following steps need to be executed (from the
 installation directory in which ``make`` and ``make install`` where 
 executed):
 
-First, we need to add the nmag executables to the system path::
-  
-  $ export PATH=$PATH:`pwd`/bin    
-
 The we let the testing subsystem find the executable and store the path in
 the testing directories::
 
   $ cd tests/config/
-  $ sh find_nsim.sh 
+  $ ../../bin/nsim setup.py
   $ cd ../..
+
+In the second line above, it is important to run the file ``setup.py`` which
+the ``nsim`` executable that we just installed -- this way its path is
+identified, and stored in the testing subdirectories.
 
 Finally, we can run the tests in the subdirectory ``tests``::
 
