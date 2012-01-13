@@ -101,7 +101,7 @@ and::
 to create the executables. By default the "installation" takes place in the local directory, not /usr/local or such. (In theory this might be possible using configuration flags but is untested.)
 
 To add all nmag executables to the system path add the subdirectory
-``bin`` to your system path, for example
+``bin`` to your system path, for example::
 
   $ export PATH=$PATH:`pwd`/bin    
 
