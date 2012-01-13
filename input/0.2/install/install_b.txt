@@ -155,9 +155,5 @@ To install Sundials (into /usr/local), you can use the following commands::
   ./configure --prefix=/usr/local --enable-shared
   make 
   sudo make install
-<<<<<<< local
-  cd ..
-
-=======
   cd ../..
->>>>>>> other
+
