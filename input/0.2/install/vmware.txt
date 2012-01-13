@@ -217,10 +217,6 @@ pressing CTRL+ALT, or moving the mouse to the top of the screen (to
 get the VMPlayer menu).
 
 
-
-
-  
-
   
 
 Frequently Asked Questions
@@ -295,15 +291,28 @@ How can I learn more about Linux or this distribution?
 Follow the `Ubuntu <http://www.ubuntu.com/>`__ tutorials.
 
 
+Additional software
+~~~~~~~~~~~~~~~~~~~
+
+We have installed additional software on the virtual machine,
+including
+
+* Netgen and Gmsh (Mesh generators)
+
+* Mayavi2 and Paraview (Visualisation packages that can read vtk files)
+
+* XMGrace and Gnuplot (xy-plotting tools)
+
+* emacs, vim, nano (editor)
+
+* Scipy (scientific Python), Matplotlib, sympy (Useful python libraries)
+
+
+The relevant ubuntu packages are ``gmsh netgen mayavi2 emacs grace gnuplot python-scipy python-matplotlib python-sympy nano vim``
 
 
 
 
-
-#Install extra software using:
-
-sudo install gmsh netgen paraview mayavi2 emacs grace gnuplot
-python-scipy
 
 
 
