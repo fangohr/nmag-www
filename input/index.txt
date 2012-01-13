@@ -68,13 +68,18 @@ News
 ----
 
 
+* *13 January 2012* 
+
+  Release of `Nmag 0.2.1 <0.2/index.html>`__
+
+
 * *3 January 2012 to 6 January 2012*
 
   Anticipated server downtime (due central infrastructure works)
 
 * *December 2011* 
 
-  Release of `Nmag 0.2 <0.2/index.html>`__
+  Release of Nmag 0.2.0.
   
 * *June 2009*
   
