@@ -119,7 +119,7 @@ Downloading and starting the Nmag virtual machine
 -------------------------------------------------
 
 * Download the zipped Nmag virtual appliance from 
-  `this directory <http://nmag.soton.ac.uk/0.2/download/vmware>`__. 
+  `this directory <http://nmag.soton.ac.uk/nmag/0.2/download/vmware>`__. 
 
 * unzip the downloaded files: extract they content into a subdirectory with name ``nmag-0.2``.
 

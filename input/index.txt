@@ -67,6 +67,11 @@ should be that the software is provided as is.
 News
 ----
 
+* *30 January 2012*
+
+  Provision of Virtual Machine disk image (VMWare) providing a 
+  pre-compiled Nmag 0.2 (`read more <0.2/install/vmware.html>`__).
+
 
 * *13 January 2012* 
 
