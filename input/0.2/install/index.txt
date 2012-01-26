@@ -76,16 +76,31 @@ An advantage of this installation method is that it allows you to use the system
 
 The disadvantages include that the versions of the installed support libraries have to be compatible with Nmag's expectations.
 
-.. comment:
 
-  Installation of Nmag via a virtual machine (VMWare)
-  ===================================================
+Installation of Nmag via a virtual machine (VMWare)
+===================================================
   
-  * `Detailed instructions <vmware.html>`__ and 
-  * `Available diskimages <../download/vmware>`__
+* `Detailed instructions <vmware.html>`__ and 
+* `Available diskimages <../download/vmware>`__
+
+What is it?
+-----------
+
+A disk image for a virtual machine: this allows to run a virtual linux
+system in an application on (for example) a Windows computer. Nmag can
+be used inside the virtual linux system. The disk image that we
+provide for the virtual machine contains a compiled Nmag which is
+ready to use, together with some meshing and postprocessing tools.
+
+Should I use it?
+----------------
+
+The virtual machine approach is very convenient if you want to test
+Nmag but don't want to spend much time installing it, and/or if you
+only have a Windows machine available.
 
 
-
+.. comment:
 
   How can I install nmag for Windows/Linux/Mac OSX?
   =================================================

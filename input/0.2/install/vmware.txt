@@ -164,7 +164,7 @@ nmag:
 
 * Click CTRL+ALT+T to get a terminal (a shell window).
 
-* You find a link on the Desktop (``show_manual.sh``) which will display a local copy of the manual on your harddrive (select ``Run`` after double clicking).
+* You find a link on the Desktop (``nmag-manual-html.sh``) which will display a local copy of the manual on your harddrive (select ``Run`` after double clicking).
 
 If you want to see the examples that are discussed in the manual
 directly, you can go to
