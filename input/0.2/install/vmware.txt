@@ -2,7 +2,7 @@ restindex
     crumb: Virtual Machine
     format: rest
     page-title: nmag installation instructions using VMware Player
-    include: No
+    include: Yes
     page-description:
       nmag installation instructions using VMware Player
     /description
@@ -31,7 +31,7 @@ other application. Once this virtual machine software is running, it
 will simulate a PC environment so that one can have a second (virtual)
 machine running in that window. The 'virtual' hard drive of that
 virtual machine is realised through a (few) big files gathered in a
-particular directory on the hard drive of the (Windows) host
+particular directory on the hard drive of the (Windows, say,) host
 machine. It is of course required to provide an operating system for
 the virtual machine, which could be, for example, Linux.
 
@@ -45,20 +45,22 @@ The performance penalty of running any software in the virtual machine
 (rather than on a real machine of similar specification) is usually
 less than 10%. In other words, a simulation that takes 10 minutes in
 the virtual machine, is not going to be faster than 9 minutes if run
-natively.
+natively. However, 3d graphics may not be hardware accelerated in the
+virtual machine; and the virtual machine will only see a part of the
+physical RAM of the host machine (this can be adjusted in the vmware
+settings when the virtual machine is shut down).
 
 The nice thing about having this virtual machine is that one can
 continue to use one's email, word processing, web browsing and all
 other applications in one's usual operating system (Windows in our
 example), and simultaneously have a simulation environment for
 micromagnetic simulations (which provides all the necessary pre and
-postprocessing tools).
+postprocessing tools, based on the Linux operating system here).
 
 In terms of performance, the host machine should have at least 2 GB of
 RAM (the more the better). The virtual machine is set to use 1.5 GB
-RAM and 1 processor core. It currently needs about 5GB of disk space
+RAM and 1 processor core. It currently needs about 7GB of disk space
 on the host machine.
-
 
 
 Installing the VMware Player
@@ -95,9 +97,6 @@ the free `VMware Player <http://www.vmware.com/products/player>`__:
 
      * ``.tar`` for all other Linux systems
 
-     Note that there are also 64-bit versions if you have a 64 bit CPU
-     (such as an Opteron)
-
 
  * After having downloaded the file, install it as you install any
    other application for your operating system (i.e. for Windows,
@@ -122,9 +121,6 @@ Downloading and starting the Nmag virtual machine
 * Download the zipped Nmag virtual appliance from 
   `this directory <http://nmag.soton.ac.uk/0.2/download/vmware>`__. 
 
-.. comment:
-  The appliance is split into two files (to ensure that each file does not exceed the 2GB file size limit that some file systems impose).
-
 * unzip the downloaded files: extract they content into a subdirectory with name ``nmag-0.2``.
 
 * start the VMware Player software 
@@ -141,7 +137,7 @@ Downloading and starting the Nmag virtual machine
 
 When you do this the first time, the VMware Player may warn that the machine is already in use. If so, select ``Take ownership``.
 
-It will ask you whether this virtual machine has been *moved* or
+It may ask you whether this virtual machine has been *moved* or
 *copied*. The right answer is *copied*.
 
 Once you have done this, the virtual machine will boot.
@@ -154,7 +150,7 @@ Wait until the graphical login turns up.
 Using the Nmag virtual machine
 ------------------------------
 
-The Nmag virtual machine is an Ubuntu64Bit 11.10 installation which provides
+The Nmag virtual machine is an Ubuntu64Bit 11.10 installation which should provide
 all the software required to run micromagnetic simulations with Nmag.
 
 After booting, a login screen appears. There is only one user
@@ -164,36 +160,38 @@ need it.)
 
 At this point, you have a complete environment to start simulations,
 and the guided tour in the manual is a good starting point to explore
-nmag. 
+nmag: 
 
-Click CTRL+ALT+T to get a terminal (a shell window).
+* Click CTRL+ALT+T to get a terminal (a shell window).
 
-
-You find a link on the Desktop (``show_manual.sh``) which will display a local copy of the manual on your harddrive (select 'Run' after double clicking).
+* You find a link on the Desktop (``show_manual.sh``) which will display a local copy of the manual on your harddrive (select ``Run`` after double clicking).
 
 If you want to see the examples that are discussed in the manual
 directly, you can go to
-``/home/nmag/nmag-0.1/nsim/interface/nmag/manual``. Each subdirectory in
-there corresponds to one example. Note that there are sometimes
-additional files in the directory that are used for automatic creation
-of plots in the manual, and for automatic testing (you may want to
-ignore those). There is a shortcut ``manual`` for this directory on the Desktop, and also in the home directory of the nmag user.
-
+``/home/nmag/Desktop/nmag-examples-drafts``. Each subdirectory in there
+corresponds to one example. Note that there are sometimes additional
+files in the directory that are used for automatic creation of plots
+in the manual, and for automatic testing (you may want to ignore
+those). Some file may be out of date, but overall this is a useful
+resource to run some existing scripts quickly.  Often, there is a
+``makefile`` or ``Makefile`` in a example directory, which summarises
+the commands that can be run to create a mesh, convert it, important
+it, run a simulation etc.
 
 First steps
 -----------
 
 #. Login as ``nmag``, password ``nmag``.
 
-#. Double click on `show_manual.sh`, then ``run`` to display the Nmag manual.
+#. Double click on ``nmag-manual-html.sh`, then ``run`` to display the Nmag manual.
 
 #. Navigate to example 1 in the guided tour (Example: Demag field in uniformly magnetised sphere).
 
-#. Open a terminal (either through clicking on the terminal icon at the top, roughly in the middle, or by going through Applications->Accessories->Terminal.)
+#. Open a terminal (either through clicking on the terminal icon at the side bar, or pressing CTRL+ALT+T)
 
 #. change into the directory with the manual examples by typing::
 
-     cd manual
+     cd Desktop/nmag-examples/drafts
 
 #. change into the directory for the first example::
 
@@ -202,6 +200,8 @@ First steps
 #. run the simulation that is described in the manual by typing::
 
      nsim sphere1.py
+
+   (When you run this the second time, you will need to use ``nsim sphere1.py --clean`` to allow overwriting of existing data files.
 
 
 
@@ -217,8 +217,6 @@ pressing CTRL+ALT, or moving the mouse to the top of the screen (to
 get the VMPlayer menu).
 
 
-  
-
 Frequently Asked Questions
 --------------------------
 
@@ -231,32 +229,37 @@ How can I exchange data between the virtual machine and the host?
 
 If you want to share data with your host, then 
 
-* go to ``VMWare Player->Preferences->Shared Folders``. 
+* go to ``Virtual Machine->Settings`` (the precise name of this may vary) and look for ``Sharing``
 
-* select ``Always enabled`` or ``Enabled until next power off or suspend``
+* Here, locations on the host system can be defined that are shared
+  with the client system, for example example your Desktop (or a
+  dedicated subfolder somewhere).
 
-* click on the ``vmware`` Folder, and select ``Properties``
+  Assuming we call this location ``vmware`` we should see that 
 
-* Modify the ``Host path`` by clicking the ``Browse`` button: Choose a
-  location which the virtual machine can read and write to, for
-  example your Desktop (or a dedicated subfolder somewhere).
-
-  Leave the ``Name`` as ``vmware`` so that the instructions below are easier to understand.
-
-* Click OK to close the window. The Shared folder is now configured:
-
-  On the linux system, there is now a folder ``/mnt/hgfs/vmware`` which shows the content of the ``Desktop`` folder on the host (or whichever folder has been chosen above), and can be used to exchange data.
-
-
+* On the linux system, there is now a folder ``/mnt/hgfs/vmware``
+  which shows the content of the ``Desktop`` folder on the host (or
+  whichever folder has been chosen above), and can be used to exchange
+  data.
 
 How can I change the keyboard in the Nmag virtual machine?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Log in, then go to the button on the right top, a menu pop downs. Then
-select System Settings. A window should appear in which you can select
-the ``Keyboard`` item. Then click on ``Layout Settings`` at the
-bottom, then click on the ``+`` (plus) symbol and take it from there.
+Open a terminal (CTRL+ALT+T), then type ``setxkbmap`` followed by the
+right code for the country. Typcial codes are ``de`` for German,
+``gb`` for Great Britain, ``dvorak`` for the Dvorak layout and ``us``
+for an american keyboard layout. 
 
+Alternatively, click on the ``System Settings`` icon on the left, then
+``keyboard layout`` and then ``+`` to add a new layout.
+
+
+.. comment:
+
+  Log in, then go to the button on the right top, a menu pop downs. Then
+  select System Settings. A window should appear in which you can select
+  the ``Keyboard`` item. Then click on ``Layout Settings`` at the
+  bottom, then click on the ``+`` (plus) symbol and take it from there.
 
 Can I also use other VMware products with the Nmag Virtual machine?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -264,7 +267,8 @@ Can I also use other VMware products with the Nmag Virtual machine?
 Yes, as far as we know. For example, if you have the VMware Work
 station or VMware Server, then these can run the Nmag virtual machine
 as well. (It may, in fact, be easier to exchange data between the host
-and the virtual machine with these more powerful products.)
+and the virtual machine with these more powerful products, as you can 
+add more shared locations.)
 
 Can I use other virtual machine products, such as VirtualBox?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

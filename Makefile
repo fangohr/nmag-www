@@ -21,6 +21,9 @@ fetch-docs:
 	cp -vr ../doc/nmag/_build/latex/NMAGUserManual.pdf webroot/$(MREV)/manual/manual.pdf
 	cp -rv ../doc/nmag/_build/html webroot/$(MREV)/manual
 	cp -rv ../doc/nmag/_build/singlehtml webroot/$(MREV)/manual	
+	make install-doc
+
+install-doc:
 	cp input/0.2/install/_a_index input/0.2/install/install_a.txt
 	cat  ../dist/INSTALL >> input/0.2/install/install_a.txt
 
