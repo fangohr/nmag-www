@@ -1,6 +1,7 @@
 # About
 
-This repository stores the code used to build the nmag website and documentation.
+This repository stores the code used to build the nmag website only.
+The documentation is built from http://github.com/fangohr/nmag-doc.
 
 # Build Using Docker
 
